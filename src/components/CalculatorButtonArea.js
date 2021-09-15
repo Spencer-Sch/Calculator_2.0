@@ -16,6 +16,7 @@ const CalculatorButtonArea = () => {
       key={button.id}
       icon={button.icon}
       disable={!button.icon ? true : false}
+      value={button.value}
     />
   ));
 

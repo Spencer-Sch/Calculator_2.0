@@ -5,15 +5,18 @@ const useStyles = makeStyles((theme) => ({
   buttonStyles: {
     minWidth: '100%',
     height: '100%',
+    minHeight: '4.5rem',
+    fontSize: '2rem',
+    fontWeight: 900,
   },
   paper: {
     height: '100%',
   },
-  typography: {
-    fontSize: '2rem',
-    fontWeight: 900,
-  },
 }));
+
+const getValue = (event) => {
+  console.log(event.target.closest('button').value);
+};
 
 const CalculatorButton = (props) => {
   const classes = useStyles();
@@ -26,10 +29,10 @@ const CalculatorButton = (props) => {
           variant="contained"
           color="primary"
           disabled={props.disable}
+          value={props.value}
+          onClick={getValue}
         >
-          <Typography variant="h5" className={classes.typography}>
-            {props.icon}
-          </Typography>
+          {props.icon}
         </Button>
       </Paper>
     </Grid>
