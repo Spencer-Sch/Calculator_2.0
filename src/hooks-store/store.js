@@ -9,7 +9,10 @@ export const useStore = () => {
 
   const dispatch = (actionIdentifier, payload) => {
     const newState = actions[actionIdentifier](globalState, payload);
-    globalState = { ...globalState, ...newState };
+
+    globalState = { ...globalState, operand1: newState };
+
+    console.log('globalState is:', globalState);
 
     for (const listener of listeners) {
       listener(globalState);

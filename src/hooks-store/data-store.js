@@ -1,14 +1,24 @@
-import { initStore } from "./store";
+import { initStore } from './store';
 
-const configureStore = () => {
-    const actions = {
-        BUILD_INTEGER: (curState, curInteger) => {
-            // logic
-            const updatedInteger = // ?
-            // logic
-            return { currentInteger: updatedInteger }
-        }
+export const configureDataStore = () => {
+  const actions = {
+    BUILD_OPERAND: (curState, newDigit) => {
+      //   console.log('Dispatch Triggered');
+      //   console.log(`${curState.operand1}`);
+      //   console.log(`${newDigit}`);
 
-    }
-    initStore(actions, );
+      // logic
+      const updatedOperand = `${curState.operand1}`.concat(`${newDigit}`);
+      // logic
+
+      return updatedOperand;
+    },
+  };
+  initStore(actions, {
+    operand1: '0',
+    operand2: '',
+    operator: '',
+    previousOperator: '',
+    total: '',
+  });
 };

@@ -2,6 +2,8 @@ import { Grid, makeStyles, Typography } from '@material-ui/core';
 import { grey, red } from '@material-ui/core/colors';
 import React from 'react';
 
+import { useStore } from '../hooks-store/store';
+
 const useStyles = makeStyles((theme) => ({
   grid: {
     display: 'flex',
@@ -21,11 +23,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const EquasionResultOutput = () => {
+  const state = useStore()[0];
+
   const classes = useStyles();
   return (
     <Grid item xs={12} className={classes.grid}>
       <Typography variant="h1" align="right" className={classes.typography}>
-        12
+        {`${state.operand1}`}
       </Typography>
     </Grid>
   );

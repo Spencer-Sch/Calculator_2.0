@@ -1,6 +1,8 @@
 import { Button, Grid, makeStyles, Paper, Typography } from '@material-ui/core';
 import React from 'react';
 
+import { useStore } from '../hooks-store/store';
+
 const useStyles = makeStyles((theme) => ({
   buttonStyles: {
     minWidth: '100%',
@@ -14,12 +16,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const getValue = (event) => {
-  console.log(event.target.closest('button').value);
-};
-
 const CalculatorButton = (props) => {
   const classes = useStyles();
+
+  const dispatch = useStore()[1];
+
+  const getValue = (event) => {
+    dispatch('BUILD_OPERAND', event.target.closest('button').value);
+    // console.log(event.target.closest('button').value);
+  };
 
   return (
     <Grid item xs={3}>
