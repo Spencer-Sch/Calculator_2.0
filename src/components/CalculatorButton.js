@@ -21,9 +21,57 @@ const CalculatorButton = (props) => {
 
   const dispatch = useStore()[1];
 
-  const getValue = (event) => {
-    dispatch('BUILD_OPERAND', event.target.closest('button').value);
-    // console.log(event.target.closest('button').value);
+  // const dispatchOperand = (event) => {
+  //   dispatch('BUILD_OPERAND', event.target.closest('button').value);
+  // };
+
+  // const dispatchOperator = (event) => {
+  //   dispatch('SEND_OPERATOR', event.target.closest('button').value);
+  // };
+
+  const chooseDispatch = (event) => {
+    const value = event.target.closest('button').value;
+    switch (value) {
+      case '0':
+      case '1':
+      case '2':
+      case '3':
+      case '4':
+      case '5':
+      case '6':
+      case '7':
+      case '8':
+      case '9':
+        dispatch('BUILD_OPERAND', value);
+        break;
+      case '+':
+      case '-':
+      case 'x':
+      case '/':
+        dispatch('SUM_SUB_MULT_DIV', value);
+        break;
+      case '%':
+        dispatch('PERCENT', value);
+        break;
+      case '.':
+        dispatch('DECIMAL', value);
+        break;
+      case '+/-':
+        dispatch('POSITIVE_NEGATIVE', value);
+        break;
+      case '=':
+        dispatch('EQUALS', value);
+        break;
+      case 'CE':
+      case 'C':
+        dispatch('CLEAR_FUNCTIONS', value);
+        break;
+      case '<-':
+        dispatch('BACKSPACE', value);
+        break;
+      default:
+        throw new Error('Error: Value to recognized');
+    }
   };
 
   return (
@@ -35,7 +83,7 @@ const CalculatorButton = (props) => {
           color="primary"
           disabled={props.disable}
           value={props.value}
-          onClick={getValue}
+          onClick={chooseDispatch}
         >
           {props.icon}
         </Button>

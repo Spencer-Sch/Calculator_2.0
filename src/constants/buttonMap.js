@@ -21,7 +21,7 @@ export const buttonMap = [
   { id: 9, icon: '7', value: '7' },
   { id: 10, icon: '8', value: '8' },
   { id: 11, icon: '9', value: '9' },
-  { id: 12, icon: <FontAwesomeIcon icon={faTimes} />, value: '*' },
+  { id: 12, icon: <FontAwesomeIcon icon={faTimes} />, value: 'x' },
   { id: 13, icon: '4', value: '4' },
   { id: 14, icon: '5', value: '5' },
   { id: 15, icon: '6', value: '6' },

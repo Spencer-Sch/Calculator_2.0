@@ -10,7 +10,7 @@ export const useStore = () => {
   const dispatch = (actionIdentifier, payload) => {
     const newState = actions[actionIdentifier](globalState, payload);
 
-    globalState = { ...globalState, operand1: newState };
+    globalState = { ...globalState, ...newState };
 
     console.log('globalState is:', globalState);
 

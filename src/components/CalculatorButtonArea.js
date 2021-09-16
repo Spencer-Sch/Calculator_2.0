@@ -2,7 +2,7 @@ import { Grid, makeStyles } from '@material-ui/core';
 import React from 'react';
 import CalculatorButton from './CalculatorButton';
 
-import { buttonMap } from '../constants/constants.js';
+import { buttonMap } from '../constants/buttonMap.js';
 
 const useStyles = makeStyles({
   buttonAreaStyles: {

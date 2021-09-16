@@ -13,3 +13,13 @@ Day 4
 - Began creating a global data store using custom hooks. Following instructions from React course. To be continued...
 
 - Succeeded in setting up the global data store and transmiting data from 'CalculatorButton' element to the 'EquasionResultOutput' element.
+
+Day 5
+
+- Set up initial store actions to be called.
+
+- Set up switch/case logic in 'CalculatorButton.js' to trigger appropriate dispatch actions when calculator buttons are clicked.
+
+- Succeeded in transfering logic from old calculator for collecting and building 'operandString' on numbered button clicks.
+
+- Began transfer of logic from old calculator for button clicks on +, -, x, /. To be continued...
