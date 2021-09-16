@@ -29,7 +29,7 @@ const EquasionResultOutput = () => {
   return (
     <Grid item xs={12} className={classes.grid}>
       <Typography variant="h1" align="right" className={classes.typography}>
-        {`${state.operandString}`}
+        {state.operandString && `${state.operandString}`}
       </Typography>
     </Grid>
   );

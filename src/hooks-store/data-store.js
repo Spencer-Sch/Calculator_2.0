@@ -1,4 +1,5 @@
 import buildOperand from '../constants/buildOperandLogic';
+import sumSubMultDiv from '../constants/sumSubMultDivLogic';
 import { initStore } from './store';
 
 export const configureDataStore = () => {
@@ -15,6 +16,8 @@ export const configureDataStore = () => {
       console.log('SUM_SUB_MULT_DIV Triggered');
       console.log(`${operator}`);
 
+      const updatedState = sumSubMultDiv(curState, operator);
+      return updatedState;
       // break sumSubMultDivLogic.js into multiple functions.
       // do sorting logic here and then trigger the correct functions?
     },
@@ -52,12 +55,12 @@ export const configureDataStore = () => {
 
   initStore(actions, {
     operandString: '0',
-    operand1: '',
-    operand2: '',
-    operator: '',
-    previousOperator: '',
+    operand1: null,
+    operand2: null,
+    operator: null,
+    previousOperator: null,
     equasionResult: 0,
-    operatorIsOn: false,
+    sumSubMultDivIsOn: false,
     equalsIsOn: false,
     decimalIsOn: false,
     percentIsOn: false,

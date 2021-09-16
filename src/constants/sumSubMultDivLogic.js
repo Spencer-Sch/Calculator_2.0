@@ -1,45 +1,51 @@
-const chooseOperator = (curState, operator) => {
-  this.decimalIsOn = false;
-  if (this.equalsIsOn) {
-    this.equalsIsOn = false;
-    this.percentIsOn = false;
-    this.equasionArr.pop();
-    this.equasionArr[0] = this.equasionResult;
-    this.equasionArr[1] = op;
-    this.equasionOutput.textContent = Output.renderEquasion(this.equasionArr);
+const sumSubMultDiv = (curState, operator) => {
+  // console.log(curState);
+
+  let queuedStateUpdates = {};
+
+  if (curState.equalsIsOn) {
+    /////////////////////////////////////////////////////
+    // logic yet to be transfered
+    /////////////////////////////////////////////////////
   }
-  if (!this.sumSubMultDivIsOn) {
-    this.sumSubMultDivIsOn = true;
-    if (this.equasionArr.length === 0) {
-      this.equasionArr.push(this.operandStr);
-      this.operandStr = '0';
-      this.equasionArr.push(op);
-      this.equasionOutput.textContent = Output.renderEquasion(this.equasionArr);
-    } else if (this.equasionArr.length === 2) {
-      this.equasionArr.push(this.operandStr);
-      this.operandStr = '0';
-      const arrCopy = [...this.equasionArr];
-      this.calculate(arrCopy, op, false);
-    } else if (this.equasionArr.length === 3) {
-      this.equasionArr = [];
-      this.equasionArr.push(this.operandStr);
-      this.operandStr = '0';
-      this.equasionArr.push(op);
-      this.equasionOutput.textContent = Output.renderEquasion(this.equasionArr);
+  if (!curState.sumSubMultDivIsOn) {
+    queuedStateUpdates = { ...queuedStateUpdates, sumSubMultDivIsOn: true };
+    if (curState.operand1 === null) {
+      queuedStateUpdates = {
+        ...queuedStateUpdates,
+        operand1: curState.operandString,
+        // operandString: '0',
+        operator: operator,
+      };
+    } else if (curState.operand1 && curState.operator) {
+      queuedStateUpdates = {
+        ...queuedStateUpdates,
+        operand2: curState.operandString,
+        // operandString: '0',
+        /////////////////////////////////////////////////////
+        // NEXT: make new file for 'calculate' method from old calculator
+        // transfer and convert logic
+      };
+      // How do I allow global state to be updated before calling calculate?
+      // call calculate here
+      // calculate(operator, false);
+      /////////////////////////////////////////////////////
+    } else if {
+      /////////////////////////////////////////////////////
+      // logic yet to be transfered
+      /////////////////////////////////////////////////////
     }
   } else {
-    this.equasionArr[1] = op;
-    this.equasionOutput.textContent = Output.renderEquasion(this.equasionArr);
+    /////////////////////////////////////////////////////
+    // logic yet to be transfered
+    /////////////////////////////////////////////////////
   }
 
   const stateUpdates = {
-    ...curState,
-    operandString: `${curState.operandString}`.concat(`${newDigit}`),
-    equalsIsOn: false,
-    operatorIsOn: false,
-    percentIsOn: false,
+    ...queuedStateUpdates,
+    decimalIsOn: false,
   };
   return stateUpdates;
 };
 
-export default chooseOperator;
+export default sumSubMultDiv;
