@@ -25,3 +25,17 @@ Day 5
 - Began transfer of logic from old calculator for button clicks on +, -, x, /. To be continued...
 
 - Succeeded in transfering part of the logic from 'sumSubMultDiv' in old calculator. To be continued...
+
+Day 6
+
+- Succeeded in transferring logic from 'sumSubMultDiv'.
+
+- Succeeded in transferring logic from 'calculate'.
+
+- Implemented useEffect() in the 'EquasionResultOutput' component in order to trigger the calculate logic when needed.
+
+- Conditionally applied font size to the output of 'EquasionResultOutput' component in order to keep large numbers from going outside the appropriate borders.
+
+- Added logic to 'EquasionResultOutput' and 'EquasionOutput' components so they display the appropriate information at the correct time.
+
+- ISSUE TO FIX: subsequent presses of the '-' button while chaining operator button equations results in the '-' symbol appearing in front of operand1.

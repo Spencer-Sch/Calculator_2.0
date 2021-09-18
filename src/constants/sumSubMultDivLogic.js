@@ -10,35 +10,39 @@ const sumSubMultDiv = (curState, operator) => {
   }
   if (!curState.sumSubMultDivIsOn) {
     queuedStateUpdates = { ...queuedStateUpdates, sumSubMultDivIsOn: true };
-    if (curState.operand1 === null) {
+    if (curState.operand1 && curState.operator && curState.operand2) {
+      console.log('BREAK POINT 1');
       queuedStateUpdates = {
         ...queuedStateUpdates,
-        operand1: curState.operandString,
-        // operandString: '0',
+        operandString: '',
+        operand1: curState.equasionResult,
+        operand2: null,
         operator: operator,
+        equasionResult: null,
       };
     } else if (curState.operand1 && curState.operator) {
+      console.log('BREAK POINT 2');
       queuedStateUpdates = {
         ...queuedStateUpdates,
         operand2: curState.operandString,
-        // operandString: '0',
-        /////////////////////////////////////////////////////
-        // NEXT: make new file for 'calculate' method from old calculator
-        // transfer and convert logic
+        operandString: '',
+        nextOperator: operator,
+        runCalculate: true,
       };
-      // How do I allow global state to be updated before calling calculate?
-      // call calculate here
-      // calculate(operator, false);
-      /////////////////////////////////////////////////////
-    } else if {
-      /////////////////////////////////////////////////////
-      // logic yet to be transfered
-      /////////////////////////////////////////////////////
+    } else if (curState.operand1 === null) {
+      console.log('BREAK POINT 3');
+      queuedStateUpdates = {
+        ...queuedStateUpdates,
+        operand1: curState.operandString,
+        operandString: '',
+        operator: operator,
+      };
     }
   } else {
-    /////////////////////////////////////////////////////
-    // logic yet to be transfered
-    /////////////////////////////////////////////////////
+    queuedStateUpdates = {
+      ...queuedStateUpdates,
+      operator: operator,
+    };
   }
 
   const stateUpdates = {

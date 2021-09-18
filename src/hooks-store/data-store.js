@@ -1,4 +1,5 @@
 import buildOperand from '../constants/buildOperandLogic';
+import calculate from '../constants/calculateLogic';
 import sumSubMultDiv from '../constants/sumSubMultDivLogic';
 import { initStore } from './store';
 
@@ -51,6 +52,11 @@ export const configureDataStore = () => {
       console.log('BACKSPACE Triggered');
       console.log(`${value}`);
     },
+
+    CALCULATE: (curState) => {
+      const updatedState = calculate(curState);
+      return updatedState;
+    },
   };
 
   initStore(actions, {
@@ -59,11 +65,14 @@ export const configureDataStore = () => {
     operand2: null,
     operator: null,
     previousOperator: null,
-    equasionResult: 0,
+    nextOperator: null,
+    equasionResult: null,
     sumSubMultDivIsOn: false,
     equalsIsOn: false,
     decimalIsOn: false,
     percentIsOn: false,
     currentPercent: null,
+    runCalculate: false,
+    cameFromEquals: false,
   });
 };

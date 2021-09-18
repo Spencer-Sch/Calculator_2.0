@@ -1,7 +1,6 @@
 import { Grid, makeStyles, Typography } from '@material-ui/core';
 import { grey, red } from '@material-ui/core/colors';
-import React from 'react';
-
+import React, { useEffect } from 'react';
 import { useStore } from '../hooks-store/store';
 
 const useStyles = makeStyles((theme) => ({
@@ -22,17 +21,36 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const EquasionResultOutput = () => {
+const EquationOutput = () => {
   const state = useStore()[0];
-
   const classes = useStyles();
+
+  let renderThis;
+
+  if (state.equasionResult) {
+    if (state.cameFromEquals) {
+      renderThis = `${state.operand1} ${state.operator} ${state.operand2}`;
+    } else {
+      renderThis = `${state.operand1} ${state.operator}`;
+    }
+    // if (state.equasionResult.length > 14) {
+    //   typographyClass = classes.typographySmall;
+    // }
+  } else if (state.operand2) {
+    renderThis = `${state.operand1} ${state.operator} ${state.operand2}`;
+  } else if (state.operator) {
+    renderThis = `${state.operand1} ${state.operator}`;
+  } else if (state.operand1) {
+    renderThis = `${state.operand1}`;
+  }
+
   return (
     <Grid item xs={12} className={classes.grid}>
-      <Typography variant="h1" align="right" className={classes.typography}>
-        {state.operandString && `${state.operandString}`}
+      <Typography variant="h3" className={classes.typography}>
+        {renderThis}
       </Typography>
     </Grid>
   );
 };
 
-export default EquasionResultOutput;
+export default EquationOutput;

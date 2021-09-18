@@ -1,7 +1,7 @@
 import { Grid, makeStyles } from '@material-ui/core';
 import React from 'react';
-import EquasionOutput from './EquasionOutput';
-import EquasionResultOutput from './EquasionResultOutput';
+import EquationOutput from './EquationOutput';
+import EquationResultOutput from './EquationResultOutput';
 
 const useStyles = makeStyles({
   grid: {
@@ -9,14 +9,14 @@ const useStyles = makeStyles({
   },
 });
 
-const EquasionArea = () => {
+const EquationArea = () => {
   const classes = useStyles();
   return (
     <Grid container item xs={12} className={classes.grid}>
-      <EquasionOutput />
-      <EquasionResultOutput />
+      <EquationOutput />
+      <EquationResultOutput />
     </Grid>
   );
 };
 
-export default EquasionArea;
+export default EquationArea;
