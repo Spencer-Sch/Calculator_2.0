@@ -39,3 +39,7 @@ Day 6
 - Added logic to 'EquasionResultOutput' and 'EquasionOutput' components so they display the appropriate information at the correct time.
 
 - ISSUE TO FIX: subsequent presses of the '-' button while chaining operator button equations results in the '-' symbol appearing in front of operand1.
+
+Day 7
+
+- Began experimenting with tests.
