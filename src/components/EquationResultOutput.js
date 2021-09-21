@@ -39,7 +39,7 @@ const EquationResultOutput = () => {
     if (state.runCalculate) {
       dispatch('CALCULATE');
     }
-  }, [state, dispatch]);
+  }, [state.runCalculate, dispatch]);
 
   let renderThis;
   let typographyClass = classes.typographyBig;

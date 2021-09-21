@@ -11,6 +11,7 @@ const sumSubMultDiv = (curState, operator) => {
   if (!curState.sumSubMultDivIsOn) {
     queuedStateUpdates = { ...queuedStateUpdates, sumSubMultDivIsOn: true };
     if (curState.operand1 && curState.operator && curState.operand2) {
+      // Is this state ever true?
       console.log('BREAK POINT 1');
       queuedStateUpdates = {
         ...queuedStateUpdates,

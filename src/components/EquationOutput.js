@@ -25,6 +25,7 @@ const EquationOutput = () => {
   const state = useStore()[0];
   const classes = useStyles();
 
+  useEffect(() => {}, []);
   let renderThis;
 
   if (state.equasionResult) {

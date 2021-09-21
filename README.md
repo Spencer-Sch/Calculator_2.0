@@ -43,3 +43,7 @@ Day 6
 Day 7
 
 - Began experimenting with tests.
+
+Day 8
+
+- Added more tests for 'buildOperand' and 'sumSubMultDiv'
