@@ -47,3 +47,5 @@ Day 7
 Day 8
 
 - Added more tests for 'buildOperand' and 'sumSubMultDiv'
+
+- Fixed issue with 'EquasionOutput' text flashing inbetween state renders when 'Calculate' was activated. Added a useTimeout() to delay the state evaluation.

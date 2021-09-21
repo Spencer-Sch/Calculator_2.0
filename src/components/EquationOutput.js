@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'flex-end',
     padding: 0,
+    minHeight: '4rem',
     marginBottom: 16,
     backgroundColor: grey[500],
     borderRadius: theme.shape.borderRadius,
@@ -25,15 +26,17 @@ const EquationOutput = () => {
   const state = useStore()[0];
   const classes = useStyles();
 
-  useEffect(() => {}, []);
   let renderThis;
 
-  if (state.equasionResult) {
-    if (state.cameFromEquals) {
-      renderThis = `${state.operand1} ${state.operator} ${state.operand2}`;
-    } else {
-      renderThis = `${state.operand1} ${state.operator}`;
-    }
+  // if (state.equasionResult) {
+  if (state.runCalculate) {
+    setTimeout(() => {
+      if (state.cameFromEquals) {
+        renderThis = `${state.operand1} ${state.operator} ${state.operand2}`;
+      } else {
+        renderThis = `${state.operand1} ${state.operator}`;
+      }
+    }, 80);
     // if (state.equasionResult.length > 14) {
     //   typographyClass = classes.typographySmall;
     // }
