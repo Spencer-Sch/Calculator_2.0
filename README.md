@@ -49,3 +49,5 @@ Day 8
 - Added more tests for 'buildOperand' and 'sumSubMultDiv'
 
 - Fixed issue with 'EquasionOutput' text flashing inbetween state renders when 'Calculate' was activated. Added a useTimeout() to delay the state evaluation.
+
+- Began setting up files and test files for equalsLogic, equalsHelperLogic. Going to attempt to build out equals and equalsHelper while using TDD. To be continued...

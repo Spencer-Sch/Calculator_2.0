@@ -60,7 +60,7 @@ const CalculatorButton = (props) => {
         dispatch('POSITIVE_NEGATIVE', value);
         break;
       case '=':
-        dispatch('EQUALS', value);
+        dispatch('EQUALS');
         break;
       case 'CE':
       case 'C':

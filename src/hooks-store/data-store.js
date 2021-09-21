@@ -1,6 +1,7 @@
 import buildOperand from '../constants/buildOperandLogic';
 import calculate from '../constants/calculateLogic';
 import sumSubMultDiv from '../constants/sumSubMultDivLogic';
+import equals from '../constants/equalsLogic';
 import { initStore } from './store';
 
 export const configureDataStore = () => {
@@ -38,9 +39,11 @@ export const configureDataStore = () => {
       console.log(`${value}`);
     },
 
-    EQUALS: (curState, value) => {
+    EQUALS: (curState) => {
       console.log('EQUALS Triggered');
-      console.log(`${value}`);
+
+      const updatedState = equals(curState);
+      return updatedState;
     },
 
     CLEAR_FUNCTIONS: (curState, value) => {
