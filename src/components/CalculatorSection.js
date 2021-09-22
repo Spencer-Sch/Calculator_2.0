@@ -4,7 +4,9 @@ import CalculatorButtonArea from './CalculatorButtonArea';
 import EquationArea from './EquationArea';
 
 const useStyles = makeStyles({
-  grid: {},
+  grid: {
+    justifyContent: 'center',
+  },
 });
 
 const CalculatorSection = () => {
