@@ -54,4 +54,6 @@ Day 8
 
 Day 9
 
+Update #1
+
 - Divided the CalculatorButton component up into four more specific components (MiscButton, DisabledButton, NumberButton, OperatorButton) in order to keep each component/logic bundle more concise.
