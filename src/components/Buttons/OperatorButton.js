@@ -1,4 +1,4 @@
-import { Button, Grid, makeStyles, Paper, Typography } from '@material-ui/core';
+import { Button, Grid, makeStyles, Paper } from '@material-ui/core';
 import React from 'react';
 
 import { useStore } from '../../hooks-store/store';
@@ -20,10 +20,6 @@ const OperatorButton = (props) => {
   const classes = useStyles();
 
   const dispatch = useStore()[1];
-
-  // const printButtonType = () => {
-  //   console.log('Operator button');
-  // };
 
   const sendDispatch = (event) => {
     const value = event.target.closest('button').value;

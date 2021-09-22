@@ -1,7 +1,5 @@
-import { Button, Grid, makeStyles, Paper, Typography } from '@material-ui/core';
+import { Button, Grid, makeStyles, Paper } from '@material-ui/core';
 import React from 'react';
-
-import { useStore } from '../../hooks-store/store';
 
 const useStyles = makeStyles((theme) => ({
   buttonStyles: {
@@ -19,18 +17,13 @@ const useStyles = makeStyles((theme) => ({
 const DisabledButton = (props) => {
   const classes = useStyles();
 
-  const dispatch = useStore()[1];
-
-  //   const printButtonType = () => {
-  //     console.log('Disabled button');
-  //   };
-
   return (
     <Grid item xs={3}>
       <Paper className={classes.paper}>
-        <Button className={classes.buttonStyles} disabled={props.disable}>
-          {props.icon}
-        </Button>
+        <Button
+          className={classes.buttonStyles}
+          disabled={props.disable}
+        ></Button>
       </Paper>
     </Grid>
   );

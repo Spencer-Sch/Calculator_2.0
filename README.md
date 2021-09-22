@@ -57,3 +57,9 @@ Day 9
 Update #1
 
 - Divided the CalculatorButton component up into four more specific components (MiscButton, DisabledButton, NumberButton, OperatorButton) in order to keep each component/logic bundle more concise.
+
+Update #2
+
+- Succeeded in transferring logic from 'equalsHelper' while using TDD.
+
+- Began transferring logic from 'equals' while using TDD. So far all has been successful. To be continued...

@@ -1,7 +1,46 @@
 import equalsHelper from './equalsHelperLogic';
 
 const equals = (curState) => {
-  console.log("WE'RE HERE IN EQUALS LOGIC!");
+  const OPERAND1 = curState.operand1;
+  const OPERAND2 = curState.operand2;
+  const OPERATOR = curState.operator;
+  const OPERAND_STRING = curState.operandString;
+  const SUM_SUB_MULT_DIV = curState.sumSubMultDivIsOn;
+  const EQUALS_IS_ON = curState.equalsIsOn;
+
+  let queuedStateUpdates = {};
+
+  if (!OPERAND1 && !OPERAND2 && !OPERATOR) {
+    const equalsHelperUpdates = equalsHelper(curState, 0);
+    queuedStateUpdates = {
+      ...equalsHelperUpdates,
+      operand1: OPERAND_STRING,
+      operator: '=',
+      operand2: OPERAND_STRING,
+    };
+    return queuedStateUpdates;
+  }
+
+  if (OPERAND1 && OPERATOR && SUM_SUB_MULT_DIV) {
+    const equalsHelperUpdates = equalsHelper(curState, 1);
+
+    queuedStateUpdates = {
+      ...equalsHelperUpdates,
+      operand2: OPERAND1,
+    };
+    return queuedStateUpdates;
+  }
+
+  if (OPERAND1 && OPERATOR && !EQUALS_IS_ON) {
+    const equalsHelperUpdates = equalsHelper(curState, 1);
+
+    queuedStateUpdates = {
+      ...equalsHelperUpdates,
+      operand2: OPERAND_STRING,
+    };
+    console.log('EXTRA PRINTED STATE:', queuedStateUpdates);
+    return queuedStateUpdates;
+  }
 };
 
 export default equals;

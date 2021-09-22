@@ -7,10 +7,7 @@ import OperatorButton from './Buttons/OperatorButton';
 import NumberButton from './Buttons/NumberButton';
 import DisabledButton from './Buttons/DisabledButton';
 
-const useStyles = makeStyles({
-  grid: {},
-  buttonAreaStyles: {},
-});
+// const useStyles = makeStyles({});
 
 const CalculatorButtonArea = () => {
   const createButtons = buttonMap.map((button) => {
@@ -35,10 +32,10 @@ const CalculatorButtonArea = () => {
     }
   });
 
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
-    <Grid container item spacing={1} xs={12} className={classes.grid}>
+    <Grid container item spacing={1} xs={12}>
       {createButtons}
     </Grid>
   );

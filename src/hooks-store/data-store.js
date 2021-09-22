@@ -20,8 +20,6 @@ export const configureDataStore = () => {
 
       const updatedState = sumSubMultDiv(curState, operator);
       return updatedState;
-      // break sumSubMultDivLogic.js into multiple functions.
-      // do sorting logic here and then trigger the correct functions?
     },
 
     PERCENT: (curState, value) => {
