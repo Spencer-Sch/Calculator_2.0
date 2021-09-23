@@ -1,14 +1,18 @@
 const buildOperand = (curState, newDigit) => {
-  let operandString = curState.operandString;
+  const OPERAND_STRING = curState.operandString;
+  const EQUALS_IS_ON = curState.equalsIsOn;
+  const EQUASION_RESULT = curState.equasionResult;
+
+  let operandString = OPERAND_STRING;
   let updateEquasionResult = {};
   if (operandString.length < 14) {
-    if (curState.equalsIsOn) {
+    if (EQUALS_IS_ON) {
       operandString = '0';
     }
     if (operandString === '0') {
       operandString = '';
     }
-    if (curState.equasionResult) {
+    if (EQUASION_RESULT) {
       updateEquasionResult = { equasionResult: null };
     }
     const stateUpdates = {

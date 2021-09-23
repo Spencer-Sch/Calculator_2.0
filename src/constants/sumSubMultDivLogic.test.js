@@ -1,6 +1,6 @@
 import sumSubMultDiv from './sumSubMultDivLogic';
 
-test('if button combo is "+" sumSubMultDiv should put "0" into state.operand1, "+" into state.operator, and "true" into state.sumSubMultDivIsOn', () => {
+test('if button combo is "+" sumSubMultDiv should put "0" into operand1, "+" into operator, and "true" into sumSubMultDivIsOn', () => {
   const testState = {
     operandString: '0',
     operand1: null,
@@ -34,7 +34,7 @@ test('if button combo is "+" sumSubMultDiv should put "0" into state.operand1, "
   });
 });
 
-test('if button combo is "1 +" sumSubMultDiv should put "1" into state.operand1, "+" into state.operator, and "true" into state.sumSubMultDivIsOn', () => {
+test('if button combo is "1 +" sumSubMultDiv should put "1" into operand1, "+" into operator, and "true" into sumSubMultDivIsOn', () => {
   const testState = {
     operandString: '1',
     operand1: null,
@@ -68,7 +68,7 @@ test('if button combo is "1 +" sumSubMultDiv should put "1" into state.operand1,
   });
 });
 
-test('if button combo is "1 + -" sumSubMultDiv should replace state.operator "+" with "-"', () => {
+test('if button combo is "1 + -" sumSubMultDiv should replace operator "+" with "-"', () => {
   const testState = {
     operandString: '',
     operand1: '1',
@@ -102,7 +102,7 @@ test('if button combo is "1 + -" sumSubMultDiv should replace state.operator "+"
   });
 });
 
-test('if button combo is "1 - x" sumSubMultDiv should replace state.operator "-" with "x"', () => {
+test('if button combo is "1 - x" sumSubMultDiv should replace operator "-" with "x"', () => {
   const testState = {
     operandString: '',
     operand1: '1',
@@ -136,7 +136,7 @@ test('if button combo is "1 - x" sumSubMultDiv should replace state.operator "-"
   });
 });
 
-test('if button combo is "1 x /" sumSubMultDiv should replace state.operator "x" with "/"', () => {
+test('if button combo is "1 x /" sumSubMultDiv should replace operator "x" with "/"', () => {
   const testState = {
     operandString: '',
     operand1: '1',
@@ -170,7 +170,7 @@ test('if button combo is "1 x /" sumSubMultDiv should replace state.operator "x"
   });
 });
 
-test('if button combo is "1 + 2 -" sumSubMultDiv should put "true" into state.sumSubMultDivIsOn, "2" into state.operand2, "" into state.operandString, "-" into state.nextOperator, and "true" into state.runCalculate', () => {
+test('if button combo is "1 + 2 -" sumSubMultDiv should put "true" into sumSubMultDivIsOn, "2" into operand2, "" into operandString, "-" into nextOperator, and "true" into runCalculate', () => {
   const testState = {
     operandString: '2',
     operand1: '1',

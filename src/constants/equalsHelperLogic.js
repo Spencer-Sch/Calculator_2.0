@@ -1,4 +1,6 @@
 const equalsHelper = (curState, key) => {
+  const OPERATOR = curState.operator;
+
   let queuedStateUpdates = {};
 
   if (key === 0) {
@@ -7,7 +9,7 @@ const equalsHelper = (curState, key) => {
     };
   } else if (key === 1) {
     queuedStateUpdates = {
-      nextOperator: curState.operator,
+      nextOperator: OPERATOR,
     };
   }
   queuedStateUpdates = {

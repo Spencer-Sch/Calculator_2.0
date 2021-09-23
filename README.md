@@ -71,3 +71,7 @@ Update #1
 - Succeeded in completing the transfer of logic from 'equals' while using TDD. All tests are passing successfully.
 
 - removed previousOperator field from global state object because it is not used.
+
+Update #2
+
+- Replaced each occurance of 'curState.propertyName' in all logic files with constants

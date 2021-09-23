@@ -1,37 +1,40 @@
 const calculate = (curState) => {
   console.log('Calculate Equasion!');
-  const operand1 = +curState.operand1;
-  const operand2 = +curState.operand2;
-  const operator = curState.operator;
+
+  const CAME_FROM_EQUALS = curState.cameFromEquals;
+  const NEXT_OPERATOR = curState.nextOperator;
+  const OPERAND1 = +curState.operand1;
+  const OPERAND2 = +curState.operand2;
+  const OPERATOR = curState.operator;
 
   let equasionResult;
 
-  if (operator === '/' && operand2 === +'0') {
+  if (OPERATOR === '/' && OPERAND2 === 0) {
     console.log("Can't divide by zero!");
     //   divByZeroHandler();
   } else {
-    if (operator === '+') {
-      equasionResult = operand1 + operand2;
+    if (OPERATOR === '+') {
+      equasionResult = OPERAND1 + OPERAND2;
     }
-    if (operator === '-') {
-      equasionResult = operand1 - operand2;
+    if (OPERATOR === '-') {
+      equasionResult = OPERAND1 - OPERAND2;
     }
-    if (operator === 'x') {
-      equasionResult = operand1 * operand2;
+    if (OPERATOR === 'x') {
+      equasionResult = OPERAND1 * OPERAND2;
     }
-    if (operator === '/') {
-      equasionResult = operand1 / operand2;
+    if (OPERATOR === '/') {
+      equasionResult = OPERAND1 / OPERAND2;
     }
-    if (operator === '=') {
-      equasionResult = operand1;
+    if (OPERATOR === '=') {
+      equasionResult = OPERAND1;
     }
   }
-  if (!curState.cameFromEquals) {
+  if (!CAME_FROM_EQUALS) {
     return {
       equasionResult: `${equasionResult}`,
       operand1: `${equasionResult}`,
       operand2: null,
-      operator: curState.nextOperator,
+      operator: NEXT_OPERATOR,
       runCalculate: false,
     };
   } else {
