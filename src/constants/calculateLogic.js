@@ -35,7 +35,11 @@ const calculate = (curState) => {
       runCalculate: false,
     };
   } else {
-    return { equasionResult: `${equasionResult}`, runCalculate: false };
+    return {
+      equasionResult: `${equasionResult}`,
+      runCalculate: false,
+      cameFromEquals: false,
+    };
   }
 };
 

@@ -65,7 +65,6 @@ export const configureDataStore = () => {
     operand1: null,
     operand2: null,
     operator: null,
-    previousOperator: null,
     nextOperator: null,
     equasionResult: null,
     sumSubMultDivIsOn: false,

@@ -63,3 +63,11 @@ Update #2
 - Succeeded in transferring logic from 'equalsHelper' while using TDD.
 
 - Began transferring logic from 'equals' while using TDD. So far all has been successful. To be continued...
+
+Day 10
+
+Update #1
+
+- Succeeded in completing the transfer of logic from 'equals' while using TDD. All tests are passing successfully.
+
+- removed previousOperator field from global state object because it is not used.
