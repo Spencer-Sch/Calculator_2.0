@@ -10,15 +10,21 @@ const sumSubMultDiv = (curState, operator) => {
   let queuedStateUpdates = {};
 
   if (EQUALS_IS_ON) {
-    /////////////////////////////////////////////////////
-    // logic yet to be transfered
-    /////////////////////////////////////////////////////
+    console.log('sumSubMultDiv Checkpoint 0.5');
+    queuedStateUpdates = {
+      ...queuedStateUpdates,
+      operand1: EQUASION_RESULT,
+      operand2: null,
+      operator: operator,
+      equalsIsOn: false,
+      percentIsOn: false,
+    };
   }
   if (!SUM_SUB_MULT_DIV_IS_ON) {
     queuedStateUpdates = { ...queuedStateUpdates, sumSubMultDivIsOn: true };
     if (OPERAND1 && OPERATOR && OPERAND2) {
       // Is this state ever true?
-      console.log('BREAK POINT 1');
+      console.log('sumSubMultDiv Checkpoint 1');
       queuedStateUpdates = {
         ...queuedStateUpdates,
         operandString: '',
@@ -28,7 +34,7 @@ const sumSubMultDiv = (curState, operator) => {
         equasionResult: null,
       };
     } else if (OPERAND1 && OPERATOR) {
-      console.log('BREAK POINT 2');
+      console.log('sumSubMultDiv Checkpoint 2');
       queuedStateUpdates = {
         ...queuedStateUpdates,
         operand2: OPERAND_STRING,
@@ -37,7 +43,7 @@ const sumSubMultDiv = (curState, operator) => {
         runCalculate: true,
       };
     } else if (OPERAND1 === null) {
-      console.log('BREAK POINT 3');
+      console.log('sumSubMultDiv Checkpoint 3');
       queuedStateUpdates = {
         ...queuedStateUpdates,
         operand1: OPERAND_STRING,

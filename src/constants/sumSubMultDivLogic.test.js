@@ -1,6 +1,40 @@
 import sumSubMultDiv from './sumSubMultDivLogic';
 
-test('if button combo is "+" sumSubMultDiv should put "0" into operand1, "+" into operator, and "true" into sumSubMultDivIsOn', () => {
+test('IF equalsIsOn is true THEN sumSubMultDiv should make equalsIsOn = false, percentIsOn = false, operand2 = null, operand1 = equasionResult, and state.operator = (passed in) operator (button combo: 1 + 2 = -)', () => {
+  const testState = {
+    operandString: '0',
+    operand1: '1',
+    operand2: '2',
+    operator: '+',
+    nextOperator: '+',
+    equasionResult: '3',
+    sumSubMultDivIsOn: true,
+    equalsIsOn: true,
+    decimalIsOn: false,
+    percentIsOn: false,
+    currentPercent: null,
+    runCalculate: false,
+    cameFromEquals: false,
+  };
+  const returnedState = sumSubMultDiv(testState, '-');
+  expect({ ...testState, ...returnedState }).toEqual({
+    operandString: '0',
+    operand1: '3',
+    operand2: null,
+    operator: '-',
+    nextOperator: '+',
+    equasionResult: '3',
+    sumSubMultDivIsOn: true,
+    equalsIsOn: false,
+    decimalIsOn: false,
+    percentIsOn: false,
+    currentPercent: null,
+    runCalculate: false,
+    cameFromEquals: false,
+  });
+});
+
+test('IF sumSubMultDiv is false THEN sumSubMultDiv should make operand1 = "0", operator = "+", and sumSubMultDivIsOn = "true" (button combo: +)', () => {
   const testState = {
     operandString: '0',
     operand1: null,
@@ -33,7 +67,9 @@ test('if button combo is "+" sumSubMultDiv should put "0" into operand1, "+" int
     cameFromEquals: false,
   });
 });
-
+//////////////////////////////////////////////
+// PICK UP HERE (re-wording test descriptions)
+//////////////////////////////////////////////
 test('if button combo is "1 +" sumSubMultDiv should put "1" into operand1, "+" into operator, and "true" into sumSubMultDivIsOn', () => {
   const testState = {
     operandString: '1',

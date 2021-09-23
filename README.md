@@ -75,3 +75,9 @@ Update #1
 Update #2
 
 - Replaced each occurance of 'curState.propertyName' in all logic files with constants
+
+Update #3
+
+- Succeeded in completing the transfer of logic from 'sumSubMultDiv' while using TDD. All tests are passing successfully.
+
+- Began re-writing sumSubMultDivLogic.test descriptions to be consistent and more read-able. To Be Continued...
