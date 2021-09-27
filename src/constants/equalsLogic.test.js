@@ -1,7 +1,7 @@
 import equals from './equalsLogic';
 
 //checkpoint 1
-test('if operand1, operand2, & operator are all "null" equals should put operandString into operand1 and operand2, "=" into operator, and also include updates from equalsHelper (button combo: 1 =)', () => {
+test('(button combo: 1 =) IF operand1, operand2, & operator are all "null" THEN equals should make operand1 = operandString, operand2 = operandString,  operator = "=", and also include updates from equalsHelper', () => {
   const testState = {
     operandString: '0',
     operand1: null,
@@ -36,7 +36,7 @@ test('if operand1, operand2, & operator are all "null" equals should put operand
 });
 
 // checkpoint 2
-test('if operand1, operator, & operand2 are truthy AND operandString !== "0" THEN equals should put operandString into operand1 and also include updates from equalsHelper (button combo: 1 + 2 = 3)', () => {
+test('(button combo: 1 + 2 = 3) IF operand1, operator, & operand2 are truthy AND operandString !== "0" THEN equals should make operand1 = operandString and also include updates from equalsHelper', () => {
   const testState = {
     operandString: '3',
     operand1: '1',
@@ -71,7 +71,7 @@ test('if operand1, operator, & operand2 are truthy AND operandString !== "0" THE
 });
 
 // checkpoint 3
-test('if operand1, operator, & operand2 are truthy THEN equals should put equasionResult into operand1, and also include updates from equalsHelper (button combo: 1 + 2 = =', () => {
+test('(button combo: 1 + 2 = =) IF operand1, operator, & operand2 are truthy THEN equals should make operand1 = equasionResult, and also include updates from equalsHelper', () => {
   const testState = {
     operandString: '0',
     operand1: '1',
@@ -106,7 +106,7 @@ test('if operand1, operator, & operand2 are truthy THEN equals should put equasi
 });
 
 // checkpoint 4
-test('if operand1 & operator are truthy AND sumSubMultDivIsOn is true THEN equals should put operand1 into operand2, and also include updates from equalsHelper (button combo: 1 + =)', () => {
+test('(button combo: 1 + =) IF operand1 & operator are truthy AND sumSubMultDivIsOn = true THEN equals should make operand2 = operand1, and also include updates from equalsHelper', () => {
   const testState = {
     operandString: '',
     operand1: '1',
@@ -141,7 +141,7 @@ test('if operand1 & operator are truthy AND sumSubMultDivIsOn is true THEN equal
 });
 
 // checkpoint 5
-test('if operand1 & operator are truthy AND equalsIsOn is false THEN equals should put operandString into operand2, and also include updates from equalsHelper (button combo: 1 + 2 =)', () => {
+test('(button combo: 1 + 2 =) IF operand1 & operator are truthy AND equalsIsOn = false THEN equals should make operand2 = operandString, and also include updates from equalsHelper', () => {
   const testState = {
     operandString: '2',
     operand1: '1',

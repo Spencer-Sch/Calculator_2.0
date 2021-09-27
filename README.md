@@ -89,3 +89,9 @@ Update #1
 - Finished re-writing sumSubMultDivLogic.test desciptions.
 
 - Messing around with Theme and styling to change button colors. Still needs work.
+
+Update #2
+
+- Finished re-writing equalsHelperLogic.test desciptions.
+- Finished re-writing equalsLogic.test desciptions.
+- Finished re-writing buildOperandLogic.test desciptions.

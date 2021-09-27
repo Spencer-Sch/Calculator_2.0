@@ -1,6 +1,6 @@
 import equalsHelper from './equalsHelperLogic';
 
-test('If "key" is "0" equalsHelper should put "=" into nextOperator, set operandString to "0", set decimalIsOn to false, set equalsIsOn to true, set sumSubMultDivIsOn to true, set cameFromEquals to true, set percentIsOn to false, and set runCalculate to true', () => {
+test('If "key" is "0" equalsHelper should make nextOperator = "=", operandString = "0", decimalIsOn = false, equalsIsOn = true, sumSubMultDivIsOn = true, cameFromEquals = true, percentIsOn = false, and runCalculate = true', () => {
   const testState = {
     operandString: '0',
     operand1: null,
@@ -34,7 +34,7 @@ test('If "key" is "0" equalsHelper should put "=" into nextOperator, set operand
   });
 });
 
-test('If "key" is "1" equalsHelper should put operator into nextOperator, set operandString to "0", set decimalIsOn to false, set equalsIsOn to true, set sumSubMultDivIsOn to true, set cameFromEquals to true, set percentIsOn to false, and set runCalculate to true', () => {
+test('If "key" is "1" equalsHelper should make nextOperator = operator, operandString = "0", decimalIsOn = false, equalsIsOn = true, sumSubMultDivIsOn = true, cameFromEquals = true, percentIsOn = false, and runCalculate = true', () => {
   const testState = {
     operandString: '0',
     operand1: null,

@@ -1,6 +1,6 @@
 import buildOperand from './buildOperandLogic';
 
-test('if button combo is "1" buildOperand should put "1" into state.operandString', () => {
+test('(button combo: 1) buildOperand should make operandString = "1"', () => {
   const testState = {
     operandString: '0',
     operand1: null,
@@ -34,7 +34,7 @@ test('if button combo is "1" buildOperand should put "1" into state.operandStrin
   });
 });
 
-test('if button combo is "1 then 2 then 3" buildOperand should put "123" into state.operandString', () => {
+test('(button combo: 1 2 3) buildOperand should make operandString = "123"', () => {
   const testState = {
     operandString: '0',
     operand1: null,
@@ -71,7 +71,7 @@ test('if button combo is "1 then 2 then 3" buildOperand should put "123" into st
   });
 });
 
-test('if button combo is 14 or more characters long buildOperand should change nothing', () => {
+test('IF button combo is 14 or more characters long buildOperand should change nothing', () => {
   const testState = {
     operandString: '12345678912345',
     operand1: null,
@@ -106,7 +106,7 @@ test('if button combo is 14 or more characters long buildOperand should change n
   });
 });
 
-test('if curState.equasionResult exists when button combo is "3" then curState.equasionResult should be changed to "null', () => {
+test('if equasionResult is truthy when button combo is "3" then equasionResult should be changed to "null', () => {
   const testState = {
     operandString: '',
     operand1: '6',
@@ -141,7 +141,7 @@ test('if curState.equasionResult exists when button combo is "3" then curState.e
   });
 });
 
-test('if button combo is "1 + 2" buildOperand should put "2" into state.operandString', () => {
+test('(button combo: 1 + 2) buildOperand should make operandString = "2"', () => {
   const testState = {
     operandString: '',
     operand1: '1',
