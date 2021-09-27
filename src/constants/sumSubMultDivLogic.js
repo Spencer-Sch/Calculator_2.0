@@ -23,7 +23,9 @@ const sumSubMultDiv = (curState, operator) => {
   if (!SUM_SUB_MULT_DIV_IS_ON) {
     queuedStateUpdates = { ...queuedStateUpdates, sumSubMultDivIsOn: true };
     if (OPERAND1 && OPERATOR && OPERAND2) {
+      /////////////////////////////
       // Is this state ever true?
+      /////////////////////////////
       console.log('sumSubMultDiv Checkpoint 1');
       queuedStateUpdates = {
         ...queuedStateUpdates,

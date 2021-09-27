@@ -81,3 +81,11 @@ Update #3
 - Succeeded in completing the transfer of logic from 'sumSubMultDiv' while using TDD. All tests are passing successfully.
 
 - Began re-writing sumSubMultDivLogic.test descriptions to be consistent and more read-able. To Be Continued...
+
+Day 11
+
+Update #1
+
+- Finished re-writing sumSubMultDivLogic.test desciptions.
+
+- Messing around with Theme and styling to change button colors. Still needs work.

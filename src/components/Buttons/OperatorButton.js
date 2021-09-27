@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '4.5rem',
     fontSize: '2rem',
     fontWeight: 900,
+    // backgroundColor: [theme.palette.primary],
   },
   paper: {
     height: '100%',
@@ -44,7 +45,7 @@ const OperatorButton = (props) => {
         <Button
           className={classes.buttonStyles}
           variant="contained"
-          color="primary"
+          // color="primary"
           value={props.value}
           onClick={sendDispatch}
         >

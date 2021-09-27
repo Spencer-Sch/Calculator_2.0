@@ -7,7 +7,7 @@ import OperatorButton from './Buttons/OperatorButton';
 import NumberButton from './Buttons/NumberButton';
 import DisabledButton from './Buttons/DisabledButton';
 
-// const useStyles = makeStyles({});
+// const useStyles = makeStyles(theme => ({}));
 
 const CalculatorButtonArea = () => {
   const createButtons = buttonMap.map((button) => {

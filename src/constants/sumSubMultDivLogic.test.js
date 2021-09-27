@@ -1,6 +1,6 @@
 import sumSubMultDiv from './sumSubMultDivLogic';
 
-test('IF equalsIsOn is true THEN sumSubMultDiv should make equalsIsOn = false, percentIsOn = false, operand2 = null, operand1 = equasionResult, and state.operator = (passed in) operator (button combo: 1 + 2 = -)', () => {
+test('(button combo: 1 + 2 = -) IF equalsIsOn is true THEN sumSubMultDiv should make equalsIsOn = false, percentIsOn = false, operand2 = null, operand1 = equasionResult, and state.operator = (passed in) operator', () => {
   const testState = {
     operandString: '0',
     operand1: '1',
@@ -34,7 +34,7 @@ test('IF equalsIsOn is true THEN sumSubMultDiv should make equalsIsOn = false, p
   });
 });
 
-test('IF sumSubMultDiv is false THEN sumSubMultDiv should make operand1 = "0", operator = "+", and sumSubMultDivIsOn = "true" (button combo: +)', () => {
+test('(button combo: +) IF sumSubMultDivIsOn is false AND operand1, operand2, & operator are falsy THEN sumSubMultDiv should make operand1 = "0", operator = "+", and sumSubMultDivIsOn = "true"', () => {
   const testState = {
     operandString: '0',
     operand1: null,
@@ -67,10 +67,8 @@ test('IF sumSubMultDiv is false THEN sumSubMultDiv should make operand1 = "0", o
     cameFromEquals: false,
   });
 });
-//////////////////////////////////////////////
-// PICK UP HERE (re-wording test descriptions)
-//////////////////////////////////////////////
-test('if button combo is "1 +" sumSubMultDiv should put "1" into operand1, "+" into operator, and "true" into sumSubMultDivIsOn', () => {
+
+test('(button combo: 1 +) IF sumSubMultDivIsOn is false, operand1, operator, & operand2 are falsy THEN sumSubMultDiv should make operand1 = "1", operator = "+", and sumSubMultDivIsOn = "true"', () => {
   const testState = {
     operandString: '1',
     operand1: null,
@@ -104,7 +102,7 @@ test('if button combo is "1 +" sumSubMultDiv should put "1" into operand1, "+" i
   });
 });
 
-test('if button combo is "1 + -" sumSubMultDiv should replace operator "+" with "-"', () => {
+test('(button combo: 1 + -) IF sumSubMultDivIsOn is true when a new operator is clicked THEN sumSubMultDiv should replace precent operator with new operator.  i.e. replace "+" with "-"', () => {
   const testState = {
     operandString: '',
     operand1: '1',
@@ -138,7 +136,7 @@ test('if button combo is "1 + -" sumSubMultDiv should replace operator "+" with 
   });
 });
 
-test('if button combo is "1 - x" sumSubMultDiv should replace operator "-" with "x"', () => {
+test('(button combo: 1 - x) IF sumSubMultDivIsOn is true when a new operator is clicked THEN sumSubMultDiv should replace precent operator with new operator.  i.e. replace "-" with "x"', () => {
   const testState = {
     operandString: '',
     operand1: '1',
@@ -172,7 +170,7 @@ test('if button combo is "1 - x" sumSubMultDiv should replace operator "-" with 
   });
 });
 
-test('if button combo is "1 x /" sumSubMultDiv should replace operator "x" with "/"', () => {
+test('(button combo: 1 x /) IF sumSubMultDivIsOn is true when a new operator is clicked THEN sumSubMultDiv should replace precent operator with new operator.  i.e. replace "x" with "/"', () => {
   const testState = {
     operandString: '',
     operand1: '1',
@@ -206,7 +204,7 @@ test('if button combo is "1 x /" sumSubMultDiv should replace operator "x" with 
   });
 });
 
-test('if button combo is "1 + 2 -" sumSubMultDiv should put "true" into sumSubMultDivIsOn, "2" into operand2, "" into operandString, "-" into nextOperator, and "true" into runCalculate', () => {
+test('(buttons combo: 1 + 2 -) IF sumSubMultDivIsOn is false, operand1 & operator are truthy, AND operand2 is falsy, sumSubMultDiv should make sumSubMultDivIsOn = "true", operand2 = "2", operandString = "", nextOperator = "-", and runCalculate = "true"', () => {
   const testState = {
     operandString: '2',
     operand1: '1',
