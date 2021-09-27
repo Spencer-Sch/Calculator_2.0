@@ -1,4 +1,5 @@
 import { createTheme } from '@material-ui/core';
+import { cyan, deepOrange, grey } from '@material-ui/core/colors';
 
 export const theme = createTheme({
   typography: {
@@ -6,13 +7,19 @@ export const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#b2ebf2',
+      main: cyan[100],
     },
     secondary: {
-      main: '#ff8a65',
+      main: deepOrange[300],
     },
     operator: {
-      main: '#9c27b0',
+      main: cyan[200],
+      dark: '#599ba3',
+      equalsMain: '#35919d',
+      equalsDark: '#006974',
+    },
+    disabled: {
+      main: grey[500],
     },
   },
 });

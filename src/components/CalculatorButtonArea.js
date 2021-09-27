@@ -6,6 +6,7 @@ import MiscButton from './Buttons/MiscButton';
 import OperatorButton from './Buttons/OperatorButton';
 import NumberButton from './Buttons/NumberButton';
 import DisabledButton from './Buttons/DisabledButton';
+import { getThemeProps } from '@material-ui/styles';
 
 // const useStyles = makeStyles(theme => ({}));
 
@@ -13,7 +14,12 @@ const CalculatorButtonArea = () => {
   const createButtons = buttonMap.map((button) => {
     if (button.type === 'misc') {
       return (
-        <MiscButton key={button.id} icon={button.icon} value={button.value} />
+        <MiscButton
+          key={button.id}
+          icon={button.icon}
+          value={button.value}
+          classesFlag={button.classesFlag}
+        />
       );
     } else if (button.type === 'number') {
       return (
@@ -25,6 +31,7 @@ const CalculatorButtonArea = () => {
           key={button.id}
           icon={button.icon}
           value={button.value}
+          classesFlag={button.classesFlag}
         />
       );
     } else {

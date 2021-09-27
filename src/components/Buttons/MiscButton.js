@@ -11,6 +11,18 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2rem',
     fontWeight: 900,
   },
+  miscButtonStyles: {
+    backgroundColor: [theme.palette.operator.main],
+    '&:hover': {
+      backgroundColor: [theme.palette.operator.dark],
+    },
+  },
+  numberButtonStyles: {
+    backgroundColor: [theme.palette.primary.main],
+    '&:hover': {
+      backgroundColor: [theme.palette.primary.dark],
+    },
+  },
   paper: {
     height: '100%',
   },
@@ -18,6 +30,13 @@ const useStyles = makeStyles((theme) => ({
 
 const MiscButton = (props) => {
   const classes = useStyles();
+
+  const combinedClasses = [
+    `${classes.buttonStyles}`,
+    props.classesFlag
+      ? `${classes.numberButtonStyles}`
+      : `${classes.miscButtonStyles}`,
+  ].join(' ');
 
   const dispatch = useStore()[1];
 
@@ -49,7 +68,7 @@ const MiscButton = (props) => {
     <Grid item xs={3}>
       <Paper className={classes.paper}>
         <Button
-          className={classes.buttonStyles}
+          className={combinedClasses}
           variant="contained"
           color="primary"
           value={props.value}

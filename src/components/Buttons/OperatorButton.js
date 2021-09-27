@@ -1,4 +1,5 @@
 import { Button, Grid, makeStyles, Paper } from '@material-ui/core';
+import { cyan } from '@material-ui/core/colors';
 import React from 'react';
 
 import { useStore } from '../../hooks-store/store';
@@ -10,7 +11,19 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '4.5rem',
     fontSize: '2rem',
     fontWeight: 900,
-    // backgroundColor: [theme.palette.primary],
+    // color: [theme.palette.operator.contrastText],
+  },
+  otherButtonStyles: {
+    backgroundColor: [theme.palette.operator.main],
+    '&:hover': {
+      backgroundColor: [theme.palette.operator.dark],
+    },
+  },
+  equalsButtonStyles: {
+    backgroundColor: [theme.palette.operator.equalsMain],
+    '&:hover': {
+      backgroundColor: [theme.palette.operator.equalsDark],
+    },
   },
   paper: {
     height: '100%',
@@ -19,6 +32,13 @@ const useStyles = makeStyles((theme) => ({
 
 const OperatorButton = (props) => {
   const classes = useStyles();
+
+  const combinedStyles = [
+    `${classes.buttonStyles}`,
+    props.classesFlag
+      ? `${classes.equalsButtonStyles}`
+      : `${classes.otherButtonStyles}`,
+  ].join(' ');
 
   const dispatch = useStore()[1];
 
@@ -43,9 +63,8 @@ const OperatorButton = (props) => {
     <Grid item xs={3}>
       <Paper className={classes.paper}>
         <Button
-          className={classes.buttonStyles}
+          className={combinedStyles}
           variant="contained"
-          // color="primary"
           value={props.value}
           onClick={sendDispatch}
         >

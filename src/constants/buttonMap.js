@@ -60,14 +60,15 @@ export const buttonMap = [
     icon: <FontAwesomeIcon icon={faPlus} />,
     value: '+',
   },
-  { id: 21, type: 'misc', icon: '+/-', value: '+/-' },
+  { id: 21, type: 'misc', icon: '+/-', value: '+/-', classesFlag: true },
   { id: 22, type: 'number', icon: '0', value: '0' },
-  { id: 23, type: 'misc', icon: '.', value: '.' },
+  { id: 23, type: 'misc', icon: '.', value: '.', classesFlag: true },
   {
     id: 24,
     type: 'operator',
     icon: <FontAwesomeIcon icon={faEquals} />,
     value: '=',
+    classesFlag: true,
   },
 ];
 

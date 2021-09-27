@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '4.5rem',
     fontSize: '2rem',
     fontWeight: 900,
+    backgroundColor: [theme.palette.disabled.main],
   },
   paper: {
     height: '100%',
