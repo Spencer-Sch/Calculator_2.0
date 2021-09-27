@@ -11,7 +11,22 @@ const calculate = (curState) => {
 
   if (OPERATOR === '/' && OPERAND2 === 0) {
     console.log("Can't divide by zero!");
-    //   divByZeroHandler();
+    const stateUpdates = {
+      operandString: '0',
+      operand1: null,
+      operand2: null,
+      operator: null,
+      nextOperator: null,
+      equalsIsOn: false,
+      equasionResult: 'Cannot Divide By Zero!',
+      sumSubMultDivIsOn: false,
+      decimalIsOn: false,
+      percentIsOn: false,
+      currentPercent: null,
+      runCalculate: false,
+      cameFromEquals: false,
+    };
+    return stateUpdates;
   } else {
     if (OPERATOR === '+') {
       equasionResult = OPERAND1 + OPERAND2;

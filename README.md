@@ -100,3 +100,9 @@ Update #3
 
 - Successfully implemented color styles to calculator buttons through the MUI theme.
 - Successfully implemented conditional classes to giving specific buttons ("+/-", ".", "=") different color styles from the other buttons in their corresponding button sub-categories (MiscButton, OperatorButton).
+
+Update #4
+
+- Successfully transfered logic for "divideByZeroHandler" using TDD. All tests passing successfully.
+
+- Wrote tests for CalculateLogic. All tests passing successfully.
