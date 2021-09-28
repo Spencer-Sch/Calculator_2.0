@@ -3,6 +3,7 @@ import calculate from '../constants/calculateLogic';
 import sumSubMultDiv from '../constants/sumSubMultDivLogic';
 import equals from '../constants/equalsLogic';
 import { initStore } from './store';
+import clearFunctions from '../constants/clearFunctionsLogic';
 
 export const configureDataStore = () => {
   const actions = {
@@ -48,14 +49,14 @@ export const configureDataStore = () => {
       console.log('CLEAR_FUNCTIONS Triggered');
       console.log(`${value}`);
 
-      ////////////////////////////////////////
-      // Pick up here
-      ////////////////////////////////////////
-      // const updatedState = clearFunctions(curState);
-      // return updatedState;
+      const updatedState = clearFunctions(curState, value);
+      return updatedState;
     },
 
     BACKSPACE: (curState, value) => {
+      ///////////////////////////////////////
+      // Pick up here
+      ///////////////////////////////////////
       console.log('BACKSPACE Triggered');
       console.log(`${value}`);
     },

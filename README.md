@@ -109,3 +109,11 @@ Update #4
 - Successfully transfered logic for "divideByZeroHandler" using TDD. All tests passing successfully.
 
 - Wrote tests for CalculateLogic. All tests passing successfully.
+
+Day 12
+
+Update #1
+
+- Successfully transfered logic for "cClear" & "ceClear".
+
+- Wrote tests for new "clearFunctions". All tests passing successfully.
