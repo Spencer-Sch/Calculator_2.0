@@ -4,6 +4,7 @@ import sumSubMultDiv from '../constants/sumSubMultDivLogic';
 import equals from '../constants/equalsLogic';
 import { initStore } from './store';
 import clearFunctions from '../constants/clearFunctionsLogic';
+import backspace from '../constants/backspaceLogic';
 
 export const configureDataStore = () => {
   const actions = {
@@ -54,11 +55,11 @@ export const configureDataStore = () => {
     },
 
     BACKSPACE: (curState, value) => {
-      ///////////////////////////////////////
-      // Pick up here
-      ///////////////////////////////////////
       console.log('BACKSPACE Triggered');
       console.log(`${value}`);
+
+      const updatedState = backspace(curState);
+      return updatedState;
     },
 
     CALCULATE: (curState) => {

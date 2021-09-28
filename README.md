@@ -117,3 +117,9 @@ Update #1
 - Successfully transfered logic for "cClear" & "ceClear".
 
 - Wrote tests for new "clearFunctions". All tests passing successfully.
+
+Update #2
+
+- Successfully transfered logic for "backspace" using TDD. All tests passing successfully.
+
+- Added utilityFunctions.js and successfully transfered "isFloat" using TDD. All tests passing successfully.
