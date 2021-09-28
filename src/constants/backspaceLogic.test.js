@@ -1,6 +1,6 @@
 import backspace from './backspaceLogic';
 
-test('(button combo: 1 2 3 +) IF sumSubMultDivIsOn = true backspace should do nothing.', () => {
+test('(button combo: 1 2 3 + <-) IF sumSubMultDivIsOn = true backspace should do nothing.', () => {
   const testState = {
     operandString: '123',
     operand1: null,
@@ -34,7 +34,7 @@ test('(button combo: 1 2 3 +) IF sumSubMultDivIsOn = true backspace should do no
   });
 });
 
-test('(button combo: 1 + 2 =) IF equalsIsOn = true backspace should do nothing.', () => {
+test('(button combo: 1 + 2 = <-) IF equalsIsOn = true backspace should do nothing.', () => {
   const testState = {
     operandString: '0',
     operand1: '1',
@@ -68,7 +68,7 @@ test('(button combo: 1 + 2 =) IF equalsIsOn = true backspace should do nothing.'
   });
 });
 
-test('(button combo: 1 2 3 + 4 5 6) IF equalsIsOn & sumSubMultDivIsOn = false THEN backspace should remove the last digit of operandString.', () => {
+test('(button combo: 1 2 3 + 4 5 6 <-) IF equalsIsOn & sumSubMultDivIsOn = false THEN backspace should remove the last digit of operandString.', () => {
   const testState = {
     operandString: '456',
     operand1: '123',
@@ -102,7 +102,7 @@ test('(button combo: 1 2 3 + 4 5 6) IF equalsIsOn & sumSubMultDivIsOn = false TH
   });
 });
 
-test('(button combo: 1 2 3 + 4) IF equalsIsOn & sumSubMultDivIsOn = false AND operandString.length === 1 THEN backspace should make operandString = "0".', () => {
+test('(button combo: 1 2 3 + 4 <-) IF equalsIsOn & sumSubMultDivIsOn = false AND operandString.length === 1 THEN backspace should make operandString = "0".', () => {
   const testState = {
     operandString: '4',
     operand1: '123',
@@ -136,7 +136,7 @@ test('(button combo: 1 2 3 + 4) IF equalsIsOn & sumSubMultDivIsOn = false AND op
   });
 });
 
-test('(button combo: 1 2 3 + 4 5) IF equalsIsOn & sumSubMultDivIsOn = false AND operandString.length > 1 THEN backspace should remove the last digit of operandString.', () => {
+test('(button combo: 1 2 3 + 4 5 <-) IF equalsIsOn & sumSubMultDivIsOn = false AND operandString.length > 1 THEN backspace should remove the last digit of operandString.', () => {
   const testState = {
     operandString: '45',
     operand1: '123',
@@ -170,7 +170,7 @@ test('(button combo: 1 2 3 + 4 5) IF equalsIsOn & sumSubMultDivIsOn = false AND 
   });
 });
 
-test('(button combo: 1 2) IF equalsIsOn & sumSubMultDivIsOn = false AND operandString is not a float point number THEN backspace should make decimalIsOn = false.', () => {
+test('(button combo: 1 2 <-) IF equalsIsOn & sumSubMultDivIsOn = false AND operandString is not a float point number THEN backspace should make decimalIsOn = false.', () => {
   const testState = {
     operandString: '12',
     operand1: null,
@@ -204,7 +204,7 @@ test('(button combo: 1 2) IF equalsIsOn & sumSubMultDivIsOn = false AND operandS
   });
 });
 
-test('(button combo: 1 . 2) IF equalsIsOn & sumSubMultDivIsOn = false AND operandString is a float point number THEN backspace should keep decimalIsOn = true.', () => {
+test('(button combo: 1 . 2 3 <-) IF equalsIsOn & sumSubMultDivIsOn = false AND operandString is a float point number THEN backspace should keep decimalIsOn = true.', () => {
   const testState = {
     operandString: '1.23',
     operand1: null,

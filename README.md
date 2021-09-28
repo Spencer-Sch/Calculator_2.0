@@ -123,3 +123,9 @@ Update #2
 - Successfully transfered logic for "backspace" using TDD. All tests passing successfully.
 
 - Added utilityFunctions.js and successfully transfered "isFloat" using TDD. All tests passing successfully.
+
+Update #3
+
+- Corrected button combo portion of test descriptions in backspaceLogic.test.js
+
+- Began transfering logic for 'decimal' using TDD. Tests passing successfully. To Be Continued...
