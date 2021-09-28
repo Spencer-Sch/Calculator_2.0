@@ -47,6 +47,12 @@ export const configureDataStore = () => {
     CLEAR_FUNCTIONS: (curState, value) => {
       console.log('CLEAR_FUNCTIONS Triggered');
       console.log(`${value}`);
+
+      ////////////////////////////////////////
+      // Pick up here
+      ////////////////////////////////////////
+      // const updatedState = clearFunctions(curState);
+      // return updatedState;
     },
 
     BACKSPACE: (curState, value) => {
