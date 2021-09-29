@@ -130,7 +130,7 @@ Update #3
 
 - Began transfering logic for 'decimal' using TDD. Tests passing successfully. To Be Continued...
 
-day 13
+Day 13
 
 Update #1
 
@@ -145,3 +145,7 @@ Update #2
 Update #3
 
 - Transfered logic for "getPercent" logic. Working on writing tests. To be continued...
+
+Update #4
+
+- Finished writing tests for "getPercent" logic. All tests passing successfully.
