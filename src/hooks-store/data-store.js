@@ -5,6 +5,7 @@ import equals from '../constants/equalsLogic';
 import { initStore } from './store';
 import clearFunctions from '../constants/clearFunctionsLogic';
 import backspace from '../constants/backspaceLogic';
+import decimal from '../constants/decimalLogic';
 
 export const configureDataStore = () => {
   const actions = {
@@ -32,6 +33,9 @@ export const configureDataStore = () => {
     DECIMAL: (curState, value) => {
       console.log('DECIMAL Triggered');
       console.log(`${value}`);
+
+      const updatedState = decimal(curState);
+      return updatedState;
     },
 
     POSITIVE_NEGATIVE: (curState, value) => {

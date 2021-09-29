@@ -129,3 +129,11 @@ Update #3
 - Corrected button combo portion of test descriptions in backspaceLogic.test.js
 
 - Began transfering logic for 'decimal' using TDD. Tests passing successfully. To Be Continued...
+
+day 13
+
+Update #1
+
+- Successfully finished transfering logic from "decimal" using TDD. All tests passing successfully.
+
+- Transfered "negate" logic. Wrote tests for negate. All tests passing successfully.

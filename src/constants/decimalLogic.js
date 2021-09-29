@@ -1,27 +1,44 @@
 let queuedStateUpdates = {};
 
 const decimal = (curState) => {
-  const OPERAND1 = curState.operand1;
   const OPERAND2 = curState.operand2;
-  const OPERATOR = curState.operator;
   const OPERAND_STRING = curState.operandString;
   const SUM_SUB_MULT_DIV_IS_ON = curState.sumSubMultDivIsOn;
   const EQUALS_IS_ON = curState.equalsIsOn;
-  const EQUASION_RESULT = curState.equasionResult;
   const DECIMAL_IS_ON = curState.decimalIsOn;
 
   if (!DECIMAL_IS_ON) {
-    let queuedStateUpdates = {
-      decimalIsOn: true,
-    };
-    if (SUM_SUB_MULT_DIV_IS_ON || (OPERAND2 === null && +OPERAND_STRING < 0)) {
+    console.log('DECIMAL checkpoint 1');
+    let queuedStateUpdates = {};
+    if (EQUALS_IS_ON) {
+      console.log('DECIMAL checkpoint 2');
+      queuedStateUpdates = {
+        ...queuedStateUpdates,
+        operandString: '0.',
+        operand1: null,
+        operand2: null,
+        operator: null,
+        equasionResult: null,
+      };
+    } else if (
+      SUM_SUB_MULT_DIV_IS_ON ||
+      (OPERAND2 === null && +OPERAND_STRING < 0)
+    ) {
+      console.log('DECIMAL checkpoint 3');
       queuedStateUpdates = {
         ...queuedStateUpdates,
         operandString: '0.',
       };
+    } else {
+      console.log('DECIMAL checkpoint 4');
+      queuedStateUpdates = {
+        ...queuedStateUpdates,
+        operandString: `${OPERAND_STRING}.`,
+      };
     }
     queuedStateUpdates = {
       ...queuedStateUpdates,
+      decimalIsOn: true,
       equalsIsOn: false,
       sumSubMultDivIsOn: false,
       percentIsOn: false,
