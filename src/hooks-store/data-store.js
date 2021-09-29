@@ -6,6 +6,7 @@ import { initStore } from './store';
 import clearFunctions from '../constants/clearFunctionsLogic';
 import backspace from '../constants/backspaceLogic';
 import decimal from '../constants/decimalLogic';
+import positiveNegative from '../constants/positiveNegativeLogic';
 
 export const configureDataStore = () => {
   const actions = {
@@ -41,6 +42,9 @@ export const configureDataStore = () => {
     POSITIVE_NEGATIVE: (curState, value) => {
       console.log('POSITIVE_NEGATIVE Triggered');
       console.log(`${value}`);
+
+      const updatedState = positiveNegative(curState);
+      return updatedState;
     },
 
     EQUALS: (curState) => {

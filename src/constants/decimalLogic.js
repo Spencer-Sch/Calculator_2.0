@@ -1,5 +1,3 @@
-let queuedStateUpdates = {};
-
 const decimal = (curState) => {
   const OPERAND2 = curState.operand2;
   const OPERAND_STRING = curState.operandString;

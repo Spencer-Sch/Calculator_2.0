@@ -137,3 +137,7 @@ Update #1
 - Successfully finished transfering logic from "decimal" using TDD. All tests passing successfully.
 
 - Transfered "negate" logic. Wrote tests for negate. All tests passing successfully.
+
+Update #2
+
+- Successfully finished transfering logic from "posNeg" using TDD. All tests passing successfully.
