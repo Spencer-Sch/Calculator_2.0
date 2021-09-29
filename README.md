@@ -141,3 +141,7 @@ Update #1
 Update #2
 
 - Successfully finished transfering logic from "posNeg" using TDD. All tests passing successfully.
+
+Update #3
+
+- Transfered logic for "getPercent" logic. Working on writing tests. To be continued...

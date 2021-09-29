@@ -7,6 +7,7 @@ import clearFunctions from '../constants/clearFunctionsLogic';
 import backspace from '../constants/backspaceLogic';
 import decimal from '../constants/decimalLogic';
 import positiveNegative from '../constants/positiveNegativeLogic';
+import percent from '../constants/percentLogic';
 
 export const configureDataStore = () => {
   const actions = {
@@ -29,6 +30,9 @@ export const configureDataStore = () => {
     PERCENT: (curState, value) => {
       console.log('PERCENT Triggered');
       console.log(`${value}`);
+
+      const updatedState = percent(curState);
+      return updatedState;
     },
 
     DECIMAL: (curState, value) => {
