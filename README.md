@@ -149,3 +149,7 @@ Update #3
 Update #4
 
 - Finished writing tests for "getPercent" logic. All tests passing successfully.
+
+Update #5
+
+- Worked at transfering "percent" and "percentHelper" logic as well as began to write tests for each. To be continued...

@@ -1,8 +1,8 @@
 import percentHelper from './percentHelperLogic';
 
-// test('(button combo: 1 +/- ) IF operand1, operand2, & operator = null THEN positiveNegative should negate operandString ALSO make equalsIsOn = false, sumSubMultDivIsOn = false, and percentIsOn = false.', () => {
+// test('(button combo:  )  ', () => {
 //   const testState = {
-//     operandString: '1',
+//     operandString: '',
 //     operand1: null,
 //     operand2: null,
 //     operator: null,
@@ -18,7 +18,7 @@ import percentHelper from './percentHelperLogic';
 //   };
 //   const returnedState = getPercent(testState);
 //   expect({ ...testState, ...returnedState }).toEqual({
-//     operandString: '-1',
+//     operandString: '',
 //     operand1: null,
 //     operand2: null,
 //     operator: null,

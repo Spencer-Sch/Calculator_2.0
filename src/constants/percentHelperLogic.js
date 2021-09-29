@@ -1,3 +1,3 @@
-const percentHelper = () => {};
+const percentHelper = (arr, key) => {};
 
 export default percentHelper;
