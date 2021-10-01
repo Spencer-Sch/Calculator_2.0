@@ -153,3 +153,9 @@ Update #4
 Update #5
 
 - Worked at transfering "percent" and "percentHelper" logic as well as began to write tests for each. To be continued...
+
+Day 14
+
+Update #1
+
+- Completed transfer of "percent" and "percentHelper". Some translation still needs work. Built a few tests for "percentHelper" and are passing successfully. To be continued...

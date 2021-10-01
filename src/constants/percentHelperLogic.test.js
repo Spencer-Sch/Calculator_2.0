@@ -1,35 +1,32 @@
 import percentHelper from './percentHelperLogic';
 
-// test('(button combo:  )  ', () => {
-//   const testState = {
-//     operandString: '',
-//     operand1: null,
-//     operand2: null,
-//     operator: null,
-//     nextOperator: null,
-//     equasionResult: null,
-//     sumSubMultDivIsOn: false,
-//     equalsIsOn: false,
-//     decimalIsOn: false,
-//     percentIsOn: false,
-//     currentPercent: null,
-//     runCalculate: false,
-//     cameFromEquals: false,
-//   };
-//   const returnedState = getPercent(testState);
-//   expect({ ...testState, ...returnedState }).toEqual({
-//     operandString: '',
-//     operand1: null,
-//     operand2: null,
-//     operator: null,
-//     nextOperator: null,
-//     equasionResult: null,
-//     sumSubMultDivIsOn: false,
-//     equalsIsOn: false,
-//     decimalIsOn: false,
-//     percentIsOn: false,
-//     currentPercent: null,
-//     runCalculate: false,
-//     cameFromEquals: false,
-//   });
-// });
+test('(button combo: 12 + % )', () => {
+  const arr = [1.44, 0.12];
+  const key = 0;
+  const returnedState = percentHelper(arr, key);
+  expect({ ...returnedState }).toEqual({
+    operandString: '1.44',
+    currentPercent: 0.12,
+  });
+});
+
+test('(button combo: 12 + 3 % )', () => {
+  const arr = [0.36, 0.03];
+  const key = 0;
+  const returnedState = percentHelper(arr, key);
+  expect({ ...returnedState }).toEqual({
+    operandString: '0.36',
+    currentPercent: 0.03,
+  });
+});
+
+test('(button combo: 12 + 3 = % )', () => {
+  const arr = [2.25, 0.15];
+  const key = 1;
+  const returnedState = percentHelper(arr, key);
+  expect({ ...returnedState }).toEqual({
+    operandString: '2.25',
+    currentPercent: 0.15,
+    equasionResult: '',
+  });
+});
