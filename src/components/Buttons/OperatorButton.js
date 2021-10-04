@@ -30,8 +30,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const OperatorButton = (props) => {
+const OperatorButton = React.memo((props) => {
   const classes = useStyles();
+  const dispatch = useStore(false)[1];
 
   const combinedStyles = [
     `${classes.buttonStyles}`,
@@ -39,8 +40,6 @@ const OperatorButton = (props) => {
       ? `${classes.equalsButtonStyles}`
       : `${classes.otherButtonStyles}`,
   ].join(' ');
-
-  const dispatch = useStore()[1];
 
   const sendDispatch = (event) => {
     const value = event.target.closest('button').value;
@@ -73,6 +72,6 @@ const OperatorButton = (props) => {
       </Paper>
     </Grid>
   );
-};
+});
 
 export default OperatorButton;

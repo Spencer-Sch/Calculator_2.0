@@ -16,10 +16,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const NumberButton = (props) => {
+const NumberButton = React.memo((props) => {
   const classes = useStyles();
-
-  const dispatch = useStore()[1];
+  const dispatch = useStore(false)[1];
 
   const sendDispatch = (event) => {
     const value = event.target.closest('button').value;
@@ -42,6 +41,6 @@ const NumberButton = (props) => {
       </Paper>
     </Grid>
   );
-};
+});
 
 export default NumberButton;

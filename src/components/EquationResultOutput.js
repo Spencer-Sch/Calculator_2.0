@@ -38,6 +38,7 @@ const EquationResultOutput = () => {
   useEffect(() => {
     if (state.runCalculate) {
       dispatch('CALCULATE');
+      dispatch('ADD_ENTRY');
     }
   }, [state.runCalculate, dispatch]);
 

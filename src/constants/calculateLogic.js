@@ -44,6 +44,7 @@ const calculate = (curState) => {
       equasionResult = OPERAND1;
     }
   }
+
   if (!CAME_FROM_EQUALS) {
     return {
       equasionResult: `${equasionResult}`,

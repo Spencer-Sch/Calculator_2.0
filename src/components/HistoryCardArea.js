@@ -2,8 +2,13 @@ import { Grid, makeStyles } from '@material-ui/core';
 import HistoryCard from './HistoryCard';
 import React from 'react';
 import { grey } from '@material-ui/core/colors';
+import { useStore } from '../hooks-store/store';
 
 const useStyles = makeStyles((theme) => ({
+  ul: {
+    margin: '0',
+    padding: '0',
+  },
   grid: {
     height: '84%',
     backgroundColor: grey[500],
@@ -17,11 +22,19 @@ const useStyles = makeStyles((theme) => ({
 const HistoryCardArea = () => {
   const classes = useStyles();
 
+  const state = useStore()[0];
+
+  const historyCards = state.historyList.map((entry) => (
+    <HistoryCard
+      key={entry.key}
+      equasion={entry.equasion}
+      equasionResult={entry.equasionResult}
+    />
+  ));
+
   return (
     <Grid item xs={12} className={classes.grid}>
-      <HistoryCard />
-      <HistoryCard />
-      <HistoryCard />
+      <ul className={classes.ul}>{historyCards}</ul>
     </Grid>
   );
 };

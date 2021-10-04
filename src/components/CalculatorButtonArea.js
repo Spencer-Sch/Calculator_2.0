@@ -1,4 +1,4 @@
-import { Grid, makeStyles } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import React from 'react';
 
 import { buttonMap } from '../constants/buttonMap.js';
@@ -6,7 +6,6 @@ import MiscButton from './Buttons/MiscButton';
 import OperatorButton from './Buttons/OperatorButton';
 import NumberButton from './Buttons/NumberButton';
 import DisabledButton from './Buttons/DisabledButton';
-import { getThemeProps } from '@material-ui/styles';
 
 // const useStyles = makeStyles(theme => ({}));
 

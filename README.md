@@ -167,3 +167,11 @@ Update #1
 - Completed full translation of "percent" and "percentHelper" logic. Built tests for "percent". All tests passing successfully.
 
 - In the process of making all possible applications of "percent" logic function properly I needed to make edits to the logic in "sumSubMultDivLogic", "percentHelperLogic", and "buildOperandLogic".
+
+Update #2
+
+- Edited custom store hook to prevent unnecessary re-renders of calculator buttons
+
+- Successfully added a second state slice to manage equation history entries.
+
+- Successfully connected necessary components to both store and retrieve equation history data.

@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const DisabledButton = (props) => {
+const DisabledButton = React.memo((props) => {
   const classes = useStyles();
 
   return (
@@ -28,6 +28,6 @@ const DisabledButton = (props) => {
       </Paper>
     </Grid>
   );
-};
+});
 
 export default DisabledButton;

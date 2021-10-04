@@ -9,6 +9,9 @@ import {
 import React from 'react';
 
 const useStyles = makeStyles({
+  li: {
+    listStyleType: 'none',
+  },
   card: {
     marginLeft: '8px',
     marginRight: '8px',
@@ -27,22 +30,24 @@ const useStyles = makeStyles({
   },
 });
 
-const HistoryCard = () => {
+const HistoryCard = (props) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.card} raised>
-      <CardActionArea>
-        <CardContent className={classes.cardContent}>
-          <Typography variant="h6" className={classes.typography}>
-            3 + 9 =
-          </Typography>
-          <Typography variant="h3" className={classes.typography}>
-            12
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <li className={classes.li}>
+      <Card className={classes.card} raised>
+        <CardActionArea>
+          <CardContent className={classes.cardContent}>
+            <Typography variant="h6" className={classes.typography}>
+              {props.equasion}
+            </Typography>
+            <Typography variant="h3" className={classes.typography}>
+              {props.equasionResult}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </li>
   );
 };
 

@@ -28,8 +28,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MiscButton = (props) => {
+const MiscButton = React.memo((props) => {
   const classes = useStyles();
+  const dispatch = useStore(false)[1];
 
   const combinedClasses = [
     `${classes.buttonStyles}`,
@@ -37,8 +38,6 @@ const MiscButton = (props) => {
       ? `${classes.numberButtonStyles}`
       : `${classes.miscButtonStyles}`,
   ].join(' ');
-
-  const dispatch = useStore()[1];
 
   const sendDispatch = (event) => {
     const value = event.target.closest('button').value;
@@ -79,6 +78,6 @@ const MiscButton = (props) => {
       </Paper>
     </Grid>
   );
-};
+});
 
 export default MiscButton;
