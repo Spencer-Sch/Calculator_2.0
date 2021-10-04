@@ -2,6 +2,7 @@ const buildOperand = (curState, newDigit) => {
   const OPERAND_STRING = curState.operandString;
   const EQUALS_IS_ON = curState.equalsIsOn;
   const EQUASION_RESULT = curState.equasionResult;
+  const PERCENT_IS_ON = curState.percentIsOn;
 
   let operandString = OPERAND_STRING;
   let updateEquasionResult = {};
@@ -16,7 +17,9 @@ const buildOperand = (curState, newDigit) => {
       updateEquasionResult = { equasionResult: null };
     }
     const stateUpdates = {
-      operandString: `${operandString}`.concat(`${newDigit}`),
+      operandString: PERCENT_IS_ON
+        ? `${newDigit}`
+        : `${operandString}`.concat(`${newDigit}`),
       equalsIsOn: false,
       sumSubMultDivIsOn: false,
       percentIsOn: false,

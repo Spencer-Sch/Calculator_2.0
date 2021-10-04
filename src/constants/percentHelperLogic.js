@@ -8,7 +8,7 @@ const percentHelper = (arr, key) => {
   if (key === 1) {
     queuedStateUpdates = {
       ...queuedStateUpdates,
-      equasionResult: '',
+      equasionResult: `${arr[0]}`,
     };
   }
 

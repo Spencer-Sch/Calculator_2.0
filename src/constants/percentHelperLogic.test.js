@@ -27,6 +27,6 @@ test('(button combo: 12 + 3 = % )', () => {
   expect({ ...returnedState }).toEqual({
     operandString: '2.25',
     currentPercent: 0.15,
-    equasionResult: '',
+    equasionResult: '2.25',
   });
 });

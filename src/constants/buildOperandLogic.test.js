@@ -175,3 +175,38 @@ test('(button combo: 1 + 2) buildOperand should make operandString = "2"', () =>
     cameFromEquals: false,
   });
 });
+
+test('(button combo: 12 + % 2 ) buildOperand should make operandString = "2"', () => {
+  const testState = {
+    operandString: '1.44',
+    operand1: '12',
+    operand2: null,
+    operator: '+',
+    nextOperator: null,
+    equasionResult: null,
+    sumSubMultDivIsOn: true,
+    equalsIsOn: false,
+    decimalIsOn: false,
+    percentIsOn: true,
+    currentPercent: 0.12,
+    runCalculate: false,
+    cameFromEquals: false,
+  };
+  const returnedState = buildOperand(testState, '2');
+
+  expect({ ...testState, ...returnedState }).toEqual({
+    operandString: '2',
+    operand1: '12',
+    operand2: null,
+    operator: '+',
+    nextOperator: null,
+    equasionResult: null,
+    sumSubMultDivIsOn: false,
+    equalsIsOn: false,
+    decimalIsOn: false,
+    percentIsOn: false,
+    currentPercent: 0.12,
+    runCalculate: false,
+    cameFromEquals: false,
+  });
+});

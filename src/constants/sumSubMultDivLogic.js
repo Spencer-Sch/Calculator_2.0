@@ -25,6 +25,7 @@ const sumSubMultDiv = (curState, operator) => {
     if (OPERAND1 && OPERATOR && OPERAND2) {
       /////////////////////////////
       // Is this state ever true?
+      // Yes.  button combo: 12 + 3 = % x
       /////////////////////////////
       console.log('sumSubMultDiv Checkpoint 1');
       queuedStateUpdates = {

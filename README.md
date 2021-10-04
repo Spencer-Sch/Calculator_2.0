@@ -159,3 +159,11 @@ Day 14
 Update #1
 
 - Completed transfer of "percent" and "percentHelper". Some translation still needs work. Built a few tests for "percentHelper" and are passing successfully. To be continued...
+
+Day 15
+
+Update #1
+
+- Completed full translation of "percent" and "percentHelper" logic. Built tests for "percent". All tests passing successfully.
+
+- In the process of making all possible applications of "percent" logic function properly I needed to make edits to the logic in "sumSubMultDivLogic", "percentHelperLogic", and "buildOperandLogic".
