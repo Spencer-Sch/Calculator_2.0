@@ -5,10 +5,18 @@ export const configureHistoryStore = () => {
     ADD_ENTRY: (curState) => {
       console.log('ADD_ENTRY Triggered');
 
+      const OPERAND_STRING = curState.operandString;
       const OPERAND1 = curState.operand1;
       const OPERAND2 = curState.operand2;
       const OPERATOR = curState.operator;
+      const NEXT_OPERATOR = curState.nextOperator;
       const EQUATION_RESULT = curState.equationResult;
+      const SUM_SUB_MULT_DIV_IS_ON = curState.sumSubMultDivIsOn;
+      const EQUALS_IS_ON = curState.equalsIsOn;
+      const DECIMAL_IS_ON = curState.decimalIsOn;
+      const PERCENT_IS_ON = curState.percentIsOn;
+      const CURRENT_PERCENT = curState.currentPercent;
+      const CAME_FROM_EQUALS = curState.cameFromEquals;
       const HISTORY_LIST = curState.historyList;
 
       let equation;
@@ -21,16 +29,60 @@ export const configureHistoryStore = () => {
 
       const newEntry = {
         key: Math.random(),
+        operandString: OPERAND_STRING,
         operand1: OPERAND1,
         operand2: OPERAND2,
         operator: OPERATOR,
-        equation: equation,
+        nextOperator: NEXT_OPERATOR,
         equationResult: EQUATION_RESULT,
+        equation: equation,
+        sumSubMultDivIsOn: SUM_SUB_MULT_DIV_IS_ON,
+        equalsIsOn: EQUALS_IS_ON,
+        decimalIsOn: DECIMAL_IS_ON,
+        percentIsOn: PERCENT_IS_ON,
+        currentPercent: CURRENT_PERCENT,
+        cameFromEquals: CAME_FROM_EQUALS,
       };
 
       return { historyList: [...HISTORY_LIST, newEntry] };
     },
-    CLEAR_HISTORY: (curState) => {
+    RECALL_ENTRY: (curState, targetId) => {
+      console.log('RECALL_HISTORY Triggered');
+
+      const entryIndex = curState.historyList.findIndex(
+        (entry) => entry.key === targetId
+      );
+      const targetEntry = curState.historyList[entryIndex];
+
+      const OPERAND_STRING = targetEntry.operandString;
+      const OPERAND1 = targetEntry.operand1;
+      const OPERAND2 = targetEntry.operand2;
+      const OPERATOR = targetEntry.operator;
+      const NEXT_OPERATOR = targetEntry.nextOperator;
+      const EQUATION_RESULT = targetEntry.equationResult;
+      const SUM_SUB_MULT_DIV_IS_ON = targetEntry.sumSubMultDivIsOn;
+      const EQUALS_IS_ON = targetEntry.equalsIsOn;
+      const DECIMAL_IS_ON = targetEntry.decimalIsOn;
+      const PERCENT_IS_ON = targetEntry.percentIsOn;
+      const CURRENT_PERCENT = targetEntry.currentPercent;
+      const CAME_FROM_EQUALS = targetEntry.cameFromEquals;
+
+      return {
+        operandString: OPERAND_STRING,
+        operand1: OPERAND1,
+        operand2: OPERAND2,
+        operator: OPERATOR,
+        nextOperator: NEXT_OPERATOR,
+        equationResult: EQUATION_RESULT,
+        sumSubMultDivIsOn: SUM_SUB_MULT_DIV_IS_ON,
+        equalsIsOn: EQUALS_IS_ON,
+        decimalIsOn: DECIMAL_IS_ON,
+        percentIsOn: PERCENT_IS_ON,
+        currentPercent: CURRENT_PERCENT,
+        cameFromEquals: CAME_FROM_EQUALS,
+      };
+    },
+    CLEAR_HISTORY: () => {
       console.log('CLEAR_HISTORY Triggered');
 
       return { historyList: [] };

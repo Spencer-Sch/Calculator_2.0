@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core';
 import { deepOrange, grey } from '@material-ui/core/colors';
 import React from 'react';
+import { useStore } from '../hooks-store/store';
 
 const useStyles = makeStyles({
   li: {
@@ -37,9 +38,15 @@ const useStyles = makeStyles({
 const HistoryCard = (props) => {
   const classes = useStyles();
 
+  const dispatch = useStore()[1];
+
   return (
     <li className={classes.li}>
-      <Card className={classes.card} raised>
+      <Card
+        className={classes.card}
+        onClick={() => dispatch('RECALL_ENTRY', props.id)}
+        raised
+      >
         <CardActionArea>
           <CardContent className={classes.cardContent}>
             <Typography variant="h6" className={classes.typography}>

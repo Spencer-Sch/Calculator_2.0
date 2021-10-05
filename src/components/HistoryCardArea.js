@@ -37,6 +37,7 @@ const HistoryCardArea = () => {
   const historyCards = state.historyList.map((entry) => (
     <HistoryCard
       key={entry.key}
+      id={entry.key}
       equation={entry.equation}
       equationResult={entry.equationResult}
     />

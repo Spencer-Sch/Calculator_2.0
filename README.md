@@ -170,7 +170,7 @@ Update #1
 
 Update #2
 
-- Edited custom store hook to prevent unnecessary re-renders of calculator buttons
+- Edited custom store hook to prevent unnecessary re-renders of calculator buttons.
 
 - Successfully added a second state slice to manage equation history entries.
 
@@ -180,18 +180,22 @@ Day 16
 
 Update #1
 
-- Fixed spelling mistake. Changed all "equasion" to "equation"
+- Fixed spelling mistake. Changed all "equasion" to "equation".
 
 Update #2
 
-- Added placeholder text in 'HistoryCardArea'
+- Added placeholder text in 'HistoryCardArea'.
 
 Update #3
 
-- Added functionality to clear history
+- Added functionality to clear history.
 
 Update #4
 
 - Added hover effect to history cards.
 
 - Restricted height of HistoryCardArea.
+
+Update #5
+
+- Added funtionality to recall history entries by clicking on them.
