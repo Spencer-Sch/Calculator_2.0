@@ -30,6 +30,11 @@ export const configureHistoryStore = () => {
 
       return { historyList: [...HISTORY_LIST, newEntry] };
     },
+    CLEAR_HISTORY: (curState) => {
+      console.log('CLEAR_HISTORY Triggered');
+
+      return { historyList: [] };
+    },
   };
 
   initStore(actions, { historyList: [] });

@@ -180,8 +180,12 @@ Day 16
 
 Update #1
 
-- Fixed spelling mistake. Changed all "equasion" to "equation".
+- Fixed spelling mistake. Changed all "equasion" to "equation"
 
 Update #2
 
-- Added placeholder text in 'HistoryCardArea'.
+- Added placeholder text in 'HistoryCardArea'
+
+Update #3
+
+- Added functionality to clear history
