@@ -12,7 +12,7 @@ Day 4
 
 - Began creating a global data store using custom hooks. Following instructions from React course. To be continued...
 
-- Succeeded in setting up the global data store and transmiting data from 'CalculatorButton' element to the 'EquasionResultOutput' element.
+- Succeeded in setting up the global data store and transmiting data from 'CalculatorButton' element to the 'EquationResultOutput' element.
 
 Day 5
 
@@ -32,11 +32,11 @@ Day 6
 
 - Succeeded in transferring logic from 'calculate'.
 
-- Implemented useEffect() in the 'EquasionResultOutput' component in order to trigger the calculate logic when needed.
+- Implemented useEffect() in the 'EquationResultOutput' component in order to trigger the calculate logic when needed.
 
-- Conditionally applied font size to the output of 'EquasionResultOutput' component in order to keep large numbers from going outside the appropriate borders.
+- Conditionally applied font size to the output of 'EquationResultOutput' component in order to keep large numbers from going outside the appropriate borders.
 
-- Added logic to 'EquasionResultOutput' and 'EquasionOutput' components so they display the appropriate information at the correct time.
+- Added logic to 'EquationResultOutput' and 'EquationOutput' components so they display the appropriate information at the correct time.
 
 - ISSUE TO FIX: subsequent presses of the '-' button while chaining operator button equations results in the '-' symbol appearing in front of operand1.
 
@@ -48,7 +48,7 @@ Day 8
 
 - Added more tests for 'buildOperand' and 'sumSubMultDiv'
 
-- Fixed issue with 'EquasionOutput' text flashing inbetween state renders when 'Calculate' was activated. Added a useTimeout() to delay the state evaluation.
+- Fixed issue with 'EquationOutput' text flashing inbetween state renders when 'Calculate' was activated. Added a useTimeout() to delay the state evaluation.
 
 - Began setting up files and test files for equalsLogic, equalsHelperLogic. Going to attempt to build out equals and equalsHelper while using TDD. To be continued...
 
@@ -175,3 +175,9 @@ Update #2
 - Successfully added a second state slice to manage equation history entries.
 
 - Successfully connected necessary components to both store and retrieve equation history data.
+
+Day 16
+
+Update #1
+
+- Fixed spelling mistake. Changed all "equasion" to "equation".

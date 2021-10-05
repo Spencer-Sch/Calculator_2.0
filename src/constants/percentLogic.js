@@ -6,7 +6,7 @@ const percent = (curState) => {
   const OPERAND2 = curState.operand2;
   const OPERATOR = curState.operator;
   const OPERAND_STRING = curState.operandString;
-  const EQUASION_RESULT = curState.equasionResult;
+  const EQUATION_RESULT = curState.equationResult;
   const PERCENT_IS_ON = curState.percentIsOn;
   const CURRENT_PERCENT = curState.currentPercent;
 
@@ -41,7 +41,7 @@ const percent = (curState) => {
       };
     } else if (OPERAND2) {
       console.log('PERCENT Checkpoint 4');
-      const resultArr = getPercent(EQUASION_RESULT, null);
+      const resultArr = getPercent(EQUATION_RESULT, null);
       const percentHelperUpdates = percentHelper(resultArr, 1);
       queuedStateUpdates = {
         ...percentHelperUpdates,

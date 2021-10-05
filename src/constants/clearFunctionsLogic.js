@@ -11,7 +11,7 @@ const clearFunctions = (curState, value) => {
       operand2: null,
       operator: null,
       nextOperator: null,
-      equasionResult: null,
+      equationResult: null,
       sumSubMultDivIsOn: false,
       equalsIsOn: false,
       decimalIsOn: false,

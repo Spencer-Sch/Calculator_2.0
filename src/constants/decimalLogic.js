@@ -16,7 +16,7 @@ const decimal = (curState) => {
         operand1: null,
         operand2: null,
         operator: null,
-        equasionResult: null,
+        equationResult: null,
       };
     } else if (
       SUM_SUB_MULT_DIV_IS_ON ||

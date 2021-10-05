@@ -39,10 +39,10 @@ const HistoryCard = (props) => {
         <CardActionArea>
           <CardContent className={classes.cardContent}>
             <Typography variant="h6" className={classes.typography}>
-              {props.equasion}
+              {props.equation}
             </Typography>
             <Typography variant="h3" className={classes.typography}>
-              {props.equasionResult}
+              {props.equationResult}
             </Typography>
           </CardContent>
         </CardActionArea>

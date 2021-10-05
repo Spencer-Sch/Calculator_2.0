@@ -28,7 +28,7 @@ const EquationOutput = () => {
 
   let renderThis;
 
-  // if (state.equasionResult) {
+  // if (state.equationResult) {
   if (state.runCalculate) {
     setTimeout(() => {
       if (state.cameFromEquals) {
@@ -37,7 +37,7 @@ const EquationOutput = () => {
         renderThis = `${state.operand1} ${state.operator}`;
       }
     }, 80);
-    // if (state.equasionResult.length > 14) {
+    // if (state.equationResult.length > 14) {
     //   typographyClass = classes.typographySmall;
     // }
   } else if (state.operand2) {

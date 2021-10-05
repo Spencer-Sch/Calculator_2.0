@@ -8,15 +8,15 @@ export const configureHistoryStore = () => {
       const OPERAND1 = curState.operand1;
       const OPERAND2 = curState.operand2;
       const OPERATOR = curState.operator;
-      const EQUASION_RESULT = curState.equasionResult;
+      const EQUATION_RESULT = curState.equationResult;
       const HISTORY_LIST = curState.historyList;
 
-      let equasion;
+      let equation;
 
       if (OPERATOR === '=') {
-        equasion = `${OPERAND1} ${OPERATOR} ${OPERAND2}`;
+        equation = `${OPERAND1} ${OPERATOR} ${OPERAND2}`;
       } else {
-        equasion = `${OPERAND1} ${OPERATOR} ${OPERAND2} =`;
+        equation = `${OPERAND1} ${OPERATOR} ${OPERAND2} =`;
       }
 
       const newEntry = {
@@ -24,8 +24,8 @@ export const configureHistoryStore = () => {
         operand1: OPERAND1,
         operand2: OPERAND2,
         operator: OPERATOR,
-        equasion: equasion,
-        equasionResult: EQUASION_RESULT,
+        equation: equation,
+        equationResult: EQUATION_RESULT,
       };
 
       return { historyList: [...HISTORY_LIST, newEntry] };

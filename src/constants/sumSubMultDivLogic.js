@@ -5,7 +5,7 @@ const sumSubMultDiv = (curState, operator) => {
   const OPERAND_STRING = curState.operandString;
   const SUM_SUB_MULT_DIV_IS_ON = curState.sumSubMultDivIsOn;
   const EQUALS_IS_ON = curState.equalsIsOn;
-  const EQUASION_RESULT = curState.equasionResult;
+  const EQUATION_RESULT = curState.equationResult;
 
   let queuedStateUpdates = {};
 
@@ -13,7 +13,7 @@ const sumSubMultDiv = (curState, operator) => {
     console.log('sumSubMultDiv Checkpoint 0.5');
     queuedStateUpdates = {
       ...queuedStateUpdates,
-      operand1: EQUASION_RESULT,
+      operand1: EQUATION_RESULT,
       operand2: null,
       operator: operator,
       equalsIsOn: false,
@@ -31,10 +31,10 @@ const sumSubMultDiv = (curState, operator) => {
       queuedStateUpdates = {
         ...queuedStateUpdates,
         operandString: '',
-        operand1: EQUASION_RESULT,
+        operand1: EQUATION_RESULT,
         operand2: null,
         operator: operator,
-        equasionResult: null,
+        equationResult: null,
       };
     } else if (OPERAND1 && OPERATOR) {
       console.log('sumSubMultDiv Checkpoint 2');

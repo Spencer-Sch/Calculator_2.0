@@ -7,7 +7,7 @@ const equals = (curState) => {
   const OPERAND_STRING = curState.operandString;
   const SUM_SUB_MULT_DIV_IS_ON = curState.sumSubMultDivIsOn;
   const EQUALS_IS_ON = curState.equalsIsOn;
-  const EQUASION_RESULT = curState.equasionResult;
+  const EQUATION_RESULT = curState.equationResult;
 
   let queuedStateUpdates = {};
 
@@ -39,7 +39,7 @@ const equals = (curState) => {
     console.log('EQUALS Checkpoint 3');
     queuedStateUpdates = {
       ...equalsHelperUpdates,
-      operand1: EQUASION_RESULT,
+      operand1: EQUATION_RESULT,
     };
     return queuedStateUpdates;
   }

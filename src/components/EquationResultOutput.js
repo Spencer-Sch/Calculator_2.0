@@ -45,9 +45,9 @@ const EquationResultOutput = () => {
   let renderThis;
   let typographyClass = classes.typographyBig;
 
-  if (state.equasionResult) {
-    renderThis = state.equasionResult;
-    if (state.equasionResult.length > 14) {
+  if (state.equationResult) {
+    renderThis = state.equationResult;
+    if (state.equationResult.length > 14) {
       typographyClass = classes.typographySmall;
     }
   } else if (state.operandString) {
