@@ -8,6 +8,9 @@ const useStyles = makeStyles((theme) => ({
   ul: {
     margin: '0',
     padding: '0',
+    height: '38.4rem',
+    overflowX: 'hidden',
+    overflowY: 'scroll',
   },
   typographyGrid: {
     paddingTop: '1rem',

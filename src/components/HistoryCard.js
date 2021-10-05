@@ -6,6 +6,7 @@ import {
   Typography,
   makeStyles,
 } from '@material-ui/core';
+import { deepOrange, grey } from '@material-ui/core/colors';
 import React from 'react';
 
 const useStyles = makeStyles({
@@ -17,6 +18,9 @@ const useStyles = makeStyles({
     marginRight: '8px',
     marginTop: '8px',
     marginBottom: '16px',
+    '&:hover': {
+      backgroundColor: deepOrange[100],
+    },
   },
   cardContent: {
     maxHeight: '100px',

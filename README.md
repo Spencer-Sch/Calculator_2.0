@@ -189,3 +189,9 @@ Update #2
 Update #3
 
 - Added functionality to clear history
+
+Update #4
+
+- Added hover effect to history cards.
+
+- Restricted height of HistoryCardArea.
