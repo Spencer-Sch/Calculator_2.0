@@ -1,4 +1,4 @@
-import { Grid, makeStyles } from '@material-ui/core';
+import { Grid, makeStyles, Typography } from '@material-ui/core';
 import HistoryCard from './HistoryCard';
 import React from 'react';
 import { grey } from '@material-ui/core/colors';
@@ -8,6 +8,13 @@ const useStyles = makeStyles((theme) => ({
   ul: {
     margin: '0',
     padding: '0',
+  },
+  typographyGrid: {
+    paddingTop: '1rem',
+  },
+  typography: {
+    fontWeight: 500,
+    letterSpacing: '0.11rem',
   },
   grid: {
     height: '84%',
@@ -32,9 +39,24 @@ const HistoryCardArea = () => {
     />
   ));
 
+  const placeholder = (
+    <Grid item xs={12} className={classes.typographyGrid}>
+      <Typography className={classes.typography} align="center" variant="body1">
+        There is no history yet...
+      </Typography>
+    </Grid>
+  );
+
+  const content =
+    historyCards.length > 0 ? (
+      <ul className={classes.ul}>{historyCards}</ul>
+    ) : (
+      placeholder
+    );
+
   return (
     <Grid item xs={12} className={classes.grid}>
-      <ul className={classes.ul}>{historyCards}</ul>
+      {content}
     </Grid>
   );
 };
