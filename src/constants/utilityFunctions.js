@@ -5,6 +5,9 @@ export const isFloat = (number) => {
 };
 
 export const negate = (input) => {
+  if (+input === 0) {
+    return `${input}`;
+  }
   if (+input > 0) {
     const newStr = `-${input}`;
     return newStr;

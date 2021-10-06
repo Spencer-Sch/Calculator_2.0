@@ -205,3 +205,7 @@ Day 17
 Update #1
 
 - Made small edits to some test descriptions.
+
+Update #2
+
+- Fixed bug in button combo: ( 0 +/- 1 ). The input of "0" in the "negate" function in "utilityFunctions" was causing "undefined" to be returned. when "1" was pressed build "buildOperand" didn't know what to do with the value of "undefined" and crashed the app.
