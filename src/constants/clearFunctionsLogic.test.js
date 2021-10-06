@@ -1,6 +1,6 @@
 import clearFunctions from './clearFunctionsLogic';
 
-test('(button combo: 1 + 2 =) IF value is "C" OR equalsIsOn = true THEN clearFunctions should return state to its default', () => {
+test('(button combo: 1 + 2 = C) IF value is "C" OR equalsIsOn = true THEN clearFunctions should return state to its default', () => {
   const testState = {
     operandString: '0',
     operand1: '1',
@@ -34,7 +34,7 @@ test('(button combo: 1 + 2 =) IF value is "C" OR equalsIsOn = true THEN clearFun
   });
 });
 
-test('(button combo: 1 + 2 = -) IF value is "C" THEN clearFunctions should return state to its default', () => {
+test('(button combo: 1 + 2 = - C) IF value is "C" THEN clearFunctions should return state to its default', () => {
   const testState = {
     operandString: '0',
     operand1: '3',
@@ -68,7 +68,7 @@ test('(button combo: 1 + 2 = -) IF value is "C" THEN clearFunctions should retur
   });
 });
 
-test('(button combo: 1 + 2 = + 4) IF value is "C" THEN clearFunctions should return state to its default', () => {
+test('(button combo: 1 + 2 = + 4 C) IF value is "C" THEN clearFunctions should return state to its default', () => {
   const testState = {
     operandString: '4',
     operand1: '3',
@@ -102,7 +102,7 @@ test('(button combo: 1 + 2 = + 4) IF value is "C" THEN clearFunctions should ret
   });
 });
 
-test('(button combo: 1 + 2 = + 4) IF value is "CE" THEN clearFunctions should return operandString, decimalIsOn, percentIsOn, & currentPercent back to default.', () => {
+test('(button combo: 1 + 2 = + 4 CE) IF value is "CE" THEN clearFunctions should return operandString, decimalIsOn, percentIsOn, & currentPercent back to default.', () => {
   const testState = {
     operandString: '4',
     operand1: '3',

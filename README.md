@@ -199,3 +199,9 @@ Update #4
 Update #5
 
 - Added funtionality to recall history entries by clicking on them.
+
+Day 17
+
+Update #1
+
+- Made small edits to some test descriptions.

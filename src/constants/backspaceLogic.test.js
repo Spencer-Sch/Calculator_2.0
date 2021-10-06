@@ -1,6 +1,6 @@
 import backspace from './backspaceLogic';
 
-test('(button combo: 1 2 3 + <-) IF sumSubMultDivIsOn = true backspace should do nothing.', () => {
+test('(button combo: 1 2 3 + <-) IF sumSubMultDivIsOn = true THEN backspace should do nothing.', () => {
   const testState = {
     operandString: '123',
     operand1: null,
@@ -34,7 +34,7 @@ test('(button combo: 1 2 3 + <-) IF sumSubMultDivIsOn = true backspace should do
   });
 });
 
-test('(button combo: 1 + 2 = <-) IF equalsIsOn = true backspace should do nothing.', () => {
+test('(button combo: 1 + 2 = <-) IF equalsIsOn = true THEN backspace should do nothing.', () => {
   const testState = {
     operandString: '0',
     operand1: '1',

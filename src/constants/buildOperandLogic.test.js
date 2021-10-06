@@ -71,7 +71,7 @@ test('(button combo: 1 2 3) buildOperand should make operandString = "123"', () 
   });
 });
 
-test('IF button combo is 14 or more characters long buildOperand should change nothing', () => {
+test('(button combo: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 )IF button combo is 14 or more characters long THEN buildOperand should change nothing', () => {
   const testState = {
     operandString: '12345678912345',
     operand1: null,
@@ -106,7 +106,7 @@ test('IF button combo is 14 or more characters long buildOperand should change n
   });
 });
 
-test('if equationResult is truthy when button combo is "3" then equationResult should be changed to "null', () => {
+test('(button combo: 3 ) IF equationResult is truthy THEN equationResult should be changed to "null', () => {
   const testState = {
     operandString: '',
     operand1: '6',
