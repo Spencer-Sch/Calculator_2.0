@@ -24,28 +24,38 @@ const useStyles = makeStyles((theme) => ({
 
 const EquationOutput = () => {
   const state = useStore()[0];
+
+  const OPERAND1 = state.operand1;
+  const OPERAND2 = state.operand2;
+  const OPERATOR = state.operator;
+  const EQUATION_RESULT = state.equationResult;
+  const RUN_CALCULATE = state.runCalculate;
+  const CAME_FROM_EQUALS = state.cameFromEquals;
+
   const classes = useStyles();
 
   let renderThis;
 
   // if (state.equationResult) {
-  if (state.runCalculate) {
+  if (RUN_CALCULATE) {
     setTimeout(() => {
-      if (state.cameFromEquals) {
-        renderThis = `${state.operand1} ${state.operator} ${state.operand2} = `;
+      if (CAME_FROM_EQUALS) {
+        renderThis = `${OPERAND1} ${OPERATOR} ${OPERAND2} = `;
       } else {
-        renderThis = `${state.operand1} ${state.operator}`;
+        renderThis = `${OPERAND1} ${OPERATOR}`;
       }
     }, 80);
-    // if (state.equationResult.length > 14) {
+    // if (EQUATION_RESULT.length > 14) {
     //   typographyClass = classes.typographySmall;
     // }
-  } else if (state.operand2) {
-    renderThis = `${state.operand1} ${state.operator} ${state.operand2} = `;
-  } else if (state.operator) {
-    renderThis = `${state.operand1} ${state.operator}`;
-  } else if (state.operand1) {
-    renderThis = `${state.operand1}`;
+  } else if (OPERAND2 && OPERATOR === '=') {
+    renderThis = `${OPERAND1} ${OPERATOR} ${OPERAND2}`;
+  } else if (OPERAND2) {
+    renderThis = `${OPERAND1} ${OPERATOR} ${OPERAND2} = `;
+  } else if (OPERATOR) {
+    renderThis = `${OPERAND1} ${OPERATOR}`;
+  } else if (OPERAND1) {
+    renderThis = `${OPERAND1}`;
   }
 
   return (

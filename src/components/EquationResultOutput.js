@@ -33,29 +33,35 @@ const useStyles = makeStyles((theme) => ({
 const EquationResultOutput = () => {
   const [state, dispatch] = useStore();
 
+  const OPERAND1 = state.operand1;
+  const OPERAND2 = state.operand2;
+  const OPERAND_STRING = state.operandString;
+  const EQUATION_RESULT = state.equationResult;
+  const RUN_CALCULATE = state.runCalculate;
+
   const classes = useStyles();
 
   useEffect(() => {
-    if (state.runCalculate) {
+    if (RUN_CALCULATE) {
       dispatch('CALCULATE');
       dispatch('ADD_ENTRY');
     }
-  }, [state.runCalculate, dispatch]);
+  }, [RUN_CALCULATE, dispatch]);
 
   let renderThis;
   let typographyClass = classes.typographyBig;
 
-  if (state.equationResult) {
-    renderThis = state.equationResult;
-    if (state.equationResult.length > 14) {
+  if (EQUATION_RESULT) {
+    renderThis = EQUATION_RESULT;
+    if (EQUATION_RESULT.length > 14) {
       typographyClass = classes.typographySmall;
     }
-  } else if (state.operandString) {
-    renderThis = state.operandString;
-  } else if (state.operand1) {
-    renderThis = state.operand1;
+  } else if (OPERAND_STRING) {
+    renderThis = OPERAND_STRING;
+  } else if (OPERAND1) {
+    renderThis = OPERAND1;
   } else {
-    renderThis = state.operand2;
+    renderThis = OPERAND2;
   }
 
   return (

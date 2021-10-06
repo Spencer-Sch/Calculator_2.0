@@ -209,3 +209,13 @@ Update #1
 Update #2
 
 - Fixed bug in button combo: ( 0 +/- 1 ). The input of "0" in the "negate" function in "utilityFunctions" was causing "undefined" to be returned. when "1" was pressed build "buildOperand" didn't know what to do with the value of "undefined" and crashed the app.
+
+Update #3
+
+- Added some constatns to "EquastionResultOutput" and "EquationOutput" to improve readability
+
+- Fixed logic in "EquationOutput" to prevent display of a second equals sign when the operator is "=". Before "0 = 0 =" after "0 = 0".
+
+Update #4
+
+- Removed a portion of "buildOperandLogic" (and an accompanying test) originally added to solve a display issue. This introduced a logical issue. The logic issue has been fixed. Now I need to solve the display issue.

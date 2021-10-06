@@ -106,41 +106,6 @@ test('(button combo: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 )IF button combo is 14 or more 
   });
 });
 
-test('(button combo: 3 ) IF equationResult is truthy THEN equationResult should be changed to "null', () => {
-  const testState = {
-    operandString: '',
-    operand1: '6',
-    operand2: null,
-    operator: '+',
-    nextOperator: '+',
-    equationResult: '6',
-    sumSubMultDivIsOn: true,
-    equalsIsOn: false,
-    decimalIsOn: false,
-    percentIsOn: false,
-    currentPercent: null,
-    runCalculate: false,
-    cameFromEquals: false,
-  };
-  const returnedState = buildOperand(testState, '3');
-
-  expect({ ...testState, ...returnedState }).toEqual({
-    operandString: '3',
-    operand1: '6',
-    operand2: null,
-    operator: '+',
-    nextOperator: '+',
-    equationResult: null,
-    sumSubMultDivIsOn: false,
-    equalsIsOn: false,
-    decimalIsOn: false,
-    percentIsOn: false,
-    currentPercent: null,
-    runCalculate: false,
-    cameFromEquals: false,
-  });
-});
-
 test('(button combo: 1 + 2) buildOperand should make operandString = "2"', () => {
   const testState = {
     operandString: '',
