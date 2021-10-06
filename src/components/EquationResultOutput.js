@@ -38,8 +38,14 @@ const EquationResultOutput = () => {
   const OPERAND_STRING = state.operandString;
   const EQUATION_RESULT = state.equationResult;
   const RUN_CALCULATE = state.runCalculate;
+  const RENDER_THIS = state.renderEquationResult;
+
+  console.log('From inside ERO: ', RENDER_THIS);
 
   const classes = useStyles();
+
+  // let renderThis;
+  let typographyClass = classes.typographyBig;
 
   useEffect(() => {
     if (RUN_CALCULATE) {
@@ -48,26 +54,30 @@ const EquationResultOutput = () => {
     }
   }, [RUN_CALCULATE, dispatch]);
 
-  let renderThis;
-  let typographyClass = classes.typographyBig;
+  // useEffect(() => {
+  //   renderThis = RENDER_THIS;
+  // }, [RENDER_THIS, dispatch]);
 
-  if (EQUATION_RESULT) {
-    renderThis = EQUATION_RESULT;
-    if (EQUATION_RESULT.length > 14) {
-      typographyClass = classes.typographySmall;
-    }
-  } else if (OPERAND_STRING) {
-    renderThis = OPERAND_STRING;
-  } else if (OPERAND1) {
-    renderThis = OPERAND1;
-  } else {
-    renderThis = OPERAND2;
-  }
+  /////////////////////////////////////////////////////////////
+
+  // if (EQUATION_RESULT) {
+  //   renderThis = EQUATION_RESULT;
+  //   if (EQUATION_RESULT.length > 14) {
+  //     typographyClass = classes.typographySmall;
+  //   }
+  // } else if (OPERAND_STRING) {
+  //   renderThis = OPERAND_STRING;
+  // } else if (OPERAND1) {
+  //   renderThis = OPERAND1;
+  // } else {
+  //   renderThis = OPERAND2;
+  // }
+  /////////////////////////////////////////////////////////////
 
   return (
     <Grid item xs={12} className={classes.grid}>
       <Typography variant="h1" align="right" className={typographyClass}>
-        {renderThis}
+        {RENDER_THIS}
       </Typography>
     </Grid>
   );

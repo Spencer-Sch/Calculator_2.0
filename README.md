@@ -219,3 +219,7 @@ Update #3
 Update #4
 
 - Removed a portion of "buildOperandLogic" (and an accompanying test) originally added to solve a display issue. This introduced a logical issue. The logic issue has been fixed. Now I need to solve the display issue.
+
+Update #5
+
+- Began redesign of the system that decides what is rendered on screen and when. Ran into a few issues that need to be worked out. To be continued...

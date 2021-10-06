@@ -17,11 +17,13 @@ const backspace = (curState) => {
       console.log('BACKSPACE Checkpoint 3');
       queuedStateUpdates = {
         operandString: '0',
+        renderEquationResult: '0',
       };
     } else {
       console.log('BACKSPACE Checkpoint 4');
       queuedStateUpdates = {
         operandString: reducedString,
+        renderEquationResult: reducedString,
       };
     }
     if (!isFloat(reducedString)) {

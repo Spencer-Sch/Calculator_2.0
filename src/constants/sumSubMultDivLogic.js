@@ -18,6 +18,8 @@ const sumSubMultDiv = (curState, operator) => {
       operator: operator,
       equalsIsOn: false,
       percentIsOn: false,
+      renderEquation: `${EQUATION_RESULT} ${operator}`,
+      renderEquationResult: `${EQUATION_RESULT}`,
     };
   }
   if (!SUM_SUB_MULT_DIV_IS_ON) {
@@ -36,6 +38,8 @@ const sumSubMultDiv = (curState, operator) => {
         operand2: null,
         operator: operator,
         equationResult: null,
+        renderEquation: `${OPERAND1} ${operator}`,
+        renderEquationResult: `${OPERAND_STRING}`,
       };
     } else if (OPERAND1 && OPERATOR) {
       console.log('sumSubMultDiv Checkpoint 2');
@@ -53,6 +57,7 @@ const sumSubMultDiv = (curState, operator) => {
         operand1: OPERAND_STRING,
         operandString: '',
         operator: operator,
+        renderEquation: `${OPERAND_STRING} ${operator}`,
       };
     }
   } else {

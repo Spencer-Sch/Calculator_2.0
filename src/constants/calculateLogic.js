@@ -7,6 +7,8 @@ const calculate = (curState) => {
   const OPERAND2 = +curState.operand2;
   const OPERATOR = curState.operator;
 
+  console.log('HERE IT IS: ', OPERAND2);
+
   let equationResult;
 
   if (OPERATOR === '/' && OPERAND2 === 0) {
@@ -18,13 +20,14 @@ const calculate = (curState) => {
       operator: null,
       nextOperator: null,
       equalsIsOn: false,
-      equationResult: 'Cannot Divide By Zero!',
+      equationResult: null,
       sumSubMultDivIsOn: false,
       decimalIsOn: false,
       percentIsOn: false,
       currentPercent: null,
       runCalculate: false,
       cameFromEquals: false,
+      renderEquationResult: 'Cannot Divide By Zero!',
     };
     return stateUpdates;
   } else {
@@ -52,10 +55,14 @@ const calculate = (curState) => {
       operand2: null,
       operator: NEXT_OPERATOR,
       runCalculate: false,
+      renderEquationResult: `${equationResult}`,
+      renderEquation: `${equationResult} ${NEXT_OPERATOR}`,
     };
   } else {
     return {
       equationResult: `${equationResult}`,
+      renderEquationResult: `${equationResult}`,
+      renderEquation: `${OPERAND1} ${OPERATOR} ${OPERAND2} =`,
       runCalculate: false,
       cameFromEquals: false,
     };

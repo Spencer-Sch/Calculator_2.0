@@ -33,7 +33,6 @@ const equals = (curState) => {
     return queuedStateUpdates;
   }
 
-  ///////////////////////////////////////////
   if (OPERAND1 && OPERATOR && OPERAND2) {
     const equalsHelperUpdates = equalsHelper(curState, 1);
     console.log('EQUALS Checkpoint 3');

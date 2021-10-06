@@ -12,13 +12,17 @@ const buildOperand = (curState, newDigit) => {
     if (operandString === '0') {
       operandString = '';
     }
+
+    const newOperandString = PERCENT_IS_ON
+      ? `${newDigit}`
+      : `${operandString}`.concat(`${newDigit}`);
+
     const stateUpdates = {
-      operandString: PERCENT_IS_ON
-        ? `${newDigit}`
-        : `${operandString}`.concat(`${newDigit}`),
+      operandString: newOperandString,
       equalsIsOn: false,
       sumSubMultDivIsOn: false,
       percentIsOn: false,
+      renderEquationResult: newOperandString,
     };
     return stateUpdates;
   }
