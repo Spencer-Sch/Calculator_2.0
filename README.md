@@ -239,3 +239,7 @@ Update #1
 Update #2
 
 - Added new render functionallity to "positiveNegativeLogic".
+
+Update #3
+
+- Added new render functionallity to "backspaceLogic".

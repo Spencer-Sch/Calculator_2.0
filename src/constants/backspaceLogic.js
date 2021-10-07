@@ -4,6 +4,7 @@ const backspace = (curState) => {
   const OPERAND_STRING = curState.operandString;
   const SUM_SUB_MULT_DIV_IS_ON = curState.sumSubMultDivIsOn;
   const EQUALS_IS_ON = curState.equalsIsOn;
+  const RENDER_DATA = curState.renderData;
 
   let queuedStateUpdates = {};
   const reducedString = OPERAND_STRING.slice(0, OPERAND_STRING.length - 1);
@@ -17,13 +18,19 @@ const backspace = (curState) => {
       console.log('BACKSPACE Checkpoint 3');
       queuedStateUpdates = {
         operandString: '0',
-        renderEquationResult: '0',
+        renderData: {
+          ...RENDER_DATA,
+          renderEquationResult: '0',
+        },
       };
     } else {
       console.log('BACKSPACE Checkpoint 4');
       queuedStateUpdates = {
         operandString: reducedString,
-        renderEquationResult: reducedString,
+        renderData: {
+          ...RENDER_DATA,
+          renderEquationResult: reducedString,
+        },
       };
     }
     if (!isFloat(reducedString)) {
