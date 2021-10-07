@@ -34,7 +34,7 @@ const HistoryCardArea = () => {
 
   const state = useStore()[0];
 
-  const historyCards = state.historyList.map((entry) => (
+  const historyCards = state.historyData.historyList.map((entry) => (
     <HistoryCard
       key={entry.key}
       id={entry.key}

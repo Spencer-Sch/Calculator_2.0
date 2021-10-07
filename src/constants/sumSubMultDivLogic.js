@@ -6,11 +6,20 @@ const sumSubMultDiv = (curState, operator) => {
   const SUM_SUB_MULT_DIV_IS_ON = curState.sumSubMultDivIsOn;
   const EQUALS_IS_ON = curState.equalsIsOn;
   const EQUATION_RESULT = curState.equationResult;
+  const RENDER_DATA = curState.renderData;
 
   let queuedStateUpdates = {};
 
+  let renderUpdate;
+
   if (EQUALS_IS_ON) {
     console.log('sumSubMultDiv Checkpoint 0.5');
+
+    renderUpdate = {
+      renderEquation: `${EQUATION_RESULT} ${operator}`,
+      renderEquationResult: `${EQUATION_RESULT}`,
+    };
+
     queuedStateUpdates = {
       ...queuedStateUpdates,
       operand1: EQUATION_RESULT,
@@ -18,8 +27,9 @@ const sumSubMultDiv = (curState, operator) => {
       operator: operator,
       equalsIsOn: false,
       percentIsOn: false,
-      renderEquation: `${EQUATION_RESULT} ${operator}`,
-      renderEquationResult: `${EQUATION_RESULT}`,
+      renderData: {
+        ...renderUpdate,
+      },
     };
   }
   if (!SUM_SUB_MULT_DIV_IS_ON) {
@@ -38,8 +48,10 @@ const sumSubMultDiv = (curState, operator) => {
         operand2: null,
         operator: operator,
         equationResult: null,
-        renderEquation: `${OPERAND1} ${operator}`,
-        renderEquationResult: `${OPERAND_STRING}`,
+        renderData: {
+          renderEquation: `${OPERAND_STRING} ${operator}`,
+          renderEquationResult: `${OPERAND_STRING}`,
+        },
       };
     } else if (OPERAND1 && OPERATOR) {
       console.log('sumSubMultDiv Checkpoint 2');
@@ -57,13 +69,23 @@ const sumSubMultDiv = (curState, operator) => {
         operand1: OPERAND_STRING,
         operandString: '',
         operator: operator,
-        renderEquation: `${OPERAND_STRING} ${operator}`,
+        renderData: {
+          ...RENDER_DATA,
+          renderEquation: `${OPERAND_STRING} ${operator}`,
+        },
       };
     }
   } else {
+    console.log('sumSubMultDiv Checkpoint 4');
     queuedStateUpdates = {
       ...queuedStateUpdates,
       operator: operator,
+      renderData: renderUpdate
+        ? renderUpdate
+        : {
+            ...RENDER_DATA,
+            renderEquation: `${OPERAND1} ${operator}`,
+          },
     };
   }
 

@@ -223,3 +223,15 @@ Update #4
 Update #5
 
 - Began redesign of the system that decides what is rendered on screen and when. Ran into a few issues that need to be worked out. To be continued...
+
+Day 18
+
+Update #1
+
+- Fixed logic error where global state data was being changed before historyEntry could be made. Solution: added "historyData" object to "history-store" slice and stored operan1, operand2, and operator into new fields operand1Store, operand2Store, and operatorStore to hold onto these values to give to historyEntry while still allowing calculateLogic to function as designed.
+
+- Began refactoring the process for how information is being rendered to the screen. Instead of old IF...THEN... filter checking for truthy or falsy values I added the "render-store" state slice and "renderData" object. Now, throughout the code I explicetly tell the state what to display at every logical turn. This grants me complete control of what is displayed when. No more IF...THEN... issues.
+
+- Need to add new renderData process to "+/-", "%", and "<-" logic.
+
+- A bunch of my tests are failing now due to adding fields to my global state. These will need to be corrected and new tests will need to be added.

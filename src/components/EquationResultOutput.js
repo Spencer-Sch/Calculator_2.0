@@ -38,9 +38,9 @@ const EquationResultOutput = () => {
   const OPERAND_STRING = state.operandString;
   const EQUATION_RESULT = state.equationResult;
   const RUN_CALCULATE = state.runCalculate;
-  const RENDER_THIS = state.renderEquationResult;
+  const RENDER_THIS = state.renderData.renderEquationResult;
 
-  console.log('From inside ERO: ', RENDER_THIS);
+  // console.log('From inside ERO: ', RENDER_THIS);
 
   const classes = useStyles();
 

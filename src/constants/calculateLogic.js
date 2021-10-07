@@ -6,10 +6,21 @@ const calculate = (curState) => {
   const OPERAND1 = +curState.operand1;
   const OPERAND2 = +curState.operand2;
   const OPERATOR = curState.operator;
-
-  console.log('HERE IT IS: ', OPERAND2);
+  const HISTORY_DATA = curState.historyData;
+  // const HISTORY_LIST = curState.historyData.historyList;
+  // const RENDER_DATA = curState.renderData;
 
   let equationResult;
+  let queuedStateUpdates = {
+    historyData: {
+      ...HISTORY_DATA,
+      operand1Store: OPERAND1,
+      operand2Store: OPERAND2,
+      operatorStore: OPERATOR,
+    },
+  };
+
+  const conditionalEquals = OPERATOR === '=' ? '' : ' =';
 
   if (OPERATOR === '/' && OPERAND2 === 0) {
     console.log("Can't divide by zero!");
@@ -27,7 +38,10 @@ const calculate = (curState) => {
       currentPercent: null,
       runCalculate: false,
       cameFromEquals: false,
-      renderEquationResult: 'Cannot Divide By Zero!',
+      renderData: {
+        renderEquation: null,
+        renderEquationResult: 'Cannot Divide By Zero!',
+      },
     };
     return stateUpdates;
   } else {
@@ -50,21 +64,27 @@ const calculate = (curState) => {
 
   if (!CAME_FROM_EQUALS) {
     return {
+      ...queuedStateUpdates,
       equationResult: `${equationResult}`,
       operand1: `${equationResult}`,
       operand2: null,
       operator: NEXT_OPERATOR,
       runCalculate: false,
-      renderEquationResult: `${equationResult}`,
-      renderEquation: `${equationResult} ${NEXT_OPERATOR}`,
+      renderData: {
+        renderEquationResult: `${equationResult}`,
+        renderEquation: `${equationResult} ${NEXT_OPERATOR}`,
+      },
     };
   } else {
     return {
+      ...queuedStateUpdates,
       equationResult: `${equationResult}`,
-      renderEquationResult: `${equationResult}`,
-      renderEquation: `${OPERAND1} ${OPERATOR} ${OPERAND2} =`,
       runCalculate: false,
       cameFromEquals: false,
+      renderData: {
+        renderEquationResult: `${equationResult}`,
+        renderEquation: `${OPERAND1} ${OPERATOR} ${OPERAND2}${conditionalEquals}`,
+      },
     };
   }
 };

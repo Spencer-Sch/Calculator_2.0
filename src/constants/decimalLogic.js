@@ -4,6 +4,7 @@ const decimal = (curState) => {
   const SUM_SUB_MULT_DIV_IS_ON = curState.sumSubMultDivIsOn;
   const EQUALS_IS_ON = curState.equalsIsOn;
   const DECIMAL_IS_ON = curState.decimalIsOn;
+  const RENDER_DATA = curState.renderData;
 
   if (!DECIMAL_IS_ON) {
     console.log('DECIMAL checkpoint 1');
@@ -17,6 +18,10 @@ const decimal = (curState) => {
         operand2: null,
         operator: null,
         equationResult: null,
+        renderData: {
+          renderEquation: null,
+          renderEquationResult: '0.',
+        },
       };
     } else if (
       SUM_SUB_MULT_DIV_IS_ON ||
@@ -26,12 +31,20 @@ const decimal = (curState) => {
       queuedStateUpdates = {
         ...queuedStateUpdates,
         operandString: '0.',
+        renderData: {
+          renderEquation: null,
+          renderEquationResult: '0.',
+        },
       };
     } else {
       console.log('DECIMAL checkpoint 4');
       queuedStateUpdates = {
         ...queuedStateUpdates,
         operandString: `${OPERAND_STRING}.`,
+        renderData: {
+          ...RENDER_DATA,
+          renderEquationResult: `${OPERAND_STRING}.`,
+        },
       };
     }
     queuedStateUpdates = {

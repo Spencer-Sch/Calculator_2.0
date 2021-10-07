@@ -6,9 +6,9 @@ export const configureHistoryStore = () => {
       console.log('ADD_ENTRY Triggered');
 
       const OPERAND_STRING = curState.operandString;
-      const OPERAND1 = curState.operand1;
-      const OPERAND2 = curState.operand2;
-      const OPERATOR = curState.operator;
+      const OPERAND1 = curState.historyData.operand1Store;
+      const OPERAND2 = curState.historyData.operand2Store;
+      const OPERATOR = curState.historyData.operatorStore;
       const NEXT_OPERATOR = curState.nextOperator;
       const EQUATION_RESULT = curState.equationResult;
       const SUM_SUB_MULT_DIV_IS_ON = curState.sumSubMultDivIsOn;
@@ -17,7 +17,7 @@ export const configureHistoryStore = () => {
       const PERCENT_IS_ON = curState.percentIsOn;
       const CURRENT_PERCENT = curState.currentPercent;
       const CAME_FROM_EQUALS = curState.cameFromEquals;
-      const HISTORY_LIST = curState.historyList;
+      const HISTORY_LIST = curState.historyData.historyList;
 
       let equation;
 
@@ -44,15 +44,22 @@ export const configureHistoryStore = () => {
         cameFromEquals: CAME_FROM_EQUALS,
       };
 
-      return { historyList: [...HISTORY_LIST, newEntry] };
+      return {
+        historyData: {
+          operand1Store: null,
+          operand2Store: null,
+          operatorStore: null,
+          historyList: [...HISTORY_LIST, newEntry],
+        },
+      };
     },
     RECALL_ENTRY: (curState, targetId) => {
       console.log('RECALL_HISTORY Triggered');
 
-      const entryIndex = curState.historyList.findIndex(
+      const entryIndex = curState.historyData.historyList.findIndex(
         (entry) => entry.key === targetId
       );
-      const targetEntry = curState.historyList[entryIndex];
+      const targetEntry = curState.historyData.historyList[entryIndex];
 
       const OPERAND_STRING = targetEntry.operandString;
       const OPERAND1 = targetEntry.operand1;
@@ -85,9 +92,23 @@ export const configureHistoryStore = () => {
     CLEAR_HISTORY: () => {
       console.log('CLEAR_HISTORY Triggered');
 
-      return { historyList: [] };
+      return {
+        historyData: {
+          operand1Store: null,
+          operand2Store: null,
+          operatorStore: null,
+          historyList: [],
+        },
+      };
     },
   };
 
-  initStore(actions, { historyList: [] });
+  initStore(actions, {
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+  });
 };

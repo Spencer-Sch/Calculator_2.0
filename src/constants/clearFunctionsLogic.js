@@ -1,5 +1,6 @@
 const clearFunctions = (curState, value) => {
   const EQUALS_IS_ON = curState.equalsIsOn;
+  const RENDER_DATA = curState.renderData;
   let queuedStateUpdates;
 
   if (value === 'C' || EQUALS_IS_ON) {
@@ -19,6 +20,10 @@ const clearFunctions = (curState, value) => {
       currentPercent: null,
       runCalculate: false,
       cameFromEquals: false,
+      renderData: {
+        renderEquation: '',
+        renderEquationResult: '0',
+      },
     };
     return queuedStateUpdates;
   } else {
@@ -29,6 +34,10 @@ const clearFunctions = (curState, value) => {
       decimalIsOn: false,
       percentIsOn: false,
       currentPercent: null,
+      renderData: {
+        ...RENDER_DATA,
+        renderEquationResult: '0',
+      },
     };
     return queuedStateUpdates;
   }

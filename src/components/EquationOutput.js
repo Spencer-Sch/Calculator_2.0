@@ -32,7 +32,7 @@ const EquationOutput = () => {
   // const RUN_CALCULATE = state.runCalculate;
   // const CAME_FROM_EQUALS = state.cameFromEquals;
 
-  const RENDER_THIS = state.renderEquation;
+  const RENDER_THIS = state.renderData.renderEquation;
 
   const classes = useStyles();
 
