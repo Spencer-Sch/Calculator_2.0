@@ -6,6 +6,7 @@ const positiveNegative = (curState) => {
   const OPERATOR = curState.operator;
   const OPERAND_STRING = curState.operandString;
   const EQUATION_RESULT = curState.equationResult;
+  const RENDER_DATA = curState.renderData;
 
   let queuedStateUpdates = {};
 
@@ -15,6 +16,10 @@ const positiveNegative = (curState) => {
     queuedStateUpdates = {
       ...queuedStateUpdates,
       operandString: returnedString,
+      renderData: {
+        ...RENDER_DATA,
+        renderEquationResult: returnedString,
+      },
     };
   } else if (OPERAND1 && OPERATOR && !OPERAND2 && !OPERAND_STRING) {
     console.log('POSITIVE_NEGATIVE Checkpoint 2');
@@ -22,6 +27,10 @@ const positiveNegative = (curState) => {
     queuedStateUpdates = {
       ...queuedStateUpdates,
       operandString: returnedString,
+      renderData: {
+        ...RENDER_DATA,
+        renderEquationResult: returnedString,
+      },
     };
   } else if (OPERAND1 && OPERATOR && OPERAND_STRING && !OPERAND2) {
     console.log('POSITIVE_NEGATIVE Checkpoint 3');
@@ -29,6 +38,10 @@ const positiveNegative = (curState) => {
     queuedStateUpdates = {
       ...queuedStateUpdates,
       operandString: returnedString,
+      renderData: {
+        ...RENDER_DATA,
+        renderEquationResult: returnedString,
+      },
     };
   } else if (OPERAND1 && OPERATOR && OPERAND2) {
     console.log('POSITIVE_NEGATIVE Checkpoint 4');
@@ -40,6 +53,10 @@ const positiveNegative = (curState) => {
       operand2: null,
       operator: null,
       equationResult: null,
+      renderData: {
+        ...RENDER_DATA,
+        renderEquationResult: returnedString,
+      },
     };
   }
   queuedStateUpdates = {

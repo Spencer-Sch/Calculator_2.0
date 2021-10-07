@@ -235,3 +235,7 @@ Update #1
 - Need to add new renderData process to "+/-", "%", and "<-" logic.
 
 - A bunch of my tests are failing now due to adding fields to my global state. These will need to be corrected and new tests will need to be added.
+
+Update #2
+
+- Added new render functionallity to "positiveNegativeLogic".
