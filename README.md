@@ -265,3 +265,7 @@ Update #1
 - Renamed "equationResult" variable in "calculateLogic" to "equationResultVar" to destinguish from "equationResult" field in global state object.
 
 - updated tests in "calculateLogic.test" in order to reflect the additions of history slice and render slice to global state.
+
+Update #2
+
+- updated tests in "calculateLogic.test" in order to reflect the additions of render slice to global state.
