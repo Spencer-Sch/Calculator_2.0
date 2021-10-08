@@ -9,13 +9,19 @@ const percent = (curState) => {
   const EQUATION_RESULT = curState.equationResult;
   const PERCENT_IS_ON = curState.percentIsOn;
   const CURRENT_PERCENT = curState.currentPercent;
+  const RENDER_DATA = curState.renderData;
 
   let queuedStateUpdates = {};
 
   if (PERCENT_IS_ON) {
     console.log('PERCENT Checkpoint 1');
+    const calcResult = +OPERAND_STRING * CURRENT_PERCENT;
     queuedStateUpdates = {
-      operandString: +OPERAND_STRING * CURRENT_PERCENT,
+      operandString: calcResult,
+      renderData: {
+        ...RENDER_DATA,
+        renderEquationResult: calcResult,
+      },
     };
   }
   if (!PERCENT_IS_ON) {
@@ -23,6 +29,10 @@ const percent = (curState) => {
       console.log('PERCENT Checkpoint 0.5');
       return {
         operandString: '0',
+        renderData: {
+          ...RENDER_DATA,
+          renderEquationResult: '0',
+        },
       };
     }
     if (OPERAND1 && OPERATOR && !OPERAND2 && !OPERAND_STRING) {
@@ -31,6 +41,10 @@ const percent = (curState) => {
       const percentHelperUpdates = percentHelper(resultArr, 0);
       queuedStateUpdates = {
         ...percentHelperUpdates,
+        renderData: {
+          renderEquation: `${OPERAND1} ${OPERATOR} ${resultArr[0]}`,
+          renderEquationResult: `${resultArr[0]}`,
+        },
       };
     } else if (OPERAND1 && OPERATOR && !OPERAND2 && OPERAND_STRING) {
       console.log('PERCENT Checkpoint 3');
@@ -38,6 +52,10 @@ const percent = (curState) => {
       const percentHelperUpdates = percentHelper(resultArr, 0);
       queuedStateUpdates = {
         ...percentHelperUpdates,
+        renderData: {
+          renderEquation: `${OPERAND1} ${OPERATOR} ${resultArr[0]}`,
+          renderEquationResult: `${resultArr[0]}`,
+        },
       };
     } else if (OPERAND2) {
       console.log('PERCENT Checkpoint 4');
@@ -45,6 +63,10 @@ const percent = (curState) => {
       const percentHelperUpdates = percentHelper(resultArr, 1);
       queuedStateUpdates = {
         ...percentHelperUpdates,
+        renderData: {
+          renderEquation: '',
+          renderEquationResult: `${resultArr[0]}`,
+        },
       };
     }
   }

@@ -1,7 +1,6 @@
 const buildOperand = (curState, newDigit) => {
   const OPERAND_STRING = curState.operandString;
   const EQUALS_IS_ON = curState.equalsIsOn;
-  const EQUATION_RESULT = curState.equationResult;
   const PERCENT_IS_ON = curState.percentIsOn;
   const RENDER_DATA = curState.renderData;
 

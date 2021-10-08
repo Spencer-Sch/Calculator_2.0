@@ -44,7 +44,6 @@ const sumSubMultDiv = (curState, operator) => {
         ...queuedStateUpdates,
         operandString: '',
         operand1: OPERAND_STRING,
-        // operand1: EQUATION_RESULT,
         operand2: null,
         operator: operator,
         equationResult: null,

@@ -7,8 +7,6 @@ const calculate = (curState) => {
   const OPERAND2 = +curState.operand2;
   const OPERATOR = curState.operator;
   const HISTORY_DATA = curState.historyData;
-  // const HISTORY_LIST = curState.historyData.historyList;
-  // const RENDER_DATA = curState.renderData;
 
   let equationResult;
   let queuedStateUpdates = {

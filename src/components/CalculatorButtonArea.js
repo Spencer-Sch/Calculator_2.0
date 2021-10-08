@@ -7,8 +7,6 @@ import OperatorButton from './Buttons/OperatorButton';
 import NumberButton from './Buttons/NumberButton';
 import DisabledButton from './Buttons/DisabledButton';
 
-// const useStyles = makeStyles(theme => ({}));
-
 const CalculatorButtonArea = () => {
   const createButtons = buttonMap.map((button) => {
     if (button.type === 'misc') {
@@ -37,8 +35,6 @@ const CalculatorButtonArea = () => {
       return <DisabledButton key={button.id} disable={true} />;
     }
   });
-
-  // const classes = useStyles();
 
   return (
     <Grid container item spacing={1} xs={12}>

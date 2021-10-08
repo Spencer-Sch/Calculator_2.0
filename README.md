@@ -243,3 +243,9 @@ Update #2
 Update #3
 
 - Added new render functionallity to "backspaceLogic".
+
+Update #4
+
+- Added new render functionallity to "percentLogic".
+
+- Cleaned up un-used code and comments from files.

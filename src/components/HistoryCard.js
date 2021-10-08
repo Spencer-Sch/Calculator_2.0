@@ -2,11 +2,10 @@ import {
   Card,
   CardActionArea,
   CardContent,
-  Grid,
   Typography,
   makeStyles,
 } from '@material-ui/core';
-import { deepOrange, grey } from '@material-ui/core/colors';
+import { deepOrange } from '@material-ui/core/colors';
 import React from 'react';
 import { useStore } from '../hooks-store/store';
 

@@ -1,5 +1,4 @@
 import { Button, Grid, makeStyles, Paper } from '@material-ui/core';
-import { cyan } from '@material-ui/core/colors';
 import React from 'react';
 
 import { useStore } from '../../hooks-store/store';
@@ -11,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '4.5rem',
     fontSize: '2rem',
     fontWeight: 900,
-    // color: [theme.palette.operator.contrastText],
   },
   otherButtonStyles: {
     backgroundColor: [theme.palette.operator.main],
