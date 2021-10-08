@@ -15,6 +15,13 @@ test('(button combo: 1 2 3 + <-) IF sumSubMultDivIsOn = true THEN backspace shou
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '123', renderEquation: '123 +' },
   };
   const returnedState = backspace(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -31,6 +38,13 @@ test('(button combo: 1 2 3 + <-) IF sumSubMultDivIsOn = true THEN backspace shou
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '123', renderEquation: '123 +' },
   });
 });
 
@@ -49,6 +63,13 @@ test('(button combo: 1 + 2 = <-) IF equalsIsOn = true THEN backspace should do n
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: 1,
+      operand2Store: 2,
+      operatorStore: '+',
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '3', renderEquation: '1 + 2 =' },
   };
   const returnedState = backspace(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -65,6 +86,13 @@ test('(button combo: 1 + 2 = <-) IF equalsIsOn = true THEN backspace should do n
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: 1,
+      operand2Store: 2,
+      operatorStore: '+',
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '3', renderEquation: '1 + 2 =' },
   });
 });
 
@@ -83,6 +111,13 @@ test('(button combo: 1 2 3 + 4 5 6 <-) IF equalsIsOn & sumSubMultDivIsOn = false
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '456', renderEquation: '123 +' },
   };
   const returnedState = backspace(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -99,6 +134,13 @@ test('(button combo: 1 2 3 + 4 5 6 <-) IF equalsIsOn & sumSubMultDivIsOn = false
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '45', renderEquation: '123 +' },
   });
 });
 
@@ -117,6 +159,13 @@ test('(button combo: 1 2 3 + 4 <-) IF equalsIsOn & sumSubMultDivIsOn = false AND
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '4', renderEquation: '123 +' },
   };
   const returnedState = backspace(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -133,6 +182,13 @@ test('(button combo: 1 2 3 + 4 <-) IF equalsIsOn & sumSubMultDivIsOn = false AND
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '0', renderEquation: '123 +' },
   });
 });
 
@@ -151,6 +207,13 @@ test('(button combo: 1 2 3 + 4 5 <-) IF equalsIsOn & sumSubMultDivIsOn = false A
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '45', renderEquation: '123 +' },
   };
   const returnedState = backspace(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -167,6 +230,13 @@ test('(button combo: 1 2 3 + 4 5 <-) IF equalsIsOn & sumSubMultDivIsOn = false A
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '4', renderEquation: '123 +' },
   });
 });
 
@@ -185,6 +255,13 @@ test('(button combo: 1 2 <-) IF equalsIsOn & sumSubMultDivIsOn = false AND opera
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '12', renderEquation: null },
   };
   const returnedState = backspace(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -201,6 +278,13 @@ test('(button combo: 1 2 <-) IF equalsIsOn & sumSubMultDivIsOn = false AND opera
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '1', renderEquation: null },
   });
 });
 
@@ -219,6 +303,13 @@ test('(button combo: 1 . 2 3 <-) IF equalsIsOn & sumSubMultDivIsOn = false AND o
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '1.23', renderEquation: null },
   };
   const returnedState = backspace(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -235,5 +326,12 @@ test('(button combo: 1 . 2 3 <-) IF equalsIsOn & sumSubMultDivIsOn = false AND o
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '1.2', renderEquation: null },
   });
 });

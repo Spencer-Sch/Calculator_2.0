@@ -249,3 +249,7 @@ Update #4
 - Added new render functionallity to "percentLogic".
 
 - Cleaned up un-used code and comments from files.
+
+Update #5
+
+- Updated "backspaceLogic.test" to include new history-store and render-store state slices. All tests passing successfully.
