@@ -93,6 +93,7 @@ export const configureDataStore = () => {
     percentIsOn: false,
     currentPercent: null,
     runCalculate: false,
+    runAddEntry: false,
     cameFromEquals: false,
   });
 };

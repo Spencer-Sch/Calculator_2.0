@@ -16,6 +16,7 @@ const calculate = (curState) => {
       operand2Store: OPERAND2,
       operatorStore: OPERATOR,
     },
+    runAddEntry: true,
   };
 
   const conditionalEquals = OPERATOR === '=' ? '' : ' =';
@@ -35,6 +36,7 @@ const calculate = (curState) => {
       percentIsOn: false,
       currentPercent: null,
       runCalculate: false,
+      runAddEntry: false,
       cameFromEquals: false,
       renderData: {
         renderEquation: null,

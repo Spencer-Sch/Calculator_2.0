@@ -285,3 +285,9 @@ Update #5
 Update #6
 
 - updated tests in "sumSubMultDivLogic.test" in order to reflect the additions of render slice to global state.
+
+Update #7
+
+- Added functionality so an equation that attempts to divide by zero does not generate a history entry. "runAddEntry" field was added to global state in order to achieve this.
+
+- Edited tests in "calculateLogic.test" to reflect this change to global state. All tests passing successfully.

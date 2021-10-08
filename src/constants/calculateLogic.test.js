@@ -15,6 +15,7 @@ test('(button combo: 1 / 0 =)IF operator = "/" & operand2 = "0" THEN calculate s
     percentIsOn: false,
     currentPercent: null,
     runCalculate: true,
+    runAddEntry: false,
     cameFromEquals: true,
     historyData: {
       operand1Store: null,
@@ -41,6 +42,7 @@ test('(button combo: 1 / 0 =)IF operator = "/" & operand2 = "0" THEN calculate s
     percentIsOn: false,
     currentPercent: null,
     runCalculate: false,
+    runAddEntry: false,
     cameFromEquals: false,
     historyData: {
       operand1Store: null,
@@ -70,6 +72,7 @@ test('(button combo: 1 / 0 +)IF operator = "/" & operand2 = "0" THEN calculate s
     percentIsOn: false,
     currentPercent: null,
     runCalculate: true,
+    runAddEntry: false,
     cameFromEquals: false,
     historyData: {
       operand1Store: null,
@@ -96,6 +99,7 @@ test('(button combo: 1 / 0 +)IF operator = "/" & operand2 = "0" THEN calculate s
     percentIsOn: false,
     currentPercent: null,
     runCalculate: false,
+    runAddEntry: false,
     cameFromEquals: false,
     historyData: {
       operand1Store: null,
@@ -126,6 +130,7 @@ test('(button combo: 1 + 2 =) IF operator = "+" AND cameFromEquals = true THEN c
     percentIsOn: false,
     currentPercent: null,
     runCalculate: true,
+    runAddEntry: false,
     cameFromEquals: true,
     historyData: {
       operand1Store: null,
@@ -152,6 +157,7 @@ test('(button combo: 1 + 2 =) IF operator = "+" AND cameFromEquals = true THEN c
     percentIsOn: false,
     currentPercent: null,
     runCalculate: false,
+    runAddEntry: true,
     cameFromEquals: false,
     historyData: {
       operand1Store: 1,
@@ -180,6 +186,7 @@ test('(button combo: 1 - 2 =) IF operator = "-" AND cameFromEquals = true THEN c
     percentIsOn: false,
     currentPercent: null,
     runCalculate: true,
+    runAddEntry: false,
     cameFromEquals: true,
     historyData: {
       operand1Store: null,
@@ -206,6 +213,7 @@ test('(button combo: 1 - 2 =) IF operator = "-" AND cameFromEquals = true THEN c
     percentIsOn: false,
     currentPercent: null,
     runCalculate: false,
+    runAddEntry: true,
     cameFromEquals: false,
     historyData: {
       operand1Store: 1,
@@ -234,6 +242,7 @@ test('(button combo: 1 x 2 =) IF operator = "x" AND cameFromEquals = true THEN c
     percentIsOn: false,
     currentPercent: null,
     runCalculate: true,
+    runAddEntry: false,
     cameFromEquals: true,
     historyData: {
       operand1Store: null,
@@ -260,6 +269,7 @@ test('(button combo: 1 x 2 =) IF operator = "x" AND cameFromEquals = true THEN c
     percentIsOn: false,
     currentPercent: null,
     runCalculate: false,
+    runAddEntry: true,
     cameFromEquals: false,
     historyData: {
       operand1Store: 1,
@@ -288,6 +298,7 @@ test('(button combo: 1 / 2 =) IF operator = "/" AND cameFromEquals = true THEN c
     percentIsOn: false,
     currentPercent: null,
     runCalculate: true,
+    runAddEntry: false,
     cameFromEquals: true,
     historyData: {
       operand1Store: null,
@@ -314,6 +325,7 @@ test('(button combo: 1 / 2 =) IF operator = "/" AND cameFromEquals = true THEN c
     percentIsOn: false,
     currentPercent: null,
     runCalculate: false,
+    runAddEntry: true,
     cameFromEquals: false,
     historyData: {
       operand1Store: 1,
@@ -344,6 +356,7 @@ test('(button combo: 1 + 2 -) IF first operator = "+", second operator = "-", AN
     percentIsOn: false,
     currentPercent: null,
     runCalculate: true,
+    runAddEntry: false,
     cameFromEquals: false,
     historyData: {
       operand1Store: null,
@@ -370,6 +383,7 @@ test('(button combo: 1 + 2 -) IF first operator = "+", second operator = "-", AN
     percentIsOn: false,
     currentPercent: null,
     runCalculate: false,
+    runAddEntry: true,
     cameFromEquals: false,
     historyData: {
       operand1Store: 1,
@@ -398,6 +412,7 @@ test('(button combo: 1 - 2 x) IF first operator = "-", second operator = "x", AN
     percentIsOn: false,
     currentPercent: null,
     runCalculate: true,
+    runAddEntry: false,
     cameFromEquals: false,
     historyData: {
       operand1Store: null,
@@ -424,6 +439,7 @@ test('(button combo: 1 - 2 x) IF first operator = "-", second operator = "x", AN
     percentIsOn: false,
     currentPercent: null,
     runCalculate: false,
+    runAddEntry: true,
     cameFromEquals: false,
     historyData: {
       operand1Store: 1,
@@ -452,6 +468,7 @@ test('(button combo: 1 x 2 /) IF first operator = "x", second operator = "/", AN
     percentIsOn: false,
     currentPercent: null,
     runCalculate: true,
+    runAddEntry: false,
     cameFromEquals: false,
     historyData: {
       operand1Store: null,
@@ -478,6 +495,7 @@ test('(button combo: 1 x 2 /) IF first operator = "x", second operator = "/", AN
     percentIsOn: false,
     currentPercent: null,
     runCalculate: false,
+    runAddEntry: true,
     cameFromEquals: false,
     historyData: {
       operand1Store: 1,
@@ -506,6 +524,7 @@ test('(button combo: 1 / 2 +) IF first operator = "/", second operator = "+", AN
     percentIsOn: false,
     currentPercent: null,
     runCalculate: true,
+    runAddEntry: false,
     cameFromEquals: false,
     historyData: {
       operand1Store: null,
@@ -532,6 +551,7 @@ test('(button combo: 1 / 2 +) IF first operator = "/", second operator = "+", AN
     percentIsOn: false,
     currentPercent: null,
     runCalculate: false,
+    runAddEntry: true,
     cameFromEquals: false,
     historyData: {
       operand1Store: 1,

@@ -31,6 +31,7 @@ const EquationResultOutput = () => {
   const [state, dispatch] = useStore();
 
   const RUN_CALCULATE = state.runCalculate;
+  const RUN_ADD_ENTRY = state.runAddEntry;
   const RENDER_THIS = state.renderData.renderEquationResult;
 
   const classes = useStyles();
@@ -40,10 +41,16 @@ const EquationResultOutput = () => {
   useEffect(() => {
     if (RUN_CALCULATE) {
       dispatch('CALCULATE');
-      console.log('FIRST STATE', state);
+      // console.log('FIRST STATE', state);
+      // dispatch('ADD_ENTRY');
+    }
+  }, [RUN_CALCULATE, dispatch]);
+
+  useEffect(() => {
+    if (RUN_ADD_ENTRY) {
       dispatch('ADD_ENTRY');
     }
-  }, [RUN_CALCULATE, state, dispatch]);
+  }, [RUN_ADD_ENTRY, dispatch]);
 
   return (
     <Grid item xs={12} className={classes.grid}>

@@ -51,6 +51,7 @@ export const configureHistoryStore = () => {
           operatorStore: null,
           historyList: [...HISTORY_LIST, newEntry],
         },
+        runAddEntry: false,
       };
     },
     RECALL_ENTRY: (curState, targetId) => {
