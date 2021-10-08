@@ -9,7 +9,6 @@ const calculate = (curState) => {
   const HISTORY_DATA = curState.historyData;
 
   let equationResultVar;
-  let divideByZero = false;
   let queuedStateUpdates = {
     historyData: {
       ...HISTORY_DATA,
@@ -22,7 +21,6 @@ const calculate = (curState) => {
   const conditionalEquals = OPERATOR === '=' ? '' : ' =';
 
   if (OPERATOR === '/' && OPERAND2 === 0) {
-    divideByZero = true;
     console.log("Can't divide by zero!");
     const stateUpdates = {
       operandString: '0',
@@ -61,33 +59,30 @@ const calculate = (curState) => {
       equationResultVar = OPERAND1;
     }
   }
-  console.log('I went too far');
-  if (!divideByZero) {
-    if (!CAME_FROM_EQUALS) {
-      return {
-        ...queuedStateUpdates,
-        equationResult: `${equationResultVar}`,
-        operand1: `${equationResultVar}`,
-        operand2: null,
-        operator: NEXT_OPERATOR,
-        runCalculate: false,
-        renderData: {
-          renderEquationResult: `${equationResultVar}`,
-          renderEquation: `${equationResultVar} ${NEXT_OPERATOR}`,
-        },
-      };
-    } else {
-      return {
-        ...queuedStateUpdates,
-        equationResult: `${equationResultVar}`,
-        runCalculate: false,
-        cameFromEquals: false,
-        renderData: {
-          renderEquationResult: `${equationResultVar}`,
-          renderEquation: `${OPERAND1} ${OPERATOR} ${OPERAND2}${conditionalEquals}`,
-        },
-      };
-    }
+  if (!CAME_FROM_EQUALS) {
+    return {
+      ...queuedStateUpdates,
+      equationResult: `${equationResultVar}`,
+      operand1: `${equationResultVar}`,
+      operand2: null,
+      operator: NEXT_OPERATOR,
+      runCalculate: false,
+      renderData: {
+        renderEquationResult: `${equationResultVar}`,
+        renderEquation: `${equationResultVar} ${NEXT_OPERATOR}`,
+      },
+    };
+  } else {
+    return {
+      ...queuedStateUpdates,
+      equationResult: `${equationResultVar}`,
+      runCalculate: false,
+      cameFromEquals: false,
+      renderData: {
+        renderEquationResult: `${equationResultVar}`,
+        renderEquation: `${OPERAND1} ${OPERATOR} ${OPERAND2}${conditionalEquals}`,
+      },
+    };
   }
 };
 
