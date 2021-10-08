@@ -281,3 +281,7 @@ Update #4
 Update #5
 
 - updated tests in "positiveNegativeLogic.test" in order to reflect the additions of render slice to global state.
+
+Update #6
+
+- updated tests in "sumSubMultDivLogic.test" in order to reflect the additions of render slice to global state.
