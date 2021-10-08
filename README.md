@@ -253,3 +253,7 @@ Update #4
 Update #5
 
 - Updated "backspaceLogic.test" to include new history-store and render-store state slices. All tests passing successfully.
+
+Update #6
+
+- Updated "buildOperandLogic.test" to include new history-store and render-store state slices. All tests passing successfully.

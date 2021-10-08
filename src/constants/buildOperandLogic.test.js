@@ -15,6 +15,13 @@ test('(button combo: 1) buildOperand should make operandString = "1"', () => {
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '0', renderEquation: null },
   };
   const returnedState = buildOperand(testState, '1');
   expect({ ...testState, ...returnedState }).toEqual({
@@ -31,6 +38,13 @@ test('(button combo: 1) buildOperand should make operandString = "1"', () => {
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '1', renderEquation: null },
   });
 });
 
@@ -49,6 +63,13 @@ test('(button combo: 1 2 3) buildOperand should make operandString = "123"', () 
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '0', renderEquation: null },
   };
   let returnedState1 = buildOperand(testState, '1');
   let returnedState2 = buildOperand({ ...testState, ...returnedState1 }, '2');
@@ -68,6 +89,13 @@ test('(button combo: 1 2 3) buildOperand should make operandString = "123"', () 
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '123', renderEquation: null },
   });
 });
 
@@ -86,6 +114,16 @@ test('(button combo: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 )IF button combo is 14 or more 
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '12345678912345',
+      renderEquation: null,
+    },
   };
   const returnedState = buildOperand(testState, '6');
 
@@ -103,6 +141,16 @@ test('(button combo: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 )IF button combo is 14 or more 
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '12345678912345',
+      renderEquation: null,
+    },
   });
 });
 
@@ -121,6 +169,13 @@ test('(button combo: 1 + 2) buildOperand should make operandString = "2"', () =>
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '1', renderEquation: '1 +' },
   };
   const returnedState = buildOperand(testState, '2');
 
@@ -138,6 +193,13 @@ test('(button combo: 1 + 2) buildOperand should make operandString = "2"', () =>
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '2', renderEquation: '1 +' },
   });
 });
 
@@ -156,6 +218,13 @@ test('(button combo: 12 + % 2 ) buildOperand should make operandString = "2"', (
     currentPercent: 0.12,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '1.44', renderEquation: '12 + 1.44' },
   };
   const returnedState = buildOperand(testState, '2');
 
@@ -173,5 +242,12 @@ test('(button combo: 12 + % 2 ) buildOperand should make operandString = "2"', (
     currentPercent: 0.12,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: { renderEquationResult: '2', renderEquation: '12 + 1.44' },
   });
 });
