@@ -273,3 +273,7 @@ Update #2
 Update #3
 
 - updated tests in "decimalLogic.test" in order to reflect the additions of render slice to global state.
+
+Update #4
+
+- updated tests in "percentLogic.test" in order to reflect the additions of render slice to global state.

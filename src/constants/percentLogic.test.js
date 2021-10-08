@@ -15,6 +15,10 @@ test('(button combo: 12 %) IF percentIsOn = false, operand1, operand2, & operato
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '12',
+      renderEquation: '',
+    },
   };
   const returnedState = percent(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -31,6 +35,10 @@ test('(button combo: 12 %) IF percentIsOn = false, operand1, operand2, & operato
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '0',
+      renderEquation: '',
+    },
   });
 });
 
@@ -49,6 +57,10 @@ test('(button combo: 12 + % ) IF percentIsOn = false, operand1 & operator = trut
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '12',
+      renderEquation: '12 +',
+    },
   };
   const returnedState = percent(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -65,6 +77,10 @@ test('(button combo: 12 + % ) IF percentIsOn = false, operand1 & operator = trut
     currentPercent: 0.12,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '1.44',
+      renderEquation: '12 + 1.44',
+    },
   });
 });
 
@@ -83,6 +99,10 @@ test('(button combo: 12 + 3 % ) IF percentIsOn = false, operand1, operator, & op
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '3',
+      renderEquation: '12 +',
+    },
   };
   const returnedState = percent(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -99,6 +119,10 @@ test('(button combo: 12 + 3 % ) IF percentIsOn = false, operand1, operator, & op
     currentPercent: 0.03,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '0.36',
+      renderEquation: '12 + 0.36',
+    },
   });
 });
 
@@ -117,6 +141,10 @@ test('(button combo: 12 + 3 = % ) IF percentIsOn = false AND operand2 = truthy T
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '15',
+      renderEquation: '12 + 3 =',
+    },
   };
   const returnedState = percent(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -133,5 +161,9 @@ test('(button combo: 12 + 3 = % ) IF percentIsOn = false AND operand2 = truthy T
     currentPercent: 0.15,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '2.25',
+      renderEquation: '',
+    },
   });
 });

@@ -1,6 +1,6 @@
 import percentHelper from './percentHelperLogic';
 
-test('(button combo: 12 + % )', () => {
+test('(button comb0: 12 + % )', () => {
   const arr = [1.44, 0.12];
   const key = 0;
   const returnedState = percentHelper(arr, key);
