@@ -15,6 +15,10 @@ test('(button combo: 1 . 2 .) IF decimalIsOn = true THEN decimal should not do a
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '1.2',
+      renderEquation: null,
+    },
   };
   const returnedState = decimal(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -31,6 +35,10 @@ test('(button combo: 1 . 2 .) IF decimalIsOn = true THEN decimal should not do a
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '1.2',
+      renderEquation: null,
+    },
   });
 });
 
@@ -49,6 +57,10 @@ test('(button combo: 1 .) IF decimalIsOn = false THEN decimal should make decima
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '1',
+      renderEquation: null,
+    },
   };
   const returnedState = decimal(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -65,6 +77,10 @@ test('(button combo: 1 .) IF decimalIsOn = false THEN decimal should make decima
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '1.',
+      renderEquation: null,
+    },
   });
 });
 
@@ -83,6 +99,10 @@ test('(button combo: 1 + 2 = .) IF decimalIsOn = false AND equalsIsOn = true THE
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '3',
+      renderEquation: '1 + 2 =',
+    },
   };
   const returnedState = decimal(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -99,6 +119,10 @@ test('(button combo: 1 + 2 = .) IF decimalIsOn = false AND equalsIsOn = true THE
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '0.',
+      renderEquation: null,
+    },
   });
 });
 
@@ -117,6 +141,10 @@ test('(button combo: 1 + .) IF decimalIsOn = false AND sumSubMultDivIsOn = true 
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '1',
+      renderEquation: '1 +',
+    },
   };
   const returnedState = decimal(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -133,6 +161,10 @@ test('(button combo: 1 + .) IF decimalIsOn = false AND sumSubMultDivIsOn = true 
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '0.',
+      renderEquation: null,
+    },
   });
 });
 
@@ -151,6 +183,10 @@ test('(button combo: 1 2 .) IF decimalIsOn = false AND sumSubMultDivIsOn = false
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '12',
+      renderEquation: null,
+    },
   };
   const returnedState = decimal(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -167,5 +203,9 @@ test('(button combo: 1 2 .) IF decimalIsOn = false AND sumSubMultDivIsOn = false
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '12.',
+      renderEquation: null,
+    },
   });
 });

@@ -268,4 +268,8 @@ Update #1
 
 Update #2
 
-- updated tests in "calculateLogic.test" in order to reflect the additions of render slice to global state.
+- updated tests in "clearFunctionLogic.test" in order to reflect the additions of render slice to global state.
+
+Update #3
+
+- updated tests in "decimalLogic.test" in order to reflect the additions of render slice to global state.
