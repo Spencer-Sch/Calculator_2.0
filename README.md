@@ -277,3 +277,7 @@ Update #3
 Update #4
 
 - updated tests in "percentLogic.test" in order to reflect the additions of render slice to global state.
+
+Update #5
+
+- updated tests in "positiveNegativeLogic.test" in order to reflect the additions of render slice to global state.

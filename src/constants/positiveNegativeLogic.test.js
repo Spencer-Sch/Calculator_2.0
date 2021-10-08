@@ -1,6 +1,6 @@
 import positiveNegative from './positiveNegativeLogic';
 
-test('(button combo: 1 +/- ) IF operand1, operand2, & operator = null THEN positiveNegative should negate operandString ALSO make equalsIsOn = false, sumSubMultDivIsOn = false, and percentIsOn = false.', () => {
+test('(button combo: 1 +/- ) IF operand1, operand2, & operator = null THEN positiveNegative should negate operandString ALSO make equalsIsOn = false, sumSubMultDivIsOn = false, and percentIsOn = fals.', () => {
   const testState = {
     operandString: '1',
     operand1: null,
@@ -15,6 +15,10 @@ test('(button combo: 1 +/- ) IF operand1, operand2, & operator = null THEN posit
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '1',
+      renderEquation: null,
+    },
   };
   const returnedState = positiveNegative(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -31,10 +35,14 @@ test('(button combo: 1 +/- ) IF operand1, operand2, & operator = null THEN posit
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '-1',
+      renderEquation: null,
+    },
   });
 });
 
-test('(button combo: 1 + 0 +/- ) IF operand1 & operator are truthy, operand2 = null & operandString is falsy THEN positiveNegative should negate operand1 and put the returned result into operandString ALSO make equalsIsOn = false, sumSubMultDivIsOn = false, and percentIsOn = false.', () => {
+test('(button combo: 1 + +/- ) IF operand1 & operator are truthy, operand2 = null & operandString is falsy THEN positiveNegative should negate operand1 and put the returned result into operandString ALSO make equalsIsOn = false, sumSubMultDivIsOn = false, and percentIsOn = false.', () => {
   const testState = {
     operandString: '',
     operand1: '1',
@@ -49,6 +57,10 @@ test('(button combo: 1 + 0 +/- ) IF operand1 & operator are truthy, operand2 = n
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '1',
+      renderEquation: '1 +',
+    },
   };
   const returnedState = positiveNegative(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -65,6 +77,10 @@ test('(button combo: 1 + 0 +/- ) IF operand1 & operator are truthy, operand2 = n
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '-1',
+      renderEquation: '1 +',
+    },
   });
 });
 
@@ -83,6 +99,10 @@ test('(button combo: 1 + 2 +/- ) IF operand1 & operator are truthy, operand2 = n
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '2',
+      renderEquation: '1 +',
+    },
   };
   const returnedState = positiveNegative(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -99,6 +119,10 @@ test('(button combo: 1 + 2 +/- ) IF operand1 & operator are truthy, operand2 = n
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '-2',
+      renderEquation: '1 +',
+    },
   });
 });
 
@@ -117,6 +141,10 @@ test('(button combo: 1 + 2 = +/- ) IF operand1, operand2, & operator are truthy 
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '3',
+      renderEquation: '1 + 2 =',
+    },
   };
   const returnedState = positiveNegative(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -133,5 +161,9 @@ test('(button combo: 1 + 2 = +/- ) IF operand1, operand2, & operator are truthy 
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    renderData: {
+      renderEquationResult: '-3',
+      renderEquation: '1 + 2 =',
+    },
   });
 });
