@@ -16,6 +16,16 @@ test('(button combo: 1 / 0 =)IF operator = "/" & operand2 = "0" THEN calculate s
     currentPercent: null,
     runCalculate: true,
     cameFromEquals: true,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '1 /',
+      renderEquation: '0',
+    },
   };
   const returnedState = calculate(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -24,7 +34,7 @@ test('(button combo: 1 / 0 =)IF operator = "/" & operand2 = "0" THEN calculate s
     operand2: null,
     operator: null,
     nextOperator: null,
-    equationResult: 'Cannot Divide By Zero!',
+    equationResult: null,
     sumSubMultDivIsOn: false,
     equalsIsOn: false,
     decimalIsOn: false,
@@ -32,25 +42,45 @@ test('(button combo: 1 / 0 =)IF operator = "/" & operand2 = "0" THEN calculate s
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: 'Cannot Divide By Zero!',
+      renderEquation: null,
+    },
   });
 });
 
 // 'Can't Divide By Zero' Test 2
 test('(button combo: 1 / 0 +)IF operator = "/" & operand2 = "0" THEN calculate should make operand1, operand2, & operator = null, operandString = "0", nextOperator = null, equalsIsOn = false, equationResult = "Cannot Divide By Zero", sumSubMultDivIsOn = false, runCalculate = false, & cameFromEquals = false', () => {
   const testState = {
-    operandString: '0',
+    operandString: '',
     operand1: '1',
     operand2: '0',
     operator: '/',
-    nextOperator: '/',
+    nextOperator: '+',
     equationResult: null,
     sumSubMultDivIsOn: true,
-    equalsIsOn: true,
+    equalsIsOn: false,
     decimalIsOn: false,
     percentIsOn: false,
     currentPercent: null,
     runCalculate: true,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '0',
+      renderEquation: '1 /',
+    },
   };
   const returnedState = calculate(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -59,7 +89,7 @@ test('(button combo: 1 / 0 +)IF operator = "/" & operand2 = "0" THEN calculate s
     operand2: null,
     operator: null,
     nextOperator: null,
-    equationResult: 'Cannot Divide By Zero!',
+    equationResult: null,
     sumSubMultDivIsOn: false,
     equalsIsOn: false,
     decimalIsOn: false,
@@ -67,6 +97,16 @@ test('(button combo: 1 / 0 +)IF operator = "/" & operand2 = "0" THEN calculate s
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: 'Cannot Divide By Zero!',
+      renderEquation: null,
+    },
   });
 });
 
@@ -87,6 +127,16 @@ test('(button combo: 1 + 2 =) IF operator = "+" AND cameFromEquals = true THEN c
     currentPercent: null,
     runCalculate: true,
     cameFromEquals: true,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '2',
+      renderEquation: '1 +',
+    },
   };
   const returnedState = calculate(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -103,6 +153,16 @@ test('(button combo: 1 + 2 =) IF operator = "+" AND cameFromEquals = true THEN c
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: 1,
+      operand2Store: 2,
+      operatorStore: '+',
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '3',
+      renderEquation: '1 + 2 =',
+    },
   });
 });
 
@@ -121,6 +181,16 @@ test('(button combo: 1 - 2 =) IF operator = "-" AND cameFromEquals = true THEN c
     currentPercent: null,
     runCalculate: true,
     cameFromEquals: true,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '2',
+      renderEquation: '1 -',
+    },
   };
   const returnedState = calculate(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -137,6 +207,16 @@ test('(button combo: 1 - 2 =) IF operator = "-" AND cameFromEquals = true THEN c
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: 1,
+      operand2Store: 2,
+      operatorStore: '-',
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '-1',
+      renderEquation: '1 - 2 =',
+    },
   });
 });
 
@@ -155,6 +235,16 @@ test('(button combo: 1 x 2 =) IF operator = "x" AND cameFromEquals = true THEN c
     currentPercent: null,
     runCalculate: true,
     cameFromEquals: true,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '2',
+      renderEquation: '1 x',
+    },
   };
   const returnedState = calculate(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -171,6 +261,16 @@ test('(button combo: 1 x 2 =) IF operator = "x" AND cameFromEquals = true THEN c
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: 1,
+      operand2Store: 2,
+      operatorStore: 'x',
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '2',
+      renderEquation: '1 x 2 =',
+    },
   });
 });
 
@@ -189,6 +289,16 @@ test('(button combo: 1 / 2 =) IF operator = "/" AND cameFromEquals = true THEN c
     currentPercent: null,
     runCalculate: true,
     cameFromEquals: true,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '2',
+      renderEquation: '1 /',
+    },
   };
   const returnedState = calculate(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -205,6 +315,16 @@ test('(button combo: 1 / 2 =) IF operator = "/" AND cameFromEquals = true THEN c
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: 1,
+      operand2Store: 2,
+      operatorStore: '/',
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '0.5',
+      renderEquation: '1 / 2 =',
+    },
   });
 });
 
@@ -225,6 +345,16 @@ test('(button combo: 1 + 2 -) IF first operator = "+", second operator = "-", AN
     currentPercent: null,
     runCalculate: true,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '2',
+      renderEquation: '1 +',
+    },
   };
   const returnedState = calculate(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -241,6 +371,16 @@ test('(button combo: 1 + 2 -) IF first operator = "+", second operator = "-", AN
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: 1,
+      operand2Store: 2,
+      operatorStore: '+',
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '3',
+      renderEquation: '3 -',
+    },
   });
 });
 
@@ -259,6 +399,16 @@ test('(button combo: 1 - 2 x) IF first operator = "-", second operator = "x", AN
     currentPercent: null,
     runCalculate: true,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '2',
+      renderEquation: '1 -',
+    },
   };
   const returnedState = calculate(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -275,6 +425,16 @@ test('(button combo: 1 - 2 x) IF first operator = "-", second operator = "x", AN
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: 1,
+      operand2Store: 2,
+      operatorStore: '-',
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '-1',
+      renderEquation: '-1 x',
+    },
   });
 });
 
@@ -293,6 +453,16 @@ test('(button combo: 1 x 2 /) IF first operator = "x", second operator = "/", AN
     currentPercent: null,
     runCalculate: true,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '2',
+      renderEquation: '1 x',
+    },
   };
   const returnedState = calculate(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -309,6 +479,16 @@ test('(button combo: 1 x 2 /) IF first operator = "x", second operator = "/", AN
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: 1,
+      operand2Store: 2,
+      operatorStore: 'x',
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '2',
+      renderEquation: '2 /',
+    },
   });
 });
 
@@ -327,6 +507,16 @@ test('(button combo: 1 / 2 +) IF first operator = "/", second operator = "+", AN
     currentPercent: null,
     runCalculate: true,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: null,
+      operand2Store: null,
+      operatorStore: null,
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '2',
+      renderEquation: '1 /',
+    },
   };
   const returnedState = calculate(testState);
   expect({ ...testState, ...returnedState }).toEqual({
@@ -343,5 +533,15 @@ test('(button combo: 1 / 2 +) IF first operator = "/", second operator = "+", AN
     currentPercent: null,
     runCalculate: false,
     cameFromEquals: false,
+    historyData: {
+      operand1Store: 1,
+      operand2Store: 2,
+      operatorStore: '/',
+      historyList: [],
+    },
+    renderData: {
+      renderEquationResult: '0.5',
+      renderEquation: '0.5 +',
+    },
   });
 });

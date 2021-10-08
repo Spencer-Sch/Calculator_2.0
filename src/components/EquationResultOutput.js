@@ -40,9 +40,10 @@ const EquationResultOutput = () => {
   useEffect(() => {
     if (RUN_CALCULATE) {
       dispatch('CALCULATE');
+      console.log('FIRST STATE', state);
       dispatch('ADD_ENTRY');
     }
-  }, [RUN_CALCULATE, dispatch]);
+  }, [RUN_CALCULATE, state, dispatch]);
 
   return (
     <Grid item xs={12} className={classes.grid}>
