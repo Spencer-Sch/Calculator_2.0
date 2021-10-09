@@ -303,3 +303,7 @@ Update #1
 Update #2
 
 - Added a test for "HistoryCardArea" component.
+
+Update #3
+
+- Added tests for "NumberButton", "MiscButton", "DisabledButton", and "OperatorButton" components.
