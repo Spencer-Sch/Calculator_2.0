@@ -307,3 +307,7 @@ Update #2
 Update #3
 
 - Added tests for "NumberButton", "MiscButton", "DisabledButton", and "OperatorButton" components.
+
+Update #4
+
+- Added describe() to each testing suite in the "constants" folder.
