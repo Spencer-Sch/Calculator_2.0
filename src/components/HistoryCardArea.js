@@ -1,6 +1,6 @@
 import { Grid, makeStyles, Typography } from '@material-ui/core';
 import HistoryCard from './HistoryCard';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { grey } from '@material-ui/core/colors';
 import { useStore } from '../hooks-store/store';
 
@@ -30,9 +30,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const HistoryCardArea = () => {
+  const [state, dispatch] = useStore();
+
   const classes = useStyles();
 
-  const state = useStore()[0];
+  const RUN_ADD_ENTRY = state.runAddEntry;
+
+  useEffect(() => {
+    if (RUN_ADD_ENTRY) {
+      dispatch('ADD_ENTRY');
+    }
+  }, [RUN_ADD_ENTRY, dispatch]);
 
   const historyCards = state.historyData.historyList.map((entry) => (
     <HistoryCard

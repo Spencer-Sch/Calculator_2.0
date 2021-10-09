@@ -30,27 +30,18 @@ const useStyles = makeStyles((theme) => ({
 const EquationResultOutput = () => {
   const [state, dispatch] = useStore();
 
-  const RUN_CALCULATE = state.runCalculate;
-  const RUN_ADD_ENTRY = state.runAddEntry;
-  const RENDER_THIS = state.renderData.renderEquationResult;
-
   const classes = useStyles();
+
+  const RUN_CALCULATE = state.runCalculate;
+  const RENDER_THIS = state.renderData.renderEquationResult;
 
   let typographyClass = classes.typographyBig;
 
   useEffect(() => {
     if (RUN_CALCULATE) {
       dispatch('CALCULATE');
-      // console.log('FIRST STATE', state);
-      // dispatch('ADD_ENTRY');
     }
   }, [RUN_CALCULATE, dispatch]);
-
-  useEffect(() => {
-    if (RUN_ADD_ENTRY) {
-      dispatch('ADD_ENTRY');
-    }
-  }, [RUN_ADD_ENTRY, dispatch]);
 
   return (
     <Grid item xs={12} className={classes.grid}>

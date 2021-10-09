@@ -291,3 +291,11 @@ Update #7
 - Added functionality so an equation that attempts to divide by zero does not generate a history entry. "runAddEntry" field was added to global state in order to achieve this.
 
 - Edited tests in "calculateLogic.test" to reflect this change to global state. All tests passing successfully.
+
+Day 20
+
+Update #1
+
+- Fixed bug where the "renderData" field was not being returned by 'RECALL_ENTRY' action in "history-store". This was preventing the equation and equationResult from being displayed in "EquationOutput" and "EquationResultOutput" components when a "HistoryCard" was clicked.
+
+- Moved the useEffect call that dispatches the 'ADD_ENTRY' action from the "EquationResultOutput" component into the "HistoryCardArea" component.

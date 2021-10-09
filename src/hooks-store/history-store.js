@@ -68,6 +68,7 @@ export const configureHistoryStore = () => {
       const OPERATOR = targetEntry.operator;
       const NEXT_OPERATOR = targetEntry.nextOperator;
       const EQUATION_RESULT = targetEntry.equationResult;
+      const EQUATION = targetEntry.equation;
       const SUM_SUB_MULT_DIV_IS_ON = targetEntry.sumSubMultDivIsOn;
       const EQUALS_IS_ON = targetEntry.equalsIsOn;
       const DECIMAL_IS_ON = targetEntry.decimalIsOn;
@@ -88,6 +89,10 @@ export const configureHistoryStore = () => {
         percentIsOn: PERCENT_IS_ON,
         currentPercent: CURRENT_PERCENT,
         cameFromEquals: CAME_FROM_EQUALS,
+        renderData: {
+          renderEquation: EQUATION,
+          renderEquationResult: EQUATION_RESULT,
+        },
       };
     },
     CLEAR_HISTORY: () => {
