@@ -96,5 +96,137 @@ describe('E2E tests of user-events', () => {
       userEvent.click(numberFourButtonElement);
       expect(equationResultOutputElement).toHaveTextContent('4');
     });
+
+    test('click on "5" button', () => {
+      configureDataStore();
+      configureHistoryStore();
+      configureRenderStore();
+      render(
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      );
+
+      const numberFiveButtonElement = screen.getByRole('button', {
+        name: '5',
+      });
+      const equationResultOutputElement = screen.getByRole('heading', {
+        level: 1,
+        name: '0',
+      });
+
+      userEvent.click(numberFiveButtonElement);
+      expect(equationResultOutputElement).toHaveTextContent('5');
+    });
+
+    test('click on "6" button', () => {
+      configureDataStore();
+      configureHistoryStore();
+      configureRenderStore();
+      render(
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      );
+
+      const numberSixButtonElement = screen.getByRole('button', {
+        name: '6',
+      });
+      const equationResultOutputElement = screen.getByRole('heading', {
+        level: 1,
+        name: '0',
+      });
+
+      userEvent.click(numberSixButtonElement);
+      expect(equationResultOutputElement).toHaveTextContent('6');
+    });
+
+    test('click on "7" button', () => {
+      configureDataStore();
+      configureHistoryStore();
+      configureRenderStore();
+      render(
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      );
+
+      const numberSevenButtonElement = screen.getByRole('button', {
+        name: '7',
+      });
+      const equationResultOutputElement = screen.getByRole('heading', {
+        level: 1,
+        name: '0',
+      });
+
+      userEvent.click(numberSevenButtonElement);
+      expect(equationResultOutputElement).toHaveTextContent('7');
+    });
+
+    test('click on "8" button', () => {
+      configureDataStore();
+      configureHistoryStore();
+      configureRenderStore();
+      render(
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      );
+
+      const numberEightButtonElement = screen.getByRole('button', {
+        name: '8',
+      });
+      const equationResultOutputElement = screen.getByRole('heading', {
+        level: 1,
+        name: '0',
+      });
+
+      userEvent.click(numberEightButtonElement);
+      expect(equationResultOutputElement).toHaveTextContent('8');
+    });
+
+    test('click on "9" button', () => {
+      configureDataStore();
+      configureHistoryStore();
+      configureRenderStore();
+      render(
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      );
+
+      const numberNineButtonElement = screen.getByRole('button', {
+        name: '9',
+      });
+      const equationResultOutputElement = screen.getByRole('heading', {
+        level: 1,
+        name: '0',
+      });
+
+      userEvent.click(numberNineButtonElement);
+      expect(equationResultOutputElement).toHaveTextContent('9');
+    });
+
+    test('click on "0" button', () => {
+      configureDataStore();
+      configureHistoryStore();
+      configureRenderStore();
+      render(
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      );
+
+      const numberZeroButtonElement = screen.getByRole('button', {
+        name: '0',
+      });
+      const equationResultOutputElement = screen.getByRole('heading', {
+        level: 1,
+        name: '0',
+      });
+
+      userEvent.click(numberZeroButtonElement);
+      expect(equationResultOutputElement).toHaveTextContent('0');
+    });
   });
 });

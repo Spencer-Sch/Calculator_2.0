@@ -369,3 +369,7 @@ Update #10
   - Started testing if user-events on number buttons rendered the proper output to the "EquationResultOutput" component.
 
 - Split "App" tests into seperate files to help reduce test run times.
+
+Update #11
+
+- Finished adding tests for user-events on number buttons. All tests passing successfully.
