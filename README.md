@@ -397,3 +397,9 @@ Update #15
 Update #16
 
 - Slightly re-organized code in App.operatorButtons.test and App.numberButtons.test.
+
+Update #17
+
+- Commented out "console.log" statements in store.js.
+
+- Began to add tests to "App.buttonCombos.backspace.test" to test backspace logic in multiple situations.

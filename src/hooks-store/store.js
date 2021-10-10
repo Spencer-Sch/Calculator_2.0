@@ -12,7 +12,7 @@ export const useStore = (shouldListen = true) => {
 
     globalState = { ...globalState, ...newState };
 
-    console.log('globalState is:', globalState);
+    // console.log('globalState is:', globalState);
 
     for (const listener of listeners) {
       listener(globalState);
