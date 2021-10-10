@@ -359,3 +359,13 @@ Update #9
 - Added tests for "HistorySection" component.
 
 - Added "data-testid" attribute to "HistorySection" component in order to access for tests.
+
+Update #10
+
+- Added tests for "App" component.
+
+- Began adding E2E tests.
+
+  - Started testing if user-events on number buttons rendered the proper output to the "EquationResultOutput" component.
+
+- Split "App" tests into seperate files to help reduce test run times.

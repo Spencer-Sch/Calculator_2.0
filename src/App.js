@@ -21,7 +21,7 @@ function App() {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" data-testid="app">
       <Paper className={classes.paper} elevation={4}>
         <Grid container className={classes.grid} spacing={2}>
           <CalculatorSection />
