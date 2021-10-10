@@ -381,3 +381,7 @@ Update #12
 - Began to add tests to "App.operatorButton.test" to test operator buttons.
 
 - Added "data-testid" attribute to "EquationOutput" component in order to access for tests.
+
+Update #13
+
+- Completed tests in "App.operatorButton.test". All tests passing successfully.
