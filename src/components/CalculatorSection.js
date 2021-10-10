@@ -12,7 +12,13 @@ const useStyles = makeStyles({
 const CalculatorSection = () => {
   const classes = useStyles();
   return (
-    <Grid container item xs={8} className={classes.grid}>
+    <Grid
+      container
+      item
+      xs={8}
+      className={classes.grid}
+      data-testid="calculatorSection"
+    >
       <EquationArea />
       <CalculatorButtonArea />
     </Grid>

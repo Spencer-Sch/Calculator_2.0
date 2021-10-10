@@ -329,3 +329,9 @@ Update #3
 - Added tests for "EquationArea" component.
 
 - Added "data-testid" attribute to "EquationArea" component in order to access for tests.
+
+Update #4
+
+- Added tests for "CalculatorSection" component.
+
+- Added "data-testid" attribute to "CalculatorSection" component in order to access for tests.
