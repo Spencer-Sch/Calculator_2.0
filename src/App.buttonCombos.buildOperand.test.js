@@ -8,7 +8,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import { theme } from './theme/theme';
 
 describe('E2E tests of user-events', () => {
-  describe('button combos involving backspace render accurately', () => {
+  describe('button combos which trigger buildOperandLogic render accurately', () => {
     test('click sequence: 1 2 3', () => {
       configureDataStore();
       configureHistoryStore();
