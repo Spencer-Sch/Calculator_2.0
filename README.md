@@ -345,3 +345,7 @@ Update #6
 - Added tests for "HistoryCardArea" component.
 
 - Added "data-testid" attribute to "HistoryCardArea" component in order to access for tests.
+
+Update #7
+
+- Added tests for "HistoryClearButton" component.
