@@ -14,7 +14,7 @@ const percent = (curState) => {
   let queuedStateUpdates = {};
 
   if (PERCENT_IS_ON) {
-    console.log('PERCENT Checkpoint 1');
+    // console.log('PERCENT Checkpoint 1');
     const calcResult = +OPERAND_STRING * CURRENT_PERCENT;
     queuedStateUpdates = {
       operandString: calcResult,
@@ -26,7 +26,7 @@ const percent = (curState) => {
   }
   if (!PERCENT_IS_ON) {
     if (!OPERAND1 && !OPERATOR && !OPERAND2 && OPERAND_STRING) {
-      console.log('PERCENT Checkpoint 0.5');
+      // console.log('PERCENT Checkpoint 0.5');
       return {
         operandString: '0',
         renderData: {
@@ -36,7 +36,7 @@ const percent = (curState) => {
       };
     }
     if (OPERAND1 && OPERATOR && !OPERAND2 && !OPERAND_STRING) {
-      console.log('PERCENT Checkpoint 2');
+      // console.log('PERCENT Checkpoint 2');
       const resultArr = getPercent(OPERAND1, null);
       const percentHelperUpdates = percentHelper(resultArr, 0);
       queuedStateUpdates = {
@@ -47,7 +47,7 @@ const percent = (curState) => {
         },
       };
     } else if (OPERAND1 && OPERATOR && !OPERAND2 && OPERAND_STRING) {
-      console.log('PERCENT Checkpoint 3');
+      // console.log('PERCENT Checkpoint 3');
       const resultArr = getPercent(OPERAND1, OPERAND_STRING);
       const percentHelperUpdates = percentHelper(resultArr, 0);
       queuedStateUpdates = {
@@ -58,7 +58,7 @@ const percent = (curState) => {
         },
       };
     } else if (OPERAND2) {
-      console.log('PERCENT Checkpoint 4');
+      // console.log('PERCENT Checkpoint 4');
       const resultArr = getPercent(EQUATION_RESULT, null);
       const percentHelperUpdates = percentHelper(resultArr, 1);
       queuedStateUpdates = {

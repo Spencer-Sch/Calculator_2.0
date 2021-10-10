@@ -4,7 +4,7 @@ const clearFunctions = (curState, value) => {
   let queuedStateUpdates;
 
   if (value === 'C' || EQUALS_IS_ON) {
-    console.log('cClear CheckPoint');
+    // console.log('cClear CheckPoint');
 
     queuedStateUpdates = {
       operandString: '0',
@@ -27,7 +27,7 @@ const clearFunctions = (curState, value) => {
     };
     return queuedStateUpdates;
   } else {
-    console.log('ceClear CheckPoint');
+    // console.log('ceClear CheckPoint');
 
     queuedStateUpdates = {
       operandString: '0',

@@ -3,7 +3,7 @@ import { initStore } from './store';
 export const configureHistoryStore = () => {
   const actions = {
     ADD_ENTRY: (curState) => {
-      console.log('ADD_ENTRY Triggered');
+      // console.log('ADD_ENTRY Triggered');
 
       const OPERAND_STRING = curState.operandString;
       const OPERAND1 = curState.historyData.operand1Store;
@@ -55,7 +55,7 @@ export const configureHistoryStore = () => {
       };
     },
     RECALL_ENTRY: (curState, targetId) => {
-      console.log('RECALL_HISTORY Triggered');
+      // console.log('RECALL_HISTORY Triggered');
 
       const entryIndex = curState.historyData.historyList.findIndex(
         (entry) => entry.key === targetId
@@ -96,7 +96,7 @@ export const configureHistoryStore = () => {
       };
     },
     CLEAR_HISTORY: () => {
-      console.log('CLEAR_HISTORY Triggered');
+      // console.log('CLEAR_HISTORY Triggered');
 
       return {
         historyData: {

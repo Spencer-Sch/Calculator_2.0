@@ -389,3 +389,7 @@ Update #13
 Update #14
 
 - Completed tests in "App.miscButtons.test". All tests passing successfully.
+
+Update #15
+
+- Commented out all "console.log" statements in logic and store files. Exception: store.js.

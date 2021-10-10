@@ -1,5 +1,5 @@
 const calculate = (curState) => {
-  console.log('Calculate Equation!');
+  // console.log('Calculate Equation!');
 
   const CAME_FROM_EQUALS = curState.cameFromEquals;
   const NEXT_OPERATOR = curState.nextOperator;
@@ -22,7 +22,7 @@ const calculate = (curState) => {
   const conditionalEquals = OPERATOR === '=' ? '' : ' =';
 
   if (OPERATOR === '/' && OPERAND2 === 0) {
-    console.log("Can't divide by zero!");
+    // console.log("Can't divide by zero!");
     const stateUpdates = {
       operandString: '0',
       operand1: null,

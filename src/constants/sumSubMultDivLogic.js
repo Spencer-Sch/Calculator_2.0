@@ -13,7 +13,7 @@ const sumSubMultDiv = (curState, operator) => {
   let renderUpdate;
 
   if (EQUALS_IS_ON) {
-    console.log('sumSubMultDiv Checkpoint 0.5');
+    // console.log('sumSubMultDiv Checkpoint 0.5');
 
     renderUpdate = {
       renderEquation: `${EQUATION_RESULT} ${operator}`,
@@ -39,7 +39,7 @@ const sumSubMultDiv = (curState, operator) => {
       // Is this state ever true?
       // Yes.  button combo: 12 + 3 = % x or 12 + 3 = % 2 + or 12 + 3 = 2 +
       /////////////////////////////
-      console.log('sumSubMultDiv Checkpoint 1');
+      // console.log('sumSubMultDiv Checkpoint 1');
       queuedStateUpdates = {
         ...queuedStateUpdates,
         operandString: '',
@@ -53,7 +53,7 @@ const sumSubMultDiv = (curState, operator) => {
         },
       };
     } else if (OPERAND1 && OPERATOR) {
-      console.log('sumSubMultDiv Checkpoint 2');
+      // console.log('sumSubMultDiv Checkpoint 2');
       queuedStateUpdates = {
         ...queuedStateUpdates,
         operand2: OPERAND_STRING,
@@ -62,7 +62,7 @@ const sumSubMultDiv = (curState, operator) => {
         runCalculate: true,
       };
     } else if (OPERAND1 === null) {
-      console.log('sumSubMultDiv Checkpoint 3');
+      // console.log('sumSubMultDiv Checkpoint 3');
       queuedStateUpdates = {
         ...queuedStateUpdates,
         operand1: OPERAND_STRING,
@@ -75,7 +75,7 @@ const sumSubMultDiv = (curState, operator) => {
       };
     }
   } else {
-    console.log('sumSubMultDiv Checkpoint 4');
+    // console.log('sumSubMultDiv Checkpoint 4');
     queuedStateUpdates = {
       ...queuedStateUpdates,
       operator: operator,
