@@ -9,7 +9,14 @@ configureHistoryStore();
 configureRenderStore();
 
 describe('HistoryCardArea component', () => {
-  test('renders HistoryCardArea in default state', () => {
+  test('renders HistoryCardArea', () => {
+    render(<HistoryCardArea />);
+
+    const historyCardAreaElement = screen.getByTestId('historyCardArea');
+    expect(historyCardAreaElement).toBeInTheDocument();
+  });
+
+  test('renders HistoryCardArea placeholder text', () => {
     render(<HistoryCardArea />);
 
     const historyCardPlaceholderElement = screen.getByText(

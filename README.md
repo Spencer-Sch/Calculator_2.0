@@ -339,3 +339,9 @@ Update #4
 Update #5
 
 - Added tests for "HistoryCard" component.
+
+Update #6
+
+- Added tests for "HistoryCardArea" component.
+
+- Added "data-testid" attribute to "HistoryCardArea" component in order to access for tests.

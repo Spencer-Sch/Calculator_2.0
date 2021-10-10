@@ -67,7 +67,7 @@ const HistoryCardArea = () => {
     );
 
   return (
-    <Grid item xs={12} className={classes.grid}>
+    <Grid item xs={12} className={classes.grid} data-testid="historyCardArea">
       {content}
     </Grid>
   );
