@@ -335,3 +335,7 @@ Update #4
 - Added tests for "CalculatorSection" component.
 
 - Added "data-testid" attribute to "CalculatorSection" component in order to access for tests.
+
+Update #5
+
+- Added tests for "HistoryCard" component.
