@@ -148,5 +148,111 @@ describe('E2E tests of user-events', () => {
       expect(equationOutputElement).toHaveTextContent('12 +');
       expect(equationResultOutputElement).toHaveTextContent('0');
     });
+
+    test('click sequence: . <-', () => {
+      configureDataStore();
+      configureHistoryStore();
+      configureRenderStore();
+      render(
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      );
+
+      const equationResultOutputElement = screen.getByRole('heading', {
+        level: 1,
+        name: '0',
+      });
+      const decimalButtonElement = screen.getByTestId('.');
+      const backspaceButtonElement = screen.getByTestId('<-');
+
+      userEvent.click(decimalButtonElement);
+      userEvent.click(backspaceButtonElement);
+
+      expect(equationResultOutputElement).toHaveTextContent('0');
+    });
+
+    test('click sequence: 1 . <-', () => {
+      configureDataStore();
+      configureHistoryStore();
+      configureRenderStore();
+      render(
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      );
+
+      const equationResultOutputElement = screen.getByRole('heading', {
+        level: 1,
+        name: '0',
+      });
+      const numberOneButtonElement = screen.getByRole('button', { name: '1' });
+      const decimalButtonElement = screen.getByTestId('.');
+      const backspaceButtonElement = screen.getByTestId('<-');
+
+      userEvent.click(numberOneButtonElement);
+      userEvent.click(decimalButtonElement);
+      userEvent.click(backspaceButtonElement);
+
+      expect(equationResultOutputElement).toHaveTextContent('1');
+    });
+
+    test('click sequence: 1 . 2 <-', () => {
+      configureDataStore();
+      configureHistoryStore();
+      configureRenderStore();
+      render(
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      );
+
+      const equationResultOutputElement = screen.getByRole('heading', {
+        level: 1,
+        name: '0',
+      });
+      const numberOneButtonElement = screen.getByRole('button', { name: '1' });
+      const numberTwoButtonElement = screen.getByRole('button', { name: '2' });
+      const decimalButtonElement = screen.getByTestId('.');
+      const backspaceButtonElement = screen.getByTestId('<-');
+
+      userEvent.click(numberOneButtonElement);
+      userEvent.click(decimalButtonElement);
+      userEvent.click(numberTwoButtonElement);
+      userEvent.click(backspaceButtonElement);
+
+      expect(equationResultOutputElement).toHaveTextContent('1.');
+    });
+
+    test('click sequence: 1 . 2 3 <-', () => {
+      configureDataStore();
+      configureHistoryStore();
+      configureRenderStore();
+      render(
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      );
+
+      const equationResultOutputElement = screen.getByRole('heading', {
+        level: 1,
+        name: '0',
+      });
+      const numberOneButtonElement = screen.getByRole('button', { name: '1' });
+      const numberTwoButtonElement = screen.getByRole('button', { name: '2' });
+      const numberThreeButtonElement = screen.getByRole('button', {
+        name: '3',
+      });
+      const decimalButtonElement = screen.getByTestId('.');
+      const backspaceButtonElement = screen.getByTestId('<-');
+
+      userEvent.click(numberOneButtonElement);
+      userEvent.click(decimalButtonElement);
+      userEvent.click(numberTwoButtonElement);
+      userEvent.click(numberThreeButtonElement);
+      userEvent.click(backspaceButtonElement);
+
+      expect(equationResultOutputElement).toHaveTextContent('1.2');
+    });
   });
 });

@@ -403,3 +403,9 @@ Update #17
 - Commented out "console.log" statements in store.js.
 
 - Began to add tests to "App.buttonCombos.backspace.test" to test backspace logic in multiple situations.
+
+Update #18
+
+- Finished adding tests to "App.buttonCombos.backspace.test". All passing successfully.
+
+- Began to add tests to "App.buttonCombos.buildOperand.test" to test buildOperand logic in multiple situations.
