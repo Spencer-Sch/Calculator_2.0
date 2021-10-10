@@ -30,7 +30,11 @@ const EquationOutput = () => {
 
   return (
     <Grid item xs={12} className={classes.grid}>
-      <Typography variant="h3" className={classes.typography}>
+      <Typography
+        variant="h3"
+        className={classes.typography}
+        data-testid="equationOutputH3"
+      >
         {RENDER_THIS}
       </Typography>
     </Grid>

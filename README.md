@@ -373,3 +373,11 @@ Update #10
 Update #11
 
 - Finished adding tests for user-events on number buttons. All tests passing successfully.
+
+Update #12
+
+- Moved "data-testid" property in "DisabledButton", "MiscButton", "NumberButton", and "OperatorButton" components onto the actual button element.
+
+- Began to add tests to "App.operatorButton.test" to test operator buttons.
+
+- Added "data-testid" attribute to "EquationOutput" component in order to access for tests.

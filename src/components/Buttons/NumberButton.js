@@ -26,7 +26,7 @@ const NumberButton = React.memo((props) => {
   };
 
   return (
-    <Grid item xs={3} data-testid={props.value}>
+    <Grid item xs={3}>
       <Paper className={classes.paper}>
         <Button
           className={classes.buttonStyles}
@@ -35,6 +35,7 @@ const NumberButton = React.memo((props) => {
           disabled={props.disable}
           value={props.value}
           onClick={sendDispatch}
+          data-testid={props.value}
         >
           {props.icon}
         </Button>
