@@ -15,7 +15,13 @@ const HistorySection = () => {
   const classes = useStyles();
 
   return (
-    <Grid container item xs={4} className={classes.grid}>
+    <Grid
+      container
+      item
+      xs={4}
+      className={classes.grid}
+      data-testid="historySection"
+    >
       <HistoryTitle />
       <HistoryCardArea />
       <HistoryClearButton />

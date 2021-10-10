@@ -353,3 +353,9 @@ Update #7
 Update #8
 
 - Added tests for "HistoryTitle" component.
+
+Update #9
+
+- Added tests for "HistorySection" component.
+
+- Added "data-testid" attribute to "HistorySection" component in order to access for tests.
