@@ -311,3 +311,11 @@ Update #3
 Update #4
 
 - Added describe() to each testing suite in the "constants" folder.
+
+Day 21
+
+Update #1
+
+- Added tests for "CalculatorButtonArea" component.
+
+- Added "data-testid" attribute to "CalculatorButtonArea", "NumberButton", "OperatorButton", "MiscButton", and "DisabledButton" components in order to access them for tests.

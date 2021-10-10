@@ -19,7 +19,7 @@ const DisabledButton = React.memo((props) => {
   const classes = useStyles();
 
   return (
-    <Grid item xs={3}>
+    <Grid item xs={3} data-testid="disabled">
       <Paper className={classes.paper}>
         <Button
           className={classes.buttonStyles}

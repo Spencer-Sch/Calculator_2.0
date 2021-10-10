@@ -37,7 +37,7 @@ const CalculatorButtonArea = () => {
   });
 
   return (
-    <Grid container item spacing={1} xs={12}>
+    <Grid container item spacing={1} xs={12} data-testid="buttonArea">
       {createButtons}
     </Grid>
   );

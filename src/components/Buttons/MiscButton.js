@@ -64,7 +64,7 @@ const MiscButton = React.memo((props) => {
   };
 
   return (
-    <Grid item xs={3}>
+    <Grid item xs={3} data-testid={props.value}>
       <Paper className={classes.paper}>
         <Button
           className={combinedClasses}
