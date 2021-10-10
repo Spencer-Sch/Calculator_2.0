@@ -323,3 +323,9 @@ Update #1
 Update #2
 
 - Added tests for "EquationResultOutput" and "EquationOutput" components.
+
+Update #3
+
+- Added tests for "EquationArea" component.
+
+- Added "data-testid" attribute to "EquationArea" component in order to access for tests.

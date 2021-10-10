@@ -12,7 +12,13 @@ const useStyles = makeStyles({
 const EquationArea = () => {
   const classes = useStyles();
   return (
-    <Grid container item xs={12} className={classes.grid}>
+    <Grid
+      container
+      item
+      xs={12}
+      className={classes.grid}
+      data-testid="equationArea"
+    >
       <EquationOutput />
       <EquationResultOutput />
     </Grid>
