@@ -349,3 +349,7 @@ Update #6
 Update #7
 
 - Added tests for "HistoryClearButton" component.
+
+Update #8
+
+- Added tests for "HistoryTitle" component.
