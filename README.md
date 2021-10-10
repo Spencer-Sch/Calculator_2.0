@@ -319,3 +319,7 @@ Update #1
 - Added tests for "CalculatorButtonArea" component.
 
 - Added "data-testid" attribute to "CalculatorButtonArea", "NumberButton", "OperatorButton", "MiscButton", and "DisabledButton" components in order to access them for tests.
+
+Update #2
+
+- Added tests for "EquationResultOutput" and "EquationOutput" components.
