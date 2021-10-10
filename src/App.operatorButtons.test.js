@@ -19,18 +19,16 @@ describe('E2E tests of user-events', () => {
         </ThemeProvider>
       );
 
+      const equationOutputElement = screen.getByTestId('equationOutputH3');
       const equationResultOutputElement = screen.getByRole('heading', {
         level: 1,
         name: '0',
       });
-
-      const equationOutputElement = screen.getByTestId('equationOutputH3');
-
       const equalsButtonElement = screen.getByTestId('=');
+
       userEvent.click(equalsButtonElement);
 
       const historyCard = await waitFor(() => screen.getByRole('listitem'));
-
       const historyCardEquation = await waitFor(() =>
         within(historyCard).getByRole('heading', {
           level: 6,
@@ -56,14 +54,13 @@ describe('E2E tests of user-events', () => {
         </ThemeProvider>
       );
 
+      const equationOutputElement = screen.getByTestId('equationOutputH3');
       const equationResultOutputElement = screen.getByRole('heading', {
         level: 1,
         name: '0',
       });
-
-      const equationOutputElement = screen.getByTestId('equationOutputH3');
-
       const additionButtonElement = screen.getByTestId('+');
+
       userEvent.click(additionButtonElement);
 
       expect(equationOutputElement).toHaveTextContent('0 +');
@@ -80,14 +77,13 @@ describe('E2E tests of user-events', () => {
         </ThemeProvider>
       );
 
+      const equationOutputElement = screen.getByTestId('equationOutputH3');
       const equationResultOutputElement = screen.getByRole('heading', {
         level: 1,
         name: '0',
       });
-
-      const equationOutputElement = screen.getByTestId('equationOutputH3');
-
       const additionButtonElement = screen.getByTestId('-');
+
       userEvent.click(additionButtonElement);
 
       expect(equationOutputElement).toHaveTextContent('0 -');
@@ -104,14 +100,13 @@ describe('E2E tests of user-events', () => {
         </ThemeProvider>
       );
 
+      const equationOutputElement = screen.getByTestId('equationOutputH3');
       const equationResultOutputElement = screen.getByRole('heading', {
         level: 1,
         name: '0',
       });
-
-      const equationOutputElement = screen.getByTestId('equationOutputH3');
-
       const additionButtonElement = screen.getByTestId('x');
+
       userEvent.click(additionButtonElement);
 
       expect(equationOutputElement).toHaveTextContent('0 x');
@@ -128,14 +123,13 @@ describe('E2E tests of user-events', () => {
         </ThemeProvider>
       );
 
+      const equationOutputElement = screen.getByTestId('equationOutputH3');
       const equationResultOutputElement = screen.getByRole('heading', {
         level: 1,
         name: '0',
       });
-
-      const equationOutputElement = screen.getByTestId('equationOutputH3');
-
       const additionButtonElement = screen.getByTestId('/');
+
       userEvent.click(additionButtonElement);
 
       expect(equationOutputElement).toHaveTextContent('0 /');

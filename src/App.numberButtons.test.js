@@ -28,6 +28,7 @@ describe('E2E tests of user-events', () => {
       });
 
       userEvent.click(numberOneButtonElement);
+
       expect(equationResultOutputElement).toHaveTextContent('1');
     });
 
@@ -50,6 +51,7 @@ describe('E2E tests of user-events', () => {
       });
 
       userEvent.click(numberTwoButtonElement);
+
       expect(equationResultOutputElement).toHaveTextContent('2');
     });
 
@@ -72,6 +74,7 @@ describe('E2E tests of user-events', () => {
       });
 
       userEvent.click(numberThreeButtonElement);
+
       expect(equationResultOutputElement).toHaveTextContent('3');
     });
 
@@ -94,6 +97,7 @@ describe('E2E tests of user-events', () => {
       });
 
       userEvent.click(numberFourButtonElement);
+
       expect(equationResultOutputElement).toHaveTextContent('4');
     });
 
@@ -116,6 +120,7 @@ describe('E2E tests of user-events', () => {
       });
 
       userEvent.click(numberFiveButtonElement);
+
       expect(equationResultOutputElement).toHaveTextContent('5');
     });
 
@@ -138,6 +143,7 @@ describe('E2E tests of user-events', () => {
       });
 
       userEvent.click(numberSixButtonElement);
+
       expect(equationResultOutputElement).toHaveTextContent('6');
     });
 
@@ -160,6 +166,7 @@ describe('E2E tests of user-events', () => {
       });
 
       userEvent.click(numberSevenButtonElement);
+
       expect(equationResultOutputElement).toHaveTextContent('7');
     });
 
@@ -182,6 +189,7 @@ describe('E2E tests of user-events', () => {
       });
 
       userEvent.click(numberEightButtonElement);
+
       expect(equationResultOutputElement).toHaveTextContent('8');
     });
 
@@ -204,6 +212,7 @@ describe('E2E tests of user-events', () => {
       });
 
       userEvent.click(numberNineButtonElement);
+
       expect(equationResultOutputElement).toHaveTextContent('9');
     });
 
@@ -226,6 +235,7 @@ describe('E2E tests of user-events', () => {
       });
 
       userEvent.click(numberZeroButtonElement);
+
       expect(equationResultOutputElement).toHaveTextContent('0');
     });
   });

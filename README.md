@@ -393,3 +393,7 @@ Update #14
 Update #15
 
 - Commented out all "console.log" statements in logic and store files. Exception: store.js.
+
+Update #16
+
+- Slightly re-organized code in App.operatorButtons.test and App.numberButtons.test.
