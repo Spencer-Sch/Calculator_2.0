@@ -413,3 +413,9 @@ Update #18
 Update #19
 
 - Finished adding tests to "App.buttonCombos.buildOperand.test". All passing successfully.
+
+Update #20
+
+- Made small edits to test in App.buttonCombos.backspace.test.js.
+
+- Began to add tests to "App.buttonCombos.calculate.test" to test calculate logic in multiple situations. To be continued...

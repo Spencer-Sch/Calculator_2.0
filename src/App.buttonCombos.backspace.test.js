@@ -75,9 +75,9 @@ describe('E2E tests of user-events', () => {
         within(historyCard).getByRole('heading', { level: 3 })
       );
 
-      expect(equationOutputElement).toHaveTextContent('1 + 2');
+      expect(equationOutputElement).toHaveTextContent('1 + 2 =');
       expect(equationResultOutputElement).toHaveTextContent('3');
-      expect(historyCardEquation).toHaveTextContent('1 + 2');
+      expect(historyCardEquation).toHaveTextContent('1 + 2 =');
       expect(historyCardEquationResult).toHaveTextContent('3');
     });
 
