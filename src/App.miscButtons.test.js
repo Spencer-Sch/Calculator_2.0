@@ -1,5 +1,5 @@
 import App from './App';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { configureDataStore } from './hooks-store/data-store';
 import { configureHistoryStore } from './hooks-store/history-store';
@@ -55,7 +55,7 @@ describe('E2E tests of user-events', () => {
       expect(equationResultOutputElement).toHaveTextContent('0');
     });
 
-    test('click sequence: 1 = 2 CE', () => {
+    test('click sequence: 1 = 2 CE', async () => {
       configureDataStore();
       configureHistoryStore();
       configureRenderStore();
@@ -80,8 +80,20 @@ describe('E2E tests of user-events', () => {
       userEvent.click(numberTwoButtonElement);
       userEvent.click(clearEntryButtonElement);
 
-      expect(equationOutputElement).toHaveTextContent('1 = 1');
+      const historyCard = await waitFor(() => screen.getByRole('listitem'));
+      const historyCardEquation = await waitFor(() =>
+        within(historyCard).getByRole('heading', {
+          level: 6,
+        })
+      );
+      const historyCardEquationResult = await waitFor(() =>
+        within(historyCard).getByRole('heading', { level: 3 })
+      );
+
+      expect(equationOutputElement).toHaveTextContent('');
       expect(equationResultOutputElement).toHaveTextContent('0');
+      expect(historyCardEquation).toHaveTextContent('1 = 1');
+      expect(historyCardEquationResult).toHaveTextContent('1');
     });
 
     test('click sequence: 1 = 2 C', () => {

@@ -479,3 +479,11 @@
 - Made small edits to test descriptions in "App.miscButtons.test".
 
 - Finished adding tests to "App.buttonCombos.decimal.test". All passing successfully.
+
+#### Update #4
+
+- Found and fixed a bug in "buildOperandLogic". (button combo: 1 + 2 = 4) when "4" was clicked "equationOutput" did not clear. Fixed so "equationOutput" only clears if "equalsIsOn" is triggered in "buildOperandLogic".
+
+- Edit of (click sequence: 1 = 2 CE) test in "App.miscButton.test" required after edit to "buildOperandLogic".
+
+- Began to add tests to "App.buttonCombos.equals.test" to test equals logic in multiple situations. To be continued...
