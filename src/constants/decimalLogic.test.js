@@ -164,7 +164,7 @@ describe('decimalLogic tests:', () => {
       cameFromEquals: false,
       renderData: {
         renderEquationResult: '0.',
-        renderEquation: null,
+        renderEquation: '1 +',
       },
     });
   });

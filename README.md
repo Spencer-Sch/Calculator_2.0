@@ -18,7 +18,9 @@
 
 - Succeeded in setting up the global data store and transmiting data from 'CalculatorButton' element to the 'EquationResultOutput' element.
 
-Day 5
+### Day 5
+
+---
 
 - Set up initial store actions to be called.
 
@@ -30,7 +32,9 @@ Day 5
 
 - Succeeded in transfering part of the logic from 'sumSubMultDiv' in old calculator. To be continued...
 
-Day 6
+### Day 6
+
+---
 
 - Succeeded in transferring logic from 'sumSubMultDiv'.
 
@@ -44,11 +48,15 @@ Day 6
 
 - ISSUE TO FIX: subsequent presses of the '-' button while chaining operator button equations results in the '-' symbol appearing in front of operand1.
 
-Day 7
+### Day 7
+
+---
 
 - Began experimenting with tests.
 
-Day 8
+### Day 8
+
+---
 
 - Added more tests for 'buildOperand' and 'sumSubMultDiv'
 
@@ -56,45 +64,51 @@ Day 8
 
 - Began setting up files and test files for equalsLogic, equalsHelperLogic. Going to attempt to build out equals and equalsHelper while using TDD. To be continued...
 
-Day 9
+### Day 9
 
-Update #1
+---
+
+#### Update #1
 
 - Divided the CalculatorButton component up into four more specific components (MiscButton, DisabledButton, NumberButton, OperatorButton) in order to keep each component/logic bundle more concise.
 
-Update #2
+#### Update #2
 
 - Succeeded in transferring logic from 'equalsHelper' while using TDD.
 
 - Began transferring logic from 'equals' while using TDD. So far all has been successful. To be continued...
 
-Day 10
+### Day 10
 
-Update #1
+---
+
+#### Update #1
 
 - Succeeded in completing the transfer of logic from 'equals' while using TDD. All tests are passing successfully.
 
 - removed previousOperator field from global state object because it is not used.
 
-Update #2
+#### Update #2
 
 - Replaced each occurance of 'curState.propertyName' in all logic files with constants
 
-Update #3
+#### Update #3
 
 - Succeeded in completing the transfer of logic from 'sumSubMultDiv' while using TDD. All tests are passing successfully.
 
 - Began re-writing sumSubMultDivLogic.test descriptions to be consistent and more read-able. To Be Continued...
 
-Day 11
+### Day 11
 
-Update #1
+---
+
+#### Update #1
 
 - Finished re-writing sumSubMultDivLogic.test desciptions.
 
 - Messing around with Theme and styling to change button colors. Still needs work.
 
-Update #2
+#### Update #2
 
 - Finished re-writing equalsHelperLogic.test desciptions.
 
@@ -102,77 +116,85 @@ Update #2
 
 - Finished re-writing buildOperandLogic.test desciptions.
 
-Update #3
+#### Update #3
 
 - Successfully implemented color styles to calculator buttons through the MUI theme.
 
 - Successfully implemented conditional classes to giving specific buttons ("+/-", ".", "=") different color styles from the other buttons in their corresponding button sub-categories (MiscButton, OperatorButton).
 
-Update #4
+#### Update #4
 
 - Successfully transfered logic for "divideByZeroHandler" using TDD. All tests passing successfully.
 
 - Wrote tests for CalculateLogic. All tests passing successfully.
 
-Day 12
+### Day 12
 
-Update #1
+---
+
+#### Update #1
 
 - Successfully transfered logic for "cClear" & "ceClear".
 
 - Wrote tests for new "clearFunctions". All tests passing successfully.
 
-Update #2
+#### Update #2
 
 - Successfully transfered logic for "backspace" using TDD. All tests passing successfully.
 
 - Added utilityFunctions.js and successfully transfered "isFloat" using TDD. All tests passing successfully.
 
-Update #3
+#### Update #3
 
 - Corrected button combo portion of test descriptions in backspaceLogic.test.js
 
 - Began transfering logic for 'decimal' using TDD. Tests passing successfully. To Be Continued...
 
-Day 13
+### Day 13
 
-Update #1
+---
+
+#### Update #1
 
 - Successfully finished transfering logic from "decimal" using TDD. All tests passing successfully.
 
 - Transfered "negate" logic. Wrote tests for negate. All tests passing successfully.
 
-Update #2
+#### Update #2
 
 - Successfully finished transfering logic from "posNeg" using TDD. All tests passing successfully.
 
-Update #3
+#### Update #3
 
 - Transfered logic for "getPercent" logic. Working on writing tests. To be continued...
 
-Update #4
+#### Update #4
 
 - Finished writing tests for "getPercent" logic. All tests passing successfully.
 
-Update #5
+#### Update #5
 
 - Worked at transfering "percent" and "percentHelper" logic as well as began to write tests for each. To be continued...
 
-Day 14
+### Day 14
 
-Update #1
+---
+
+#### Update #1
 
 - Completed transfer of "percent" and "percentHelper". Some translation still needs work. Built a few tests for "percentHelper" and are passing successfully. To be continued...
 
-Day 15
+### Day 15
 
-Update #1
+---
+
+#### Update #1
 
 - Completed full translation of "percent" and "percentHelper" logic. Built tests for "percent". All tests passing successfully.
 
 - In the process of making all possible applications of "percent" logic function properly I needed to make edits to the logic in "sumSubMultDivLogic", "percentHelperLogic", and "buildOperandLogic".
 
-Update #2
+#### Update #2
 
 - Edited custom store hook to prevent unnecessary re-renders of calculator buttons.
 
@@ -180,57 +202,63 @@ Update #2
 
 - Successfully connected necessary components to both store and retrieve equation history data.
 
-Day 16
+### Day 16
 
-Update #1
+---
+
+#### Update #1
 
 - Fixed spelling mistake. Changed all "equasion" to "equation".
 
-Update #2
+#### Update #2
 
 - Added placeholder text in 'HistoryCardArea'.
 
-Update #3
+#### Update #3
 
 - Added functionality to clear history.
 
-Update #4
+#### Update #4
 
 - Added hover effect to history cards.
 
 - Restricted height of HistoryCardArea.
 
-Update #5
+#### Update #5
 
 - Added funtionality to recall history entries by clicking on them.
 
-Day 17
+### Day 17
 
-Update #1
+---
+
+#### Update #1
 
 - Made small edits to some test descriptions.
 
-Update #2
+#### Update #2
 
 - Fixed bug in button combo: ( 0 +/- 1 ). The input of "0" in the "negate" function in "utilityFunctions" was causing "undefined" to be returned. when "1" was pressed build "buildOperand" didn't know what to do with the value of "undefined" and crashed the app.
 
-Update #3
+#### Update #3
 
 - Added some constatns to "EquastionResultOutput" and "EquationOutput" to improve readability
 
 - Fixed logic in "EquationOutput" to prevent display of a second equals sign when the operator is "=". Before "0 = 0 =" after "0 = 0".
 
-Update #4
+#### Update #4
 
 - Removed a portion of "buildOperandLogic" (and an accompanying test) originally added to solve a display issue. This introduced a logical issue. The logic issue has been fixed. Now I need to solve the display issue.
 
-Update #5
+#### Update #5
 
 - Began redesign of the system that decides what is rendered on screen and when. Ran into a few issues that need to be worked out. To be continued...
 
-Day 18
+### Day 18
 
-Update #1
+---
+
+#### Update #1
 
 - Fixed logic error where global state data was being changed before historyEntry could be made. Solution: added "historyData" object to "history-store" slice and stored operan1, operand2, and operator into new fields operand1Store, operand2Store, and operatorStore to hold onto these values to give to historyEntry while still allowing calculateLogic to function as designed.
 
@@ -240,79 +268,83 @@ Update #1
 
 - A bunch of my tests are failing now due to adding fields to my global state. These will need to be corrected and new tests will need to be added.
 
-Update #2
+#### Update #2
 
 - Added new render functionallity to "positiveNegativeLogic".
 
-Update #3
+#### Update #3
 
 - Added new render functionallity to "backspaceLogic".
 
-Update #4
+#### Update #4
 
 - Added new render functionallity to "percentLogic".
 
 - Cleaned up un-used code and comments from files.
 
-Update #5
+#### Update #5
 
 - Updated "backspaceLogic.test" to include new history-store and render-store state slices. All tests passing successfully.
 
-Update #6
+#### Update #6
 
 - Updated "buildOperandLogic.test" to include new history-store and render-store state slices. All tests passing successfully.
 
-Day 19
+### Day 19
 
-Update #1
+---
+
+#### Update #1
 
 - Renamed "equationResult" variable in "calculateLogic" to "equationResultVar" to destinguish from "equationResult" field in global state object.
 
 - updated tests in "calculateLogic.test" in order to reflect the additions of history slice and render slice to global state.
 
-Update #2
+#### Update #2
 
 - updated tests in "clearFunctionLogic.test" in order to reflect the additions of render slice to global state.
 
-Update #3
+#### Update #3
 
 - updated tests in "decimalLogic.test" in order to reflect the additions of render slice to global state.
 
-Update #4
+#### Update #4
 
 - updated tests in "percentLogic.test" in order to reflect the additions of render slice to global state.
 
-Update #5
+#### Update #5
 
 - updated tests in "positiveNegativeLogic.test" in order to reflect the additions of render slice to global state.
 
-Update #6
+#### Update #6
 
 - updated tests in "sumSubMultDivLogic.test" in order to reflect the additions of render slice to global state.
 
-Update #7
+#### Update #7
 
 - Added functionality so an equation that attempts to divide by zero does not generate a history entry. "runAddEntry" field was added to global state in order to achieve this.
 
 - Edited tests in "calculateLogic.test" to reflect this change to global state. All tests passing successfully.
 
-Day 20
+### Day 20
 
-Update #1
+---
+
+#### Update #1
 
 - Fixed bug where the "renderData" field was not being returned by 'RECALL_ENTRY' action in "history-store". This was preventing the equation and equationResult from being displayed in "EquationOutput" and "EquationResultOutput" components when a "HistoryCard" was clicked.
 
 - Moved the useEffect call that dispatches the 'ADD_ENTRY' action from the "EquationResultOutput" component into the "HistoryCardArea" component.
 
-Update #2
+#### Update #2
 
 - Added a test for "HistoryCardArea" component.
 
-Update #3
+#### Update #3
 
 - Added tests for "NumberButton", "MiscButton", "DisabledButton", and "OperatorButton" components.
 
-Update #4
+#### Update #4
 
 - Added describe() to each testing suite in the "constants" folder.
 
@@ -437,3 +469,13 @@ Update #4
 #### Update #2
 
 - Finished adding tests to "App.buttonCombos.clearFunctions.test". All passing successfully.
+
+#### Update #3
+
+- Found and fixed a bug in "decimalLogic". (button combo: 1 + . 2 = ) when decimal was clicked it caused "equationOutput" component to go blank. Fixed so the current equation is always displayed.
+
+- Edit of (button combo: 1 + .) test in "decimalLogic.test" required after edit to "decimalLogic".
+
+- Made small edits to test descriptions in "App.miscButtons.test".
+
+- Finished adding tests to "App.buttonCombos.decimal.test". All passing successfully.

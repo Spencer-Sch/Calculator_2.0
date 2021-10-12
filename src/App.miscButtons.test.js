@@ -229,7 +229,7 @@ describe('E2E tests of user-events', () => {
       expect(equationResultOutputElement).toHaveTextContent('0.');
     });
 
-    test('click sequence: .1', () => {
+    test('click sequence: . 1', () => {
       configureDataStore();
       configureHistoryStore();
       configureRenderStore();
@@ -252,7 +252,7 @@ describe('E2E tests of user-events', () => {
       expect(equationResultOutputElement).toHaveTextContent('0.1');
     });
 
-    test('click sequence: 1.', () => {
+    test('click sequence: 1 .', () => {
       configureDataStore();
       configureHistoryStore();
       configureRenderStore();
@@ -275,7 +275,7 @@ describe('E2E tests of user-events', () => {
       expect(equationResultOutputElement).toHaveTextContent('1.');
     });
 
-    test('click sequence: 1.2', () => {
+    test('click sequence: 1 . 2', () => {
       configureDataStore();
       configureHistoryStore();
       configureRenderStore();
@@ -300,7 +300,7 @@ describe('E2E tests of user-events', () => {
       expect(equationResultOutputElement).toHaveTextContent('1.2');
     });
 
-    test('click sequence: 1.2.', () => {
+    test('click sequence: 1 . 2 .', () => {
       configureDataStore();
       configureHistoryStore();
       configureRenderStore();

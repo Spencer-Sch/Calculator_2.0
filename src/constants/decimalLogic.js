@@ -7,10 +7,10 @@ const decimal = (curState) => {
   const RENDER_DATA = curState.renderData;
 
   if (!DECIMAL_IS_ON) {
-    // console.log('DECIMAL checkpoint 1');
+    console.log('DECIMAL checkpoint 1');
     let queuedStateUpdates = {};
     if (EQUALS_IS_ON) {
-      // console.log('DECIMAL checkpoint 2');
+      console.log('DECIMAL checkpoint 2');
       queuedStateUpdates = {
         ...queuedStateUpdates,
         operandString: '0.',
@@ -27,17 +27,17 @@ const decimal = (curState) => {
       SUM_SUB_MULT_DIV_IS_ON ||
       (OPERAND2 === null && +OPERAND_STRING < 0)
     ) {
-      // console.log('DECIMAL checkpoint 3');
+      console.log('DECIMAL checkpoint 3');
       queuedStateUpdates = {
         ...queuedStateUpdates,
         operandString: '0.',
         renderData: {
-          renderEquation: null,
+          ...RENDER_DATA,
           renderEquationResult: '0.',
         },
       };
     } else {
-      // console.log('DECIMAL checkpoint 4');
+      console.log('DECIMAL checkpoint 4');
       queuedStateUpdates = {
         ...queuedStateUpdates,
         operandString: `${OPERAND_STRING}.`,
