@@ -4,9 +4,13 @@
 
 ### Days 1 - 3
 
+---
+
 - Front-end complete
 
-Day 4
+### Day 4
+
+---
 
 - Succeeded in getting the value of each button to print to the console. This value will be passed to the global store to be distributed to the necessary components later.
 
@@ -312,55 +316,57 @@ Update #4
 
 - Added describe() to each testing suite in the "constants" folder.
 
-Day 21
+### Day 21
 
-Update #1
+---
+
+#### Update #1
 
 - Added tests for "CalculatorButtonArea" component.
 
 - Added "data-testid" attribute to "CalculatorButtonArea", "NumberButton", "OperatorButton", "MiscButton", and "DisabledButton" components in order to access them for tests.
 
-Update #2
+#### Update #2
 
 - Added tests for "EquationResultOutput" and "EquationOutput" components.
 
-Update #3
+#### Update #3
 
 - Added tests for "EquationArea" component.
 
 - Added "data-testid" attribute to "EquationArea" component in order to access for tests.
 
-Update #4
+#### Update #4
 
 - Added tests for "CalculatorSection" component.
 
 - Added "data-testid" attribute to "CalculatorSection" component in order to access for tests.
 
-Update #5
+#### Update #5
 
 - Added tests for "HistoryCard" component.
 
-Update #6
+#### Update #6
 
 - Added tests for "HistoryCardArea" component.
 
 - Added "data-testid" attribute to "HistoryCardArea" component in order to access for tests.
 
-Update #7
+#### Update #7
 
 - Added tests for "HistoryClearButton" component.
 
-Update #8
+#### Update #8
 
 - Added tests for "HistoryTitle" component.
 
-Update #9
+#### Update #9
 
 - Added tests for "HistorySection" component.
 
 - Added "data-testid" attribute to "HistorySection" component in order to access for tests.
 
-Update #10
+#### Update #10
 
 - Added tests for "App" component.
 
@@ -370,11 +376,11 @@ Update #10
 
 - Split "App" tests into seperate files to help reduce test run times.
 
-Update #11
+#### Update #11
 
 - Finished adding tests for user-events on number buttons ("App.numberButtons.test"). All tests passing successfully.
 
-Update #12
+#### Update #12
 
 - Moved "data-testid" property in "DisabledButton", "MiscButton", "NumberButton", and "OperatorButton" components onto the actual button element.
 
@@ -382,39 +388,39 @@ Update #12
 
 - Added "data-testid" attribute to "EquationOutput" component in order to access for tests.
 
-Update #13
+#### Update #13
 
 - Completed tests in "App.operatorButtons.test". All tests passing successfully.
 
-Update #14
+#### Update #14
 
 - Completed tests in "App.miscButtons.test". All tests passing successfully.
 
-Update #15
+#### Update #15
 
 - Commented out all "console.log" statements in logic and store files. Exception: store.js.
 
-Update #16
+#### Update #16
 
 - Slightly re-organized code in App.operatorButtons.test and App.numberButtons.test.
 
-Update #17
+#### Update #17
 
 - Commented out "console.log" statements in store.js.
 
 - Began to add tests to "App.buttonCombos.backspace.test" to test backspace logic in multiple situations.
 
-Update #18
+#### Update #18
 
 - Finished adding tests to "App.buttonCombos.backspace.test". All passing successfully.
 
 - Began to add tests to "App.buttonCombos.buildOperand.test" to test buildOperand logic in multiple situations.
 
-Update #19
+#### Update #19
 
 - Finished adding tests to "App.buttonCombos.buildOperand.test". All passing successfully.
 
-Update #20
+#### Update #20
 
 - Made small edits to test in App.buttonCombos.backspace.test.js.
 
@@ -422,6 +428,12 @@ Update #20
 
 ### Day 22
 
+---
+
 #### Update #1
 
 - Finished adding tests to "App.buttonCombos.buildOperand.test". All passing successfully.
+
+#### Update #2
+
+- Finished adding tests to "App.buttonCombos.clearFunctions.test". All passing successfully.
