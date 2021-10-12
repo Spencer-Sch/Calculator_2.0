@@ -2,7 +2,7 @@
 
 ## Remaking my calculator project using React, Material-UI, and Jest
 
-Days 1 - 3
+### Days 1 - 3
 
 - Front-end complete
 
@@ -419,3 +419,9 @@ Update #20
 - Made small edits to test in App.buttonCombos.backspace.test.js.
 
 - Began to add tests to "App.buttonCombos.calculate.test" to test calculate logic in multiple situations. To be continued...
+
+### Day 22
+
+#### Update #1
+
+- Finished adding tests to "App.buttonCombos.buildOperand.test". All passing successfully.
