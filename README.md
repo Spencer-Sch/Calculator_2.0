@@ -505,3 +505,7 @@
 - The above edit to "buildOperandLogic" then required edits to "(button combo: 12 + % 2 )" test in "buildOperandLogic.test".
 
 - Bug fixed. All render data is displaying as it should. All tests are passing successfully.
+
+#### Update #3
+
+- Finished adding tests to "App.buttonCombos.percent.test". All passing successfully.
