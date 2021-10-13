@@ -509,3 +509,11 @@
 #### Update #3
 
 - Finished adding tests to "App.buttonCombos.percent.test". All passing successfully.
+
+#### Update #4
+
+- Removed un-needed "async" from test functions in "App.buttonCombos.percent.test".
+
+- Finished adding tests to "App.buttonCombos.positiveNegative.test". All passing successfully.
+
+- Began to add tests to "App.buttonCombos.sumSubMultDiv.test" to test sumSubMultDiv logic in multiple situations. To be continued...

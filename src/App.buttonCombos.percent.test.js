@@ -37,7 +37,7 @@ describe('E2E tests of user-events', () => {
       expect(equationResultOutputElement).toHaveTextContent('0');
     });
 
-    test('click sequence: 12 + %', async () => {
+    test('click sequence: 12 + %', () => {
       configureDataStore();
       configureHistoryStore();
       configureRenderStore();
@@ -67,7 +67,7 @@ describe('E2E tests of user-events', () => {
       expect(equationResultOutputElement).toHaveTextContent('1.44');
     });
 
-    test('click sequence: 12 + 3 %', async () => {
+    test('click sequence: 12 + 3 %', () => {
       configureDataStore();
       configureHistoryStore();
       configureRenderStore();
@@ -149,7 +149,7 @@ describe('E2E tests of user-events', () => {
       expect(historyCardEquationResult).toHaveTextContent('15');
     });
 
-    test('click sequence: 12 + % 3', async () => {
+    test('click sequence: 12 + % 3', () => {
       configureDataStore();
       configureHistoryStore();
       configureRenderStore();
