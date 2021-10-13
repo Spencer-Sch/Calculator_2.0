@@ -521,3 +521,9 @@
 #### Update #5
 
 - Finished adding tests to "App.buttonCombos.sumSubMultDiv.test". All passing successfully.
+
+#### Update #6
+
+- Small edit to "App.buttonCombos.sumSubMultDiv.test" to remove un-needed "async".
+
+- Finished adding tests to "App.buttonCombos.miscCombos.test". All passing successfully.
