@@ -517,3 +517,7 @@
 - Finished adding tests to "App.buttonCombos.positiveNegative.test". All passing successfully.
 
 - Began to add tests to "App.buttonCombos.sumSubMultDiv.test" to test sumSubMultDiv logic in multiple situations. To be continued...
+
+#### Update #5
+
+- Finished adding tests to "App.buttonCombos.sumSubMultDiv.test". All passing successfully.

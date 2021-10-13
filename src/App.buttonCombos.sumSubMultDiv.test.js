@@ -52,5 +52,139 @@ describe('E2E tests of user-events', () => {
       expect(historyCardEquation).toHaveTextContent('1 + 2 =');
       expect(historyCardEquationResult).toHaveTextContent('3');
     });
+
+    test('click sequence: +', async () => {
+      configureDataStore();
+      configureHistoryStore();
+      configureRenderStore();
+      render(
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      );
+
+      const equationOutputElement = screen.getByTestId('equationOutputH3');
+      const equationResultOutputElement = screen.getByRole('heading', {
+        level: 1,
+        name: '0',
+      });
+
+      const additionButtonElement = screen.getByTestId('+');
+
+      userEvent.click(additionButtonElement);
+
+      expect(equationOutputElement).toHaveTextContent('0 +');
+      expect(equationResultOutputElement).toHaveTextContent('0');
+    });
+
+    test('click sequence: 1 +', async () => {
+      configureDataStore();
+      configureHistoryStore();
+      configureRenderStore();
+      render(
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      );
+
+      const equationOutputElement = screen.getByTestId('equationOutputH3');
+      const equationResultOutputElement = screen.getByRole('heading', {
+        level: 1,
+        name: '0',
+      });
+
+      const numberOneButtonElement = screen.getByRole('button', { name: '1' });
+      const additionButtonElement = screen.getByTestId('+');
+
+      userEvent.click(numberOneButtonElement);
+      userEvent.click(additionButtonElement);
+
+      expect(equationOutputElement).toHaveTextContent('1 +');
+      expect(equationResultOutputElement).toHaveTextContent('1');
+    });
+
+    test('click sequence: 1 + -', async () => {
+      configureDataStore();
+      configureHistoryStore();
+      configureRenderStore();
+      render(
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      );
+
+      const equationOutputElement = screen.getByTestId('equationOutputH3');
+      const equationResultOutputElement = screen.getByRole('heading', {
+        level: 1,
+        name: '0',
+      });
+
+      const numberOneButtonElement = screen.getByRole('button', { name: '1' });
+      const additionButtonElement = screen.getByTestId('+');
+      const subtractionButtonElement = screen.getByTestId('-');
+
+      userEvent.click(numberOneButtonElement);
+      userEvent.click(additionButtonElement);
+      userEvent.click(subtractionButtonElement);
+
+      expect(equationOutputElement).toHaveTextContent('1 -');
+      expect(equationResultOutputElement).toHaveTextContent('1');
+    });
+
+    test('click sequence: 1 - x', async () => {
+      configureDataStore();
+      configureHistoryStore();
+      configureRenderStore();
+      render(
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      );
+
+      const equationOutputElement = screen.getByTestId('equationOutputH3');
+      const equationResultOutputElement = screen.getByRole('heading', {
+        level: 1,
+        name: '0',
+      });
+
+      const numberOneButtonElement = screen.getByRole('button', { name: '1' });
+      const subtractionButtonElement = screen.getByTestId('-');
+      const multiplicationButtonElement = screen.getByTestId('x');
+
+      userEvent.click(numberOneButtonElement);
+      userEvent.click(subtractionButtonElement);
+      userEvent.click(multiplicationButtonElement);
+
+      expect(equationOutputElement).toHaveTextContent('1 x');
+      expect(equationResultOutputElement).toHaveTextContent('1');
+    });
+
+    test('click sequence: 1 x /', async () => {
+      configureDataStore();
+      configureHistoryStore();
+      configureRenderStore();
+      render(
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      );
+
+      const equationOutputElement = screen.getByTestId('equationOutputH3');
+      const equationResultOutputElement = screen.getByRole('heading', {
+        level: 1,
+        name: '0',
+      });
+
+      const numberOneButtonElement = screen.getByRole('button', { name: '1' });
+      const multiplicationButtonElement = screen.getByTestId('x');
+      const divisionButtonElement = screen.getByTestId('/');
+
+      userEvent.click(numberOneButtonElement);
+      userEvent.click(multiplicationButtonElement);
+      userEvent.click(divisionButtonElement);
+
+      expect(equationOutputElement).toHaveTextContent('1 /');
+      expect(equationResultOutputElement).toHaveTextContent('1');
+    });
   });
 });
