@@ -487,3 +487,11 @@
 - Edit of (click sequence: 1 = 2 CE) test in "App.miscButton.test" required after edit to "buildOperandLogic".
 
 - Began to add tests to "App.buttonCombos.equals.test" to test equals logic in multiple situations. To be continued...
+
+### Day 23
+
+---
+
+#### Update #1
+
+- Finished adding tests to "App.buttonCombos.equals.test". All passing successfully.
