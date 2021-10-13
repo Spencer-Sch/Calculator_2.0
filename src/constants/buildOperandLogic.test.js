@@ -248,7 +248,7 @@ describe('buildOperandLogic tests:', () => {
         operatorStore: null,
         historyList: [],
       },
-      renderData: { renderEquationResult: '2', renderEquation: '12 + 1.44' },
+      renderData: { renderEquationResult: '2', renderEquation: '12 +' },
     });
   });
 });

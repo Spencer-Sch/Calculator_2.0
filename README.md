@@ -495,3 +495,13 @@
 #### Update #1
 
 - Finished adding tests to "App.buttonCombos.equals.test". All passing successfully.
+
+#### Update #2
+
+- Commented out all console.log statements in decimalLogic.
+
+- Found bug where clicking a number button after clicking the "%" button did not display the proper information in "equationOutput" component. Fix required an edit to "buildOperandLogic".
+
+- The above edit to "buildOperandLogic" then required edits to "(button combo: 12 + % 2 )" test in "buildOperandLogic.test".
+
+- Bug fixed. All render data is displaying as it should. All tests are passing successfully.

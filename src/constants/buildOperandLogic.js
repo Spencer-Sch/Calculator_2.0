@@ -3,6 +3,8 @@ const buildOperand = (curState, newDigit) => {
   const EQUALS_IS_ON = curState.equalsIsOn;
   const PERCENT_IS_ON = curState.percentIsOn;
   const RENDER_DATA = curState.renderData;
+  const OPERAND1 = curState.operand1;
+  const OPERATOR = curState.operator;
 
   let operandString = OPERAND_STRING;
   let queuedStateUpdates;
@@ -34,7 +36,13 @@ const buildOperand = (curState, newDigit) => {
       ? `${newDigit}`
       : `${operandString}`.concat(`${newDigit}`);
 
-    const conditionalRenderData = shouldRenderDataBeEmpty ? {} : RENDER_DATA;
+    const equalsRenderData = shouldRenderDataBeEmpty ? {} : RENDER_DATA;
+
+    const percentRenderData = { renderEquation: `${OPERAND1} ${OPERATOR}` };
+
+    const conditionalRenderData = PERCENT_IS_ON
+      ? percentRenderData
+      : equalsRenderData;
 
     // const renderDataUpdate = queuedRenderDataUpdate
     //   ? queuedRenderDataUpdate
@@ -52,6 +60,7 @@ const buildOperand = (curState, newDigit) => {
       sumSubMultDivIsOn: false,
       percentIsOn: false,
       renderData: {
+        // ...equalsRenderData,
         ...conditionalRenderData,
         renderEquationResult: newOperandString,
       },
