@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '4.5rem',
     fontSize: '2rem',
     fontWeight: 900,
+    '&:active': {
+      boxShadow: 'none',
+    },
   },
   paper: {
     height: '100%',
@@ -32,6 +35,7 @@ const NumberButton = React.memo((props) => {
           className={classes.buttonStyles}
           variant="contained"
           color="primary"
+          disableRipple={true}
           disabled={props.disable}
           value={props.value}
           onClick={sendDispatch}

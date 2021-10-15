@@ -22,4 +22,13 @@ export const theme = createTheme({
       main: grey[500],
     },
   },
+  overrides: {
+    MuiPaper: {
+      elevation1: {
+        '&:active': {
+          boxShadow: 'none',
+        },
+      },
+    },
+  },
 });

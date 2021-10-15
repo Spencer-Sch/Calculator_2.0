@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '4.5rem',
     fontSize: '2rem',
     fontWeight: 900,
+    '&:active': {
+      boxShadow: 'none',
+    },
   },
   otherButtonStyles: {
     backgroundColor: [theme.palette.operator.main],
@@ -62,6 +65,7 @@ const OperatorButton = React.memo((props) => {
         <Button
           className={combinedStyles}
           variant="contained"
+          disableRipple={true}
           value={props.value}
           onClick={sendDispatch}
           data-testid={props.value}

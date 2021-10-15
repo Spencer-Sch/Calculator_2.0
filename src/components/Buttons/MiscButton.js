@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '4.5rem',
     fontSize: '2rem',
     fontWeight: 900,
+    '&:active': {
+      boxShadow: 'none',
+    },
   },
   miscButtonStyles: {
     backgroundColor: [theme.palette.operator.main],
@@ -70,6 +73,7 @@ const MiscButton = React.memo((props) => {
           className={combinedClasses}
           variant="contained"
           color="primary"
+          disableRipple={true}
           value={props.value}
           onClick={sendDispatch}
           data-testid={props.value}

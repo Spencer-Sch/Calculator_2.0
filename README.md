@@ -535,3 +535,13 @@
 #### Update #1
 
 - Finished adding test to "App.buttonCombos.clearHistory.test". Test passing successfully.
+
+### Day 25
+
+---
+
+#### Update #1
+
+- Disabled the ripple effect on all buttons.
+
+- Made all buttons looks like they are being pressed in when clicked.

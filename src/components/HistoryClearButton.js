@@ -12,6 +12,9 @@ const useStyles = makeStyles({
     letterSpacing: 2.5,
     fontWeight: 700,
     fontSize: '1.2rem',
+    '&:active': {
+      boxShadow: 'none',
+    },
   },
 });
 
@@ -29,6 +32,7 @@ const HistoryClearButton = React.memo(() => {
       <Button
         variant="contained"
         color="secondary"
+        disableRipple={true}
         fullWidth
         className={classes.button}
         onClick={clearHistory}

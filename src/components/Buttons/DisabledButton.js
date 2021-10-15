@@ -20,7 +20,7 @@ const DisabledButton = React.memo((props) => {
 
   return (
     <Grid item xs={3}>
-      <Paper className={classes.paper}>
+      <Paper className={classes.paper} elevation={0}>
         <Button
           className={classes.buttonStyles}
           disabled={props.disable}
