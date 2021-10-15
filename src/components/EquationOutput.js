@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 const EquationOutput = () => {
   const state = useStore()[0];
 
-  const RENDER_THIS = state.renderData.renderEquation;
+  const content = state.renderData.renderEquation;
 
   const classes = useStyles();
 
@@ -35,7 +35,7 @@ const EquationOutput = () => {
         className={classes.typography}
         data-testid="equationOutputH3"
       >
-        {RENDER_THIS}
+        {content}
       </Typography>
     </Grid>
   );

@@ -33,7 +33,7 @@ const EquationResultOutput = () => {
   const classes = useStyles();
 
   const RUN_CALCULATE = state.runCalculate;
-  const RENDER_THIS = state.renderData.renderEquationResult;
+  const content = state.renderData.renderEquationResult;
 
   let typographyClass = classes.typographyBig;
 
@@ -46,7 +46,7 @@ const EquationResultOutput = () => {
   return (
     <Grid item xs={12} className={classes.grid}>
       <Typography variant="h1" align="right" className={typographyClass}>
-        {RENDER_THIS}
+        {content}
       </Typography>
     </Grid>
   );
