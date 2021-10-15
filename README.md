@@ -545,3 +545,7 @@
 - Disabled the ripple effect on all buttons.
 
 - Made all buttons looks like they are being pressed in when clicked.
+
+#### Update #2
+
+- Added my custom box shadow to the MUI Theme object 'shadows' array in order to make the JSS in my 'EquationOutput', 'EquationResultOutput', and 'HistoryCardArea' components easier to read.

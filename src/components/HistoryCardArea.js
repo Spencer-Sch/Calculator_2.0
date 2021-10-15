@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     marginBottom: theme.spacing(2),
     marginTop: 0,
-    boxShadow: `inset 0px 12px 8px -10px ${grey[600]}, inset 0px -16px 8px -10px ${grey[600]}, inset 12px 0px 8px -10px ${grey[600]}, inset -16px 0px 8px -10px ${grey[600]}`,
+    boxShadow: [theme.shadows[25]],
   },
 }));
 

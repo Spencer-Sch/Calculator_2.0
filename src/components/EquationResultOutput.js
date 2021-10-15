@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 16,
     backgroundColor: grey[500],
     borderRadius: theme.shape.borderRadius,
-    boxShadow: `inset 0px 12px 8px -10px ${grey[600]}, inset 0px -16px 8px -10px ${grey[600]}, inset 12px 0px 8px -10px ${grey[600]}, inset -16px 0px 8px -10px ${grey[600]}`,
+    boxShadow: [theme.shadows[25]],
   },
   typographyBig: {
     fontWeight: 900,
