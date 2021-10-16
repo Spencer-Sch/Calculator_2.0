@@ -563,3 +563,9 @@
 - Changed 'renderEquation: null' to 'renderEquation: ""' in default state set up in 'render-store'.
 
 - Changed 'renderEquation: null' to 'renderEquation: ""' in all tests.
+
+#### Update #5
+
+- Continueing work to keep the text content of 'EquationOutput' and 'EquationResultOutput' inside their respective containers. Implemented a useful font size calc formula that I found to help scale font sizes with viewport width.
+
+- Worked on finding ideal font sizes based on character-length-breakpoints.

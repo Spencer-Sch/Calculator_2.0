@@ -4,6 +4,7 @@ import { cyan, deepOrange, grey } from '@material-ui/core/colors';
 export const theme = createTheme({
   typography: {
     fontFamily: ['Orbitron', 'Helvetica', 'Arial', 'sans-serif'].join(','),
+    htmlFontSize: '16',
   },
   palette: {
     primary: {

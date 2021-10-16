@@ -16,15 +16,22 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     boxShadow: [theme.shadows[25]],
   },
-  typographyBig: {
+  typography: {
     fontWeight: 900,
     paddingRight: 12,
-    fontSize: '5rem',
+    fontSize: 'calc( 50px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    // fontSize: '5rem',
+    // '@media (max-width: 1250px)': {
+    //   fontSize: '3.8rem',
+    // },
+    // '@media (max-width: 950px)': {
+    //   fontSize: '3rem',
+    // },
   },
   typographySmall: {
     fontWeight: 900,
     paddingRight: 12,
-    fontSize: '4rem',
+    fontSize: '3rem',
   },
 }));
 
@@ -38,7 +45,7 @@ const EquationResultOutput = () => {
   const content = state.renderData.renderEquationResult;
 
   let typographyClass =
-    content.length >= 12 ? classes.typographySmall : classes.typographyBig;
+    content.length >= 12 ? classes.typographySmall : classes.typography;
 
   useEffect(() => {
     if (RUN_CALCULATE) {

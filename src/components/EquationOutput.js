@@ -15,15 +15,15 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     boxShadow: [theme.shadows[25]],
   },
-  typographyBig: {
+  typography: {
     fontWeight: 900,
     paddingRight: 12,
-    fontSize: '3rem',
+    fontSize: 'calc( 18px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
   },
   typographySmall: {
     fontWeight: 900,
     paddingRight: 12,
-    fontSize: '1.8rem',
+    fontSize: '2.2rem',
   },
 }));
 
@@ -35,7 +35,7 @@ const EquationOutput = () => {
   const classes = useStyles();
 
   let typographyClass =
-    content.length >= 23 ? classes.typographySmall : classes.typographyBig;
+    content.length >= 23 ? classes.typographySmall : classes.typography;
 
   return (
     <Grid item xs={12} className={classes.grid}>
