@@ -569,3 +569,27 @@
 - Continueing work to keep the text content of 'EquationOutput' and 'EquationResultOutput' inside their respective containers. Implemented a useful font size calc formula that I found to help scale font sizes with viewport width.
 
 - Worked on finding ideal font sizes based on character-length-breakpoints.
+
+### Day 25
+
+---
+
+#### Update #1
+
+- Began implementing breakpoints to keep the text content of 'EquationOutput' and 'EquationResultOutput' inside their respective containers.
+
+- 'EquationResultOutput' while 'typographySmall' class is applied:
+
+  - Completed breakpoint process for from smallest screen size to largest.
+
+- 'EquationResultOutput' while 'typography' class is applied:
+
+  - Yet to be done.
+
+- Edited the 'md' breakpoint from 960 to 950 in MUI theme object.
+
+- Added a 'minWidth' to the overall container in 'App'.
+
+- Used breakpoints to hide 'historySection' on smaller screens.
+
+- Used breakpoints to make 'calculatorSection' take fill all of the parent container on smaller screens.

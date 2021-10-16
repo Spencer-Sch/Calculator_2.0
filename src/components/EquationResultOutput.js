@@ -19,19 +19,42 @@ const useStyles = makeStyles((theme) => ({
   typography: {
     fontWeight: 900,
     paddingRight: 12,
-    fontSize: 'calc( 50px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
-    // fontSize: '5rem',
-    // '@media (max-width: 1250px)': {
-    //   fontSize: '3.8rem',
-    // },
-    // '@media (max-width: 950px)': {
-    //   fontSize: '3rem',
-    // },
+    fontSize: '5rem',
+    '@media (max-width: 1250px)': {
+      fontSize: 'calc( 50px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
   },
   typographySmall: {
     fontWeight: 900,
     paddingRight: 12,
-    fontSize: '3rem',
+    fontSize: 'calc( 19px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    '@media (min-width: 1800px)': {
+      fontSize: '2.7rem',
+    },
+    '@media (max-width: 1800px)': {
+      fontSize: '2.7rem',
+    },
+    '@media (max-width: 1275px)': {
+      fontSize: 'calc( 24px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 1000px)': {
+      fontSize: 'calc( 21px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 949px)': {
+      fontSize: 'calc( 35px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 800px)': {
+      fontSize: 'calc( 28px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 650px)': {
+      fontSize: 'calc( 25px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 550px)': {
+      fontSize: 'calc( 22px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 475px)': {
+      fontSize: '1.45rem',
+    },
   },
 }));
 

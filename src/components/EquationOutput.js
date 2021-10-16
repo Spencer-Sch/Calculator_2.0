@@ -18,12 +18,15 @@ const useStyles = makeStyles((theme) => ({
   typography: {
     fontWeight: 900,
     paddingRight: 12,
-    fontSize: 'calc( 18px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    paddingLeft: 12,
+    fontSize: 'calc( 17px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
   },
   typographySmall: {
     fontWeight: 900,
     paddingRight: 12,
-    fontSize: '2.2rem',
+    paddingLeft: 12,
+    fontSize: 'calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    // fontSize: '2.2rem',
   },
 }));
 

@@ -7,6 +7,7 @@ const useStyles = makeStyles({
   grid: {
     justifyContent: 'center',
   },
+  '@media (max-width: 950px)': {},
 });
 
 const CalculatorSection = () => {
@@ -15,7 +16,9 @@ const CalculatorSection = () => {
     <Grid
       container
       item
-      xs={8}
+      xs={12}
+      sm={12}
+      md={8}
       className={classes.grid}
       data-testid="calculatorSection"
     >

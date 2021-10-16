@@ -5,11 +5,17 @@ import HistoryClearButton from './HistoryClearButton';
 import HistoryTitle from './HistoryTitle';
 import HistoryCardArea from './HistoryCardArea';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   grid: {
     justifyContent: 'center',
+    [theme.breakpoints.up('md')]: {
+      display: 'block',
+    },
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
   },
-});
+}));
 
 const HistorySection = () => {
   const classes = useStyles();
