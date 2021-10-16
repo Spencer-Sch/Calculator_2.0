@@ -21,7 +21,7 @@ describe('buildOperandLogic tests:', () => {
         operatorStore: null,
         historyList: [],
       },
-      renderData: { renderEquationResult: '0', renderEquation: null },
+      renderData: { renderEquationResult: '0', renderEquation: '' },
     };
     const returnedState = buildOperand(testState, '1');
     expect({ ...testState, ...returnedState }).toEqual({
@@ -44,7 +44,7 @@ describe('buildOperandLogic tests:', () => {
         operatorStore: null,
         historyList: [],
       },
-      renderData: { renderEquationResult: '1', renderEquation: null },
+      renderData: { renderEquationResult: '1', renderEquation: '' },
     });
   });
 
@@ -69,7 +69,7 @@ describe('buildOperandLogic tests:', () => {
         operatorStore: null,
         historyList: [],
       },
-      renderData: { renderEquationResult: '0', renderEquation: null },
+      renderData: { renderEquationResult: '0', renderEquation: '' },
     };
     let returnedState1 = buildOperand(testState, '1');
     let returnedState2 = buildOperand({ ...testState, ...returnedState1 }, '2');
@@ -95,7 +95,7 @@ describe('buildOperandLogic tests:', () => {
         operatorStore: null,
         historyList: [],
       },
-      renderData: { renderEquationResult: '123', renderEquation: null },
+      renderData: { renderEquationResult: '123', renderEquation: '' },
     });
   });
 
@@ -122,7 +122,7 @@ describe('buildOperandLogic tests:', () => {
       },
       renderData: {
         renderEquationResult: '12345678912345',
-        renderEquation: null,
+        renderEquation: '',
       },
     };
     const returnedState = buildOperand(testState, '6');
@@ -149,7 +149,7 @@ describe('buildOperandLogic tests:', () => {
       },
       renderData: {
         renderEquationResult: '12345678912345',
-        renderEquation: null,
+        renderEquation: '',
       },
     });
   });

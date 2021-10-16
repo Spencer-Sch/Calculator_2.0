@@ -553,3 +553,13 @@
 #### Update #3
 
 - In 'EquationOutput' and 'EquationResultOutput' I Changed const name from 'RENDER_THIS' to 'content' to improve readability.
+
+#### Update #4
+
+- Working to keep the text content of 'EquationOutput' and 'EquationResultOutput' inside their respective containers.
+
+- Edited 'utilityFunctions.test' to remove some redundancy.
+
+- Changed 'renderEquation: null' to 'renderEquation: ""' in default state set up in 'render-store'.
+
+- Changed 'renderEquation: null' to 'renderEquation: ""' in all tests.

@@ -39,7 +39,7 @@ const calculate = (curState) => {
       runAddEntry: false,
       cameFromEquals: false,
       renderData: {
-        renderEquation: null,
+        renderEquation: '',
         renderEquationResult: 'Cannot Divide By Zero!',
       },
     };

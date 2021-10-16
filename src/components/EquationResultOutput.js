@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'flex-end',
     padding: 0,
+    minHeight: '5.8rem',
     marginBottom: 16,
     backgroundColor: grey[500],
     borderRadius: theme.shape.borderRadius,
@@ -23,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   typographySmall: {
     fontWeight: 900,
     paddingRight: 12,
-    fontSize: '3rem',
+    fontSize: '4rem',
   },
 }));
 
@@ -33,9 +34,11 @@ const EquationResultOutput = () => {
   const classes = useStyles();
 
   const RUN_CALCULATE = state.runCalculate;
+
   const content = state.renderData.renderEquationResult;
 
-  let typographyClass = classes.typographyBig;
+  let typographyClass =
+    content.length >= 12 ? classes.typographySmall : classes.typographyBig;
 
   useEffect(() => {
     if (RUN_CALCULATE) {

@@ -18,7 +18,7 @@ describe('decimalLogic tests:', () => {
       cameFromEquals: false,
       renderData: {
         renderEquationResult: '1.2',
-        renderEquation: null,
+        renderEquation: '',
       },
     };
     const returnedState = decimal(testState);
@@ -38,7 +38,7 @@ describe('decimalLogic tests:', () => {
       cameFromEquals: false,
       renderData: {
         renderEquationResult: '1.2',
-        renderEquation: null,
+        renderEquation: '',
       },
     });
   });
@@ -60,7 +60,7 @@ describe('decimalLogic tests:', () => {
       cameFromEquals: false,
       renderData: {
         renderEquationResult: '1',
-        renderEquation: null,
+        renderEquation: '',
       },
     };
     const returnedState = decimal(testState);
@@ -80,7 +80,7 @@ describe('decimalLogic tests:', () => {
       cameFromEquals: false,
       renderData: {
         renderEquationResult: '1.',
-        renderEquation: null,
+        renderEquation: '',
       },
     });
   });
@@ -122,7 +122,7 @@ describe('decimalLogic tests:', () => {
       cameFromEquals: false,
       renderData: {
         renderEquationResult: '0.',
-        renderEquation: null,
+        renderEquation: '',
       },
     });
   });
@@ -186,7 +186,7 @@ describe('decimalLogic tests:', () => {
       cameFromEquals: false,
       renderData: {
         renderEquationResult: '12',
-        renderEquation: null,
+        renderEquation: '',
       },
     };
     const returnedState = decimal(testState);
@@ -206,7 +206,7 @@ describe('decimalLogic tests:', () => {
       cameFromEquals: false,
       renderData: {
         renderEquationResult: '12.',
-        renderEquation: null,
+        renderEquation: '',
       },
     });
   });

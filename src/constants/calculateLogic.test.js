@@ -52,7 +52,7 @@ describe('calculateLogic tests:', () => {
       },
       renderData: {
         renderEquationResult: 'Cannot Divide By Zero!',
-        renderEquation: null,
+        renderEquation: '',
       },
     });
   });
@@ -109,7 +109,7 @@ describe('calculateLogic tests:', () => {
       },
       renderData: {
         renderEquationResult: 'Cannot Divide By Zero!',
-        renderEquation: null,
+        renderEquation: '',
       },
     });
   });

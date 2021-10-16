@@ -4,6 +4,6 @@ export const configureRenderStore = () => {
   const actions = {};
 
   initStore(actions, {
-    renderData: { renderEquationResult: '0', renderEquation: null },
+    renderData: { renderEquationResult: '0', renderEquation: '' },
   });
 };

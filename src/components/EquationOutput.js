@@ -15,9 +15,15 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     boxShadow: [theme.shadows[25]],
   },
-  typography: {
+  typographyBig: {
     fontWeight: 900,
     paddingRight: 12,
+    fontSize: '3rem',
+  },
+  typographySmall: {
+    fontWeight: 900,
+    paddingRight: 12,
+    fontSize: '1.8rem',
   },
 }));
 
@@ -28,11 +34,14 @@ const EquationOutput = () => {
 
   const classes = useStyles();
 
+  let typographyClass =
+    content.length >= 23 ? classes.typographySmall : classes.typographyBig;
+
   return (
     <Grid item xs={12} className={classes.grid}>
       <Typography
         variant="h3"
-        className={classes.typography}
+        className={typographyClass}
         data-testid="equationOutputH3"
       >
         {content}

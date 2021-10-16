@@ -19,7 +19,7 @@ const decimal = (curState) => {
         operator: null,
         equationResult: null,
         renderData: {
-          renderEquation: null,
+          renderEquation: '',
           renderEquationResult: '0.',
         },
       };

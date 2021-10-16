@@ -11,7 +11,7 @@ const buildOperand = (curState, newDigit) => {
   let shouldRenderDataBeEmpty = false;
   // let queuedRenderDataUpdate;
 
-  if (operandString.length < 14) {
+  if (operandString.length < 11) {
     if (EQUALS_IS_ON) {
       operandString = '0';
       shouldRenderDataBeEmpty = true;
@@ -36,7 +36,9 @@ const buildOperand = (curState, newDigit) => {
       ? `${newDigit}`
       : `${operandString}`.concat(`${newDigit}`);
 
-    const equalsRenderData = shouldRenderDataBeEmpty ? {} : RENDER_DATA;
+    const equalsRenderData = shouldRenderDataBeEmpty
+      ? { renderEquation: '', renderEquationResult: '' }
+      : RENDER_DATA;
 
     const percentRenderData = { renderEquation: `${OPERAND1} ${OPERATOR}` };
 

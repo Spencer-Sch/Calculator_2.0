@@ -18,7 +18,7 @@ describe('pasitiveNegativeLogic tests:', () => {
       cameFromEquals: false,
       renderData: {
         renderEquationResult: '1',
-        renderEquation: null,
+        renderEquation: '',
       },
     };
     const returnedState = positiveNegative(testState);
@@ -38,7 +38,7 @@ describe('pasitiveNegativeLogic tests:', () => {
       cameFromEquals: false,
       renderData: {
         renderEquationResult: '-1',
-        renderEquation: null,
+        renderEquation: '',
       },
     });
   });

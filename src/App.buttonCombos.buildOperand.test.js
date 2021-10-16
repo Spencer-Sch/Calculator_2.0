@@ -58,7 +58,7 @@ describe('E2E tests of user-events', () => {
       }
       userEvent.click(numberTwoButtonElement);
 
-      expect(equationResultOutputElement).toHaveTextContent('11111111111111');
+      expect(equationResultOutputElement).toHaveTextContent('11111111111');
     });
   });
 });

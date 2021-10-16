@@ -261,7 +261,7 @@ describe('backspaceLogic tests:', () => {
         operatorStore: null,
         historyList: [],
       },
-      renderData: { renderEquationResult: '12', renderEquation: null },
+      renderData: { renderEquationResult: '12', renderEquation: '' },
     };
     const returnedState = backspace(testState);
     expect({ ...testState, ...returnedState }).toEqual({
@@ -284,7 +284,7 @@ describe('backspaceLogic tests:', () => {
         operatorStore: null,
         historyList: [],
       },
-      renderData: { renderEquationResult: '1', renderEquation: null },
+      renderData: { renderEquationResult: '1', renderEquation: '' },
     });
   });
 
@@ -309,7 +309,7 @@ describe('backspaceLogic tests:', () => {
         operatorStore: null,
         historyList: [],
       },
-      renderData: { renderEquationResult: '1.23', renderEquation: null },
+      renderData: { renderEquationResult: '1.23', renderEquation: '' },
     };
     const returnedState = backspace(testState);
     expect({ ...testState, ...returnedState }).toEqual({
@@ -332,7 +332,7 @@ describe('backspaceLogic tests:', () => {
         operatorStore: null,
         historyList: [],
       },
-      renderData: { renderEquationResult: '1.2', renderEquation: null },
+      renderData: { renderEquationResult: '1.2', renderEquation: '' },
     });
   });
 });

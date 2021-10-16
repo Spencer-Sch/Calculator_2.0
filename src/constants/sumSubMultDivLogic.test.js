@@ -102,7 +102,7 @@ describe('sumSubMultDivLogic tests:', () => {
       cameFromEquals: false,
       renderData: {
         renderEquationResult: '0',
-        renderEquation: null,
+        renderEquation: '',
       },
     };
     const returnedState = sumSubMultDiv(testState, '+');
@@ -144,7 +144,7 @@ describe('sumSubMultDivLogic tests:', () => {
       cameFromEquals: false,
       renderData: {
         renderEquationResult: '1',
-        renderEquation: null,
+        renderEquation: '',
       },
     };
     const returnedState = sumSubMultDiv(testState, '+');
