@@ -603,3 +603,9 @@
 - 'EquationResultOutput' while 'typography' class is applied:
 
   - Completed breakpoint process from smallest screen size to largest.
+
+#### Update #2
+
+- Divided 'typography' class in 'EquationResultOutput' and 'EquationOutput' into 'typographyMed' and 'typographyBig'.
+
+- Finished adding/editing media queries in 'EquationResultOutput' and 'EquationOutput'.

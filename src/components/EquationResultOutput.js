@@ -16,17 +16,39 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     boxShadow: [theme.shadows[25]],
   },
-  typography: {
+  typographyBig: {
     fontWeight: 900,
     paddingRight: 12,
     '@media (min-width: 1800px)': {
-      fontSize: '4.9rem',
+      fontSize: '4.6rem',
     },
     '@media (max-width: 1800px)': {
+      fontSize: '4.6rem',
+    },
+    '@media (max-width: 1000px)': {
+      fontSize: '4.6rem',
+    },
+    '@media (max-width: 949px)': {
+      fontSize: 'calc( 60px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 475px)': {
+      fontSize: '3.8rem',
+    },
+  },
+  typographyMed: {
+    fontWeight: 900,
+    paddingRight: 12,
+    '@media (min-width: 1800px)': {
+      fontSize: '4.6rem',
+    },
+    '@media (max-width: 1800px)': {
+      fontSize: '4.6rem',
+    },
+    '@media (max-width: 1275px)': {
       fontSize: 'calc( 50px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
     '@media (max-width: 1000px)': {
-      fontSize: 'calc( 45px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+      fontSize: 'calc( 48px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
     '@media (max-width: 949px)': {
       fontSize: '4.5rem',
@@ -35,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 'calc( 53px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
     '@media (max-width: 650px)': {
-      fontSize: 'calc( 45px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+      fontSize: 'calc( 47px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
     '@media (max-width: 550px)': {
       fontSize: 'calc( 40px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
@@ -47,35 +69,46 @@ const useStyles = makeStyles((theme) => ({
   typographySmall: {
     fontWeight: 900,
     paddingRight: 12,
-    fontSize: 'calc( 19px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     '@media (min-width: 1800px)': {
-      fontSize: '2.7rem',
+      fontSize: '2.8rem',
     },
     '@media (max-width: 1800px)': {
-      fontSize: '2.7rem',
+      fontSize: '2.8rem',
     },
     '@media (max-width: 1275px)': {
-      fontSize: 'calc( 24px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
-    },
-    '@media (max-width: 1000px)': {
-      fontSize: 'calc( 21px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
-    },
-    '@media (max-width: 949px)': {
-      fontSize: 'calc( 35px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
-    },
-    '@media (max-width: 800px)': {
-      fontSize: 'calc( 28px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
-    },
-    '@media (max-width: 650px)': {
       fontSize: 'calc( 25px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
+    '@media (max-width: 1000px)': {
+      fontSize: 'calc( 23px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 949px)': {
+      fontSize: 'calc( 37px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 800px)': {
+      fontSize: 'calc( 30px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 650px)': {
+      fontSize: 'calc( 27px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
     '@media (max-width: 550px)': {
-      fontSize: 'calc( 22px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+      fontSize: 'calc( 23px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
     '@media (max-width: 475px)': {
-      fontSize: '1.45rem',
+      fontSize: '1.53rem',
     },
   },
+  // // Small
+  // borderRed: {
+  //   border: 'red 3px solid',
+  // },
+  // // Med
+  // borderBlue: {
+  //   border: 'blue 3px solid',
+  // },
+  // // Big
+  // borderGreen: {
+  //   border: 'green 3px solid',
+  // },
 }));
 
 const EquationResultOutput = () => {
@@ -87,8 +120,21 @@ const EquationResultOutput = () => {
 
   const content = state.renderData.renderEquationResult;
 
-  let typographyClass =
-    content.length >= 12 ? classes.typographySmall : classes.typography;
+  let typographyClass;
+
+  if (content.length >= 12) {
+    typographyClass = classes.typographySmall;
+    // typographyClass = [classes.typographySmall, classes.borderRed].join(' ');
+  } else if (content.length < 12 && content.length > 5) {
+    typographyClass = classes.typographyMed;
+    // typographyClass = [classes.typographyMed, classes.borderBlue].join(' ');
+  } else {
+    typographyClass = classes.typographyBig;
+    // typographyClass = [classes.typographyBig, classes.borderGreen].join(' ');
+  }
+
+  // let typographyClass =
+  //   content.length >= 12 ? classes.typographySmall : classes.typography;
 
   useEffect(() => {
     if (RUN_CALCULATE) {
