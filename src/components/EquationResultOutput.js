@@ -19,9 +19,29 @@ const useStyles = makeStyles((theme) => ({
   typography: {
     fontWeight: 900,
     paddingRight: 12,
-    fontSize: '5rem',
-    '@media (max-width: 1250px)': {
+    '@media (min-width: 1800px)': {
+      fontSize: '4.9rem',
+    },
+    '@media (max-width: 1800px)': {
       fontSize: 'calc( 50px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 1000px)': {
+      fontSize: 'calc( 45px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 949px)': {
+      fontSize: '4.5rem',
+    },
+    '@media (max-width: 800px)': {
+      fontSize: 'calc( 53px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 650px)': {
+      fontSize: 'calc( 45px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 550px)': {
+      fontSize: 'calc( 40px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 475px)': {
+      fontSize: '2.58rem',
     },
   },
   typographySmall: {

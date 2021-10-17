@@ -580,7 +580,7 @@
 
 - 'EquationResultOutput' while 'typographySmall' class is applied:
 
-  - Completed breakpoint process for from smallest screen size to largest.
+  - Completed breakpoint process from smallest screen size to largest.
 
 - 'EquationResultOutput' while 'typography' class is applied:
 
@@ -593,3 +593,13 @@
 - Used breakpoints to hide 'historySection' on smaller screens.
 
 - Used breakpoints to make 'calculatorSection' take fill all of the parent container on smaller screens.
+
+### Day 26
+
+---
+
+#### Update #1
+
+- 'EquationResultOutput' while 'typography' class is applied:
+
+  - Completed breakpoint process from smallest screen size to largest.
