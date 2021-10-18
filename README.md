@@ -609,3 +609,11 @@
 - Divided 'typography' class in 'EquationResultOutput' and 'EquationOutput' into 'typographyMed' and 'typographyBig'.
 
 - Finished adding/editing media queries in 'EquationResultOutput' and 'EquationOutput'.
+
+### Day 27
+
+---
+
+#### Update #2
+
+- Added conditional classes to text content in 'HistoryCard' to keep text inside of appropriate boundaries.
