@@ -45,7 +45,6 @@ const useStyles = makeStyles({
   equationResultTypographyMed: {
     marginRight: 15,
     fontSize: '2.5rem',
-    // paddingTop: '0.4rem',
   },
 });
 
@@ -57,33 +56,19 @@ const HistoryCard = (props) => {
   const equationContent = props.equation;
   const equationResultContent = props.equationResult;
 
-  // console.log(equationResultContent.length);
-
   let equationTypographyClass =
     equationContent.length > 23
       ? classes.equationTypographySmall
       : classes.typography;
 
-  // let equationResultTypographyClass =
-  //   equationResultContent.length > 8
-  //     ? classes.equationResultTypographySmall
-  //     : classes.typography;
-
   let equationResultTypographyClass;
 
   if (equationResultContent.length > 8) {
     equationResultTypographyClass = classes.equationResultTypographySmall;
-    // equationResultTypographyClass = [classes.typographySmall, classes.borderRed].join(' ');
-  } else if (
-    equationResultContent.length === 8
-    // equationResultContent.length < 8 &&
-    // equationResultContent.length > 6
-  ) {
+  } else if (equationResultContent.length === 8) {
     equationResultTypographyClass = classes.equationResultTypographyMed;
-    // equationResultTypographyClass = [classes.typographyMed, classes.borderBlue].join(' ');
   } else {
     equationResultTypographyClass = classes.typography;
-    // equationResultTypographyClass = [classes.typographyBig, classes.borderGreen].join(' ');
   }
 
   return (
