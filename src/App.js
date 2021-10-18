@@ -8,6 +8,9 @@ import CalculatorSection from './components/CalculatorSection';
 const useStyles = makeStyles((theme) => ({
   container: {
     minWidth: '475px',
+    '@media (max-width: 1264px)': {
+      maxWidth: '80vw',
+    },
   },
   paper: {
     backgroundColor: '#ccc',

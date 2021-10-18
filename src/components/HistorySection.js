@@ -7,12 +7,13 @@ import HistoryCardArea from './HistoryCardArea';
 
 const useStyles = makeStyles((theme) => ({
   grid: {
+    minWidth: '25rem',
     justifyContent: 'center',
-    [theme.breakpoints.up('md')]: {
-      display: 'block',
-    },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('lg')]: {
       display: 'none',
+    },
+    [theme.breakpoints.up('lg')]: {
+      display: 'block',
     },
   },
 }));

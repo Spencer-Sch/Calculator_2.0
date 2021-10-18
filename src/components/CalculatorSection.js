@@ -3,12 +3,11 @@ import React from 'react';
 import CalculatorButtonArea from './CalculatorButtonArea';
 import EquationArea from './EquationArea';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   grid: {
     justifyContent: 'center',
   },
-  '@media (max-width: 950px)': {},
-});
+}));
 
 const CalculatorSection = () => {
   const classes = useStyles();
@@ -17,8 +16,8 @@ const CalculatorSection = () => {
       container
       item
       xs={12}
-      sm={12}
-      md={8}
+      md={12}
+      lg={8}
       className={classes.grid}
       data-testid="calculatorSection"
     >

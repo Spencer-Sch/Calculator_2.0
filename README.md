@@ -614,6 +614,16 @@
 
 ---
 
-#### Update #2
+#### Update #1
 
 - Added conditional classes to text content in 'HistoryCard' to keep text inside of appropriate boundaries.
+
+#### Update #2
+
+- In 'theme.js': Edited a media query on the 'MuiContainer-root' class to fix a padding issue.
+
+- Edited the 'lg' breakpoint from 1280 to 1265 in MUI theme object.
+
+- Changed point at which 'HistorySection' disapears to prevent the history cards from scaling down and looking bad.
+
+- Need to edit some of my media queries on 'EquationResultOutput' and 'EquationOutput'.
