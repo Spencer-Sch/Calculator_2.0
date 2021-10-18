@@ -44,26 +44,23 @@ const useStyles = makeStyles((theme) => ({
     '@media (max-width: 1800px)': {
       fontSize: '4.6rem',
     },
-    '@media (max-width: 1275px)': {
-      fontSize: 'calc( 50px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
-    },
     '@media (max-width: 1000px)': {
-      fontSize: 'calc( 48px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
-    },
-    '@media (max-width: 949px)': {
-      fontSize: '4.5rem',
+      fontSize: 'calc( 52px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
     '@media (max-width: 800px)': {
-      fontSize: 'calc( 53px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+      fontSize: 'calc( 45px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 750px)': {
+      fontSize: 'calc( 42px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
     '@media (max-width: 650px)': {
-      fontSize: 'calc( 47px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+      fontSize: 'calc( 39px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
     '@media (max-width: 550px)': {
-      fontSize: 'calc( 40px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+      fontSize: 'calc( 39px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
     '@media (max-width: 475px)': {
-      fontSize: '2.58rem',
+      fontSize: '2.54rem',
     },
   },
   typographySmall: {
@@ -75,26 +72,20 @@ const useStyles = makeStyles((theme) => ({
     '@media (max-width: 1800px)': {
       fontSize: '2.8rem',
     },
-    '@media (max-width: 1275px)': {
-      fontSize: 'calc( 25px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    '@media (max-width: 1264px)': {
+      fontSize: '2.7rem',
     },
     '@media (max-width: 1000px)': {
-      fontSize: 'calc( 23px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
-    },
-    '@media (max-width: 949px)': {
-      fontSize: 'calc( 37px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
-    },
-    '@media (max-width: 800px)': {
-      fontSize: 'calc( 30px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
-    },
-    '@media (max-width: 650px)': {
       fontSize: 'calc( 27px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
-    '@media (max-width: 550px)': {
-      fontSize: 'calc( 23px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    '@media (max-width: 949px)': {
+      fontSize: 'calc( 25.5px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
-    '@media (max-width: 475px)': {
-      fontSize: '1.53rem',
+    '@media (max-width: 800px)': {
+      fontSize: 'calc( 21px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    },
+    '@media (max-width: 650px)': {
+      fontSize: '1.45rem',
     },
   },
   // // Small
@@ -132,9 +123,6 @@ const EquationResultOutput = () => {
     typographyClass = classes.typographyBig;
     // typographyClass = [classes.typographyBig, classes.borderGreen].join(' ');
   }
-
-  // let typographyClass =
-  //   content.length >= 12 ? classes.typographySmall : classes.typography;
 
   useEffect(() => {
     if (RUN_CALCULATE) {

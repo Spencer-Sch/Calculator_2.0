@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
+    textAlign: 'right',
     padding: 0,
     minHeight: '4rem',
     marginBottom: 16,
@@ -45,29 +46,17 @@ const useStyles = makeStyles((theme) => ({
     '@media (max-width: 1800px)': {
       fontSize: '2.8rem',
     },
-    '@media (max-width: 1275px)': {
-      fontSize: 'calc( 27.5px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
-    },
     '@media (max-width: 1000px)': {
       fontSize: '2.3rem',
     },
-    '@media (max-width: 949px)': {
-      fontSize: 'calc( 36px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
-    },
     '@media (max-width: 800px)': {
-      fontSize: 'calc( 33px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+      fontSize: 'calc( 27px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
     '@media (max-width: 750px)': {
-      fontSize: 'calc( 32px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
-    },
-    '@media (max-width: 650px)': {
-      fontSize: 'calc( 28px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
-    },
-    '@media (max-width: 550px)': {
-      fontSize: 'calc( 25px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+      fontSize: 'calc( 27px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
     '@media (max-width: 475px)': {
-      fontSize: '1.6rem',
+      fontSize: '1.8rem',
     },
   },
   typographySmall: {
@@ -75,34 +64,28 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 12,
     paddingLeft: 12,
     '@media (min-width: 1800px)': {
-      fontSize: '2.2rem',
+      fontSize: '1.8rem',
     },
     '@media (max-width: 1800px)': {
-      fontSize: '2.2rem',
+      fontSize: '1.7rem',
     },
-    '@media (max-width: 1275px)': {
-      fontSize: 'calc( 15px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+    '@media (max-width: 1264px)': {
+      fontSize: 'calc( 14.5px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
     '@media (max-width: 1000px)': {
-      fontSize: '1.64rem',
-    },
-    '@media (max-width: 949px)': {
-      fontSize: 'calc( 25px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+      fontSize: '1.8rem',
     },
     '@media (max-width: 800px)': {
-      fontSize: 'calc( 24px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+      fontSize: 'calc( 21px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
     '@media (max-width: 750px)': {
       fontSize: 'calc( 21px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
     '@media (max-width: 650px)': {
-      fontSize: 'calc( 19px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
+      fontSize: 'calc( 19.5px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
     },
     '@media (max-width: 550px)': {
-      fontSize: 'calc( 17px + (24 - 16) * (100vw - 400px) / (800 - 400) )',
-    },
-    '@media (max-width: 475px)': {
-      fontSize: '1.1rem',
+      fontSize: '1.4rem',
     },
   },
   // // Small
@@ -138,7 +121,6 @@ const EquationOutput = () => {
     typographyClass = classes.typographyBig;
     // typographyClass = [classes.typographyBig, classes.borderGreen].join(' ');
   }
-  // let typographyClass = content.length >= 23 ? classes.typographySmall : classes.typography;
 
   return (
     <Grid item xs={12} className={classes.grid}>

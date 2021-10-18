@@ -627,3 +627,7 @@
 - Changed point at which 'HistorySection' disapears to prevent the history cards from scaling down and looking bad.
 
 - Need to edit some of my media queries on 'EquationResultOutput' and 'EquationOutput'.
+
+#### Update #3
+
+- Edited media queries on 'EquationResultOutput' and 'EquationOutput' to keep the text content of 'EquationOutput' and 'EquationResultOutput' inside their respective containers.
