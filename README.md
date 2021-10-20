@@ -11,8 +11,6 @@
 - Material-UI
 - Font Awsome
 
----
-
 ### Days 1 - 3
 
 ---
