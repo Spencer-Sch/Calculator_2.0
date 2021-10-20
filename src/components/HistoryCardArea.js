@@ -8,9 +8,8 @@ const useStyles = makeStyles((theme) => ({
   ul: {
     margin: '0',
     padding: '0',
-    height: '38.4rem',
-    overflowX: 'hidden',
-    overflowY: 'scroll',
+    height: '37.2rem',
+    overflow: 'auto',
   },
   typographyGrid: {
     paddingTop: '1rem',
@@ -20,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: '0.11rem',
   },
   grid: {
-    height: '84%',
+    height: '81.2%',
     backgroundColor: grey[500],
     borderRadius: theme.shape.borderRadius,
     marginBottom: theme.spacing(2),

@@ -1,4 +1,4 @@
-import { Grid } from '@material-ui/core';
+import { Grid, makeStyles } from '@material-ui/core';
 import React from 'react';
 
 import { buttonMap } from '../constants/buttonMap.js';
@@ -7,7 +7,15 @@ import OperatorButton from './Buttons/OperatorButton';
 import NumberButton from './Buttons/NumberButton';
 import DisabledButton from './Buttons/DisabledButton';
 
+const useStyles = makeStyles((theme) => ({
+  grid: {
+    margin: 0,
+  },
+}));
+
 const CalculatorButtonArea = () => {
+  const classes = useStyles();
+
   const createButtons = buttonMap.map((button) => {
     if (button.type === 'misc') {
       return (
@@ -37,7 +45,14 @@ const CalculatorButtonArea = () => {
   });
 
   return (
-    <Grid container item spacing={1} xs={12} data-testid="buttonArea">
+    <Grid
+      container
+      item
+      className={classes.grid}
+      spacing={1}
+      xs={12}
+      data-testid="buttonArea"
+    >
       {createButtons}
     </Grid>
   );

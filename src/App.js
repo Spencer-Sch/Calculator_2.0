@@ -7,6 +7,7 @@ import CalculatorSection from './components/CalculatorSection';
 
 const useStyles = makeStyles((theme) => ({
   container: {
+    height: '80vh',
     minWidth: '475px',
     '@media (max-width: 1264px)': {
       maxWidth: '80vw',
@@ -16,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#ccc',
     marginTop: '3rem',
     padding: '1rem',
-    height: '80vh',
+    height: '100%',
   },
   grid: {
     height: '100%',

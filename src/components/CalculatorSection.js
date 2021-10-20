@@ -5,7 +5,7 @@ import EquationArea from './EquationArea';
 
 const useStyles = makeStyles((theme) => ({
   grid: {
-    justifyContent: 'center',
+    height: '100%',
   },
 }));
 
