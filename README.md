@@ -1,6 +1,17 @@
 # Calculator 2.0
 
-## Remaking my calculator project using React, Material-UI, and Jest
+## An updated and refined version of my previous calculator project.
+
+#### Technologies used:
+
+- JavaScript
+- React
+- Jest
+- React Testing Library
+- Material-UI
+- Font Awsome
+
+---
 
 ### Days 1 - 3
 
@@ -631,3 +642,15 @@
 #### Update #3
 
 - Edited media queries on 'EquationResultOutput' and 'EquationOutput' to keep the text content of 'EquationOutput' and 'EquationResultOutput' inside their respective containers.
+
+### Day 28
+
+---
+
+#### Update #1
+
+- Added some more information at the beginning of this README file.
+
+- made some small visual tweeks.
+
+## Project Complete!
