@@ -27,7 +27,7 @@ After learning React and Material-UI I decided to remake this calculator project
 - Jest
 - React Testing Library
 
-[Back To The Top](#calculator-2.0)
+[Back To The Top](#calculator-20)
 
 ---
 
@@ -57,7 +57,7 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-[Back To The Top](#calculator-2.0)
+[Back To The Top](#calculator_20)
 
 ---
 
@@ -65,7 +65,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 - Website - [Spencer Schoeneman](https://inthekeyofrhythm.com)
 
-[Back To The Top](#calculator-2.0)
+[Back To The Top](#calculator_20)
 
 ---
 
@@ -123,6 +123,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 - Began experimenting with tests.
 
+[Back To The Top](#calculator-20)
+
 ### Day 8
 
 ---
@@ -166,6 +168,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 - Succeeded in completing the transfer of logic from 'sumSubMultDiv' while using TDD. All tests are passing successfully.
 
 - Began re-writing sumSubMultDivLogic.test descriptions to be consistent and more read-able. To Be Continued...
+
+[Back To The Top](#calculator-20)
 
 ### Day 11
 
@@ -219,6 +223,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 - Began transfering logic for 'decimal' using TDD. Tests passing successfully. To Be Continued...
 
+[Back To The Top](#calculator-20)
+
 ### Day 13
 
 ---
@@ -271,6 +277,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 - Successfully connected necessary components to both store and retrieve equation history data.
 
+[Back To The Top](#calculator-20)
+
 ### Day 16
 
 ---
@@ -322,6 +330,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 #### Update #5
 
 - Began redesign of the system that decides what is rendered on screen and when. Ran into a few issues that need to be worked out. To be continued...
+
+[Back To The Top](#calculator-20)
 
 ### Day 18
 
@@ -394,6 +404,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 - Added functionality so an equation that attempts to divide by zero does not generate a history entry. "runAddEntry" field was added to global state in order to achieve this.
 
 - Edited tests in "calculateLogic.test" to reflect this change to global state. All tests passing successfully.
+
+[Back To The Top](#calculator-20)
 
 ### Day 20
 
@@ -527,6 +539,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 - Began to add tests to "App.buttonCombos.calculate.test" to test calculate logic in multiple situations. To be continued...
 
+[Back To The Top](#calculator-20)
+
 ### Day 22
 
 ---
@@ -597,6 +611,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 - Finished adding tests to "App.buttonCombos.miscCombos.test". All passing successfully.
 
+[Back To The Top](#calculator-20)
+
 ### Day 24
 
 ---
@@ -663,6 +679,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 - Used breakpoints to make 'calculatorSection' take fill all of the parent container on smaller screens.
 
+[Back To The Top](#calculator-20)
+
 ### Day 26
 
 ---
@@ -712,3 +730,5 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 - made some small visual tweeks.
 
 ## Project Complete!
+
+[Back To The Top](#calculator-20)
