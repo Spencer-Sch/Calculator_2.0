@@ -1,15 +1,75 @@
 # Calculator 2.0
 
-## An updated and refined version of my previous calculator project.
+> An updated and refined version of my previous calculator project.
 
-#### Technologies used:
+---
+
+### Table of Contents
+
+- [Description](#description)
+- [How To Use](#how-to-use)
+- [Author Info](#author-info)
+- [Production Notes](#production-notes)
+
+---
+
+## Description
+
+Previously, I built a calculator that mimicked the functionality of the Windows 10 calculator app. This previous version was built using vanilia JavaScript, HTML, and CSS ([repo here](https://github.com/Spencer-Sch/Calculator)).
+
+After learning React and Material-UI I decided to remake this calculator project using these new techonolgies. This project also gave me the opportunity to practice writing and working with tests, which was another goal of mine.
+
+#### Technologies
 
 - JavaScript
 - React
+- Material-UI
 - Jest
 - React Testing Library
-- Material-UI
-- Font Awsome
+
+[Back To The Top](#read-me-template)
+
+---
+
+## How To Use
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Installation
+
+1. Clone the repo
+2. In the project directory run `npm install`
+
+### Available Scripts
+
+In the project directory, you can run:
+
+#### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+#### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+[Back To The Top](#read-me-template)
+
+---
+
+## Author Info
+
+- Website - [Spencer Schoeneman](https://inthekeyofrhythm.com)
+
+[Back To The Top](#read-me-template)
+
+---
+
+## Production Notes
 
 ### Days 1 - 3
 
@@ -247,7 +307,7 @@
 
 #### Update #2
 
-- Fixed bug in button combo: ( 0 +/- 1 ). The input of "0" in the "negate" function in "utilityFunctions" was causing "undefined" to be returned. when "1" was pressed build "buildOperand" didn't know what to do with the value of "undefined" and crashed the app.
+- Fixed bug in button combo: ( 0 +/- 1 ). The input of "0" in the "negate" function in "utilityFunctions" was causing "undefined" to be returned. when "1" was pressed "buildOperand" didn't know what to do with the value of "undefined" and crashed the app.
 
 #### Update #3
 
@@ -269,9 +329,9 @@
 
 #### Update #1
 
-- Fixed logic error where global state data was being changed before historyEntry could be made. Solution: added "historyData" object to "history-store" slice and stored operan1, operand2, and operator into new fields operand1Store, operand2Store, and operatorStore to hold onto these values to give to historyEntry while still allowing calculateLogic to function as designed.
+- Fixed logic error where global state data was being changed before historyEntry could be made. Solution: added "historyData" object to "history-store" slice and stored operand1, operand2, and operator into new fields operand1Store, operand2Store, and operatorStore to hold onto these values to give to historyEntry while still allowing calculateLogic to function as designed.
 
-- Began refactoring the process for how information is being rendered to the screen. Instead of old IF...THEN... filter checking for truthy or falsy values I added the "render-store" state slice and "renderData" object. Now, throughout the code I explicetly tell the state what to display at every logical turn. This grants me complete control of what is displayed when. No more IF...THEN... issues.
+- Began refactoring the process for how information is being rendered to the screen. Instead of old IF...THEN... filter checking for truthy or falsy values I added the "render-store" state slice and "renderData" object. Now, throughout the code I explicetly tell the state what to display at every logical turn. This grants me complete control of what is displayed and when. No more IF...THEN... issues.
 
 - Need to add new renderData process to "+/-", "%", and "<-" logic.
 
