@@ -27,7 +27,7 @@ After learning React and Material-UI I decided to remake this calculator project
 - Jest
 - React Testing Library
 
-[Back To The Top](#read-me-template)
+[Back To The Top](#calculator-2.0)
 
 ---
 
@@ -57,7 +57,7 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-[Back To The Top](#read-me-template)
+[Back To The Top](#calculator-2.0)
 
 ---
 
@@ -65,7 +65,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 - Website - [Spencer Schoeneman](https://inthekeyofrhythm.com)
 
-[Back To The Top](#read-me-template)
+[Back To The Top](#calculator-2.0)
 
 ---
 
