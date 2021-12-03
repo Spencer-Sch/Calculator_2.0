@@ -17,15 +17,15 @@
 
 Previously, I built a calculator that mimicked the functionality of the Windows 10 calculator app. This previous version was built using vanilia JavaScript, HTML, and CSS ([repo here](https://github.com/Spencer-Sch/Calculator)).
 
-After learning React and Material-UI I decided to remake this calculator project using these new techonolgies. This project also gave me the opportunity to practice writing and working with tests, which was another goal of mine.
+After learning React and Material-UI I decided to remake the app using these new techonolgies. This also gave me the opportunity to practice testing with Jest and React Testing Library.
 
 #### Technologies
 
-- JavaScript
-- React
-- Material-UI
-- Jest
-- React Testing Library
+✅ JavaScript </br>
+✅ React </br>
+✅ Material-UI </br>
+✅ Jest </br>
+✅ React Testing Library </br>
 
 [Back To The Top](#calculator-20)
 
