@@ -1,13 +1,13 @@
-import buildOperand from '../constants/buildOperandLogic';
-import calculate from '../constants/calculateLogic';
-import sumSubMultDiv from '../constants/sumSubMultDivLogic';
-import equals from '../constants/equalsLogic';
+import buildOperand from '../constants/buildOperandLogic/buildOperandLogic';
+import calculate from '../constants/calculateLogic/calculateLogic';
+import sumSubMultDiv from '../constants/sumSubMultDivLogic/sumSubMultDivLogic';
+import equals from '../constants/equalsLogic/equalsLogic';
 import { initStore } from './store';
-import clearFunctions from '../constants/clearFunctionsLogic';
-import backspace from '../constants/backspaceLogic';
-import decimal from '../constants/decimalLogic';
-import positiveNegative from '../constants/positiveNegativeLogic';
-import percent from '../constants/percentLogic';
+import clearFunctions from '../constants/clearFunctionsLogic/clearFunctionsLogic';
+import backspace from '../constants/backspaceLogic/backspaceLogic';
+import decimal from '../constants/decimalLogic/decimalLogic';
+import positiveNegative from '../constants/positiveNegativeLogic/positiveNegativeLogic';
+import percent from '../constants/percentLogic/percentLogic';
 
 export const configureDataStore = () => {
   const actions = {
