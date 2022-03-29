@@ -71,6 +71,19 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Production Notes
 
+## An updated and refined version of my previous calculator project.
+
+#### Technologies used:
+
+- JavaScript
+- React
+- Jest
+- React Testing Library
+- Material-UI
+- Font Awsome
+
+---
+
 ### Days 1 - 3
 
 ---
@@ -731,4 +744,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Project Complete!
 
-[Back To The Top](#calculator-20)
+<<<<<<< HEAD
+
+# [Back To The Top](#calculator-20)
+
+> > > > > > > 8b76915 (See README Day 28 Update 1)
