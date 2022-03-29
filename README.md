@@ -1,6 +1,8 @@
 # Calculator 2.0
 
-> An updated and refined version of my previous calculator project.
+## An updated and refined version of my previous calculator project.
+
+### Try out the [live app here](https://calc-app-2.herokuapp.com/)
 
 ---
 
@@ -63,24 +65,14 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Author Info
 
-- Website - [Spencer Schoeneman](https://inthekeyofrhythm.com)
+- [Github Profile](https://github.com/Spencer-Sch)
+- [LinkedIn](https://www.linkedin.com/in/spencer-schoeneman-b621908b/)
 
 [Back To The Top](#calculator-20)
 
 ---
 
 ## Production Notes
-
-## An updated and refined version of my previous calculator project.
-
-#### Technologies used:
-
-- JavaScript
-- React
-- Jest
-- React Testing Library
-- Material-UI
-- Font Awsome
 
 ### Days 1 - 3
 
@@ -745,5 +737,3 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 <<<<<<< HEAD
 
 # [Back To The Top](#calculator-20)
-
-> > > > > > > 8b76915 (See README Day 28 Update 1)
