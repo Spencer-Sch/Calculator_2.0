@@ -12,15 +12,16 @@ const useStyles = makeStyles((theme) => ({
     height: '80vh',
     minWidth: '475px',
     '@media (max-width: 1264px)': {
-      maxWidth: '80vw',
+      maxWidth: '80%',
     },
   },
   paper: {
+    width: '100%',
     backgroundColor: '#ccc',
     marginTop: '3rem',
     padding: '1rem',
-    height: '90vh',
-    minHeight: '44rem',
+    height: '100%',
+    minHeight: '48rem',
     '@media (max-height: 800px)': {
       marginTop: '1rem',
     },
