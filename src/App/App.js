@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Container from '@material-ui/core/Container';
 import { makeStyles, Paper, Grid } from '@material-ui/core';
 import HistorySection from '../components/HistorySection/HistorySection';
 import CalculatorSection from '../components/CalculatorSection/CalculatorSection';
+import { useStore } from '../hooks-store/store';
+import { handleKeyDown } from '../constants/handleKeyDownLogic/handleKeyDownLogic';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -29,6 +31,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function App() {
+  const dispatch = useStore(false)[1];
+
+  useEffect(() => {
+    window.addEventListener('keydown', (event) =>
+      handleKeyDown(dispatch, event)
+    );
+  });
+
   const classes = useStyles();
 
   return (
