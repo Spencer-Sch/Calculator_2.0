@@ -17,7 +17,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#ccc',
     marginTop: '3rem',
     padding: '1rem',
-    height: '100%',
+    height: '90vh',
+    minHeight: '44rem',
+    '@media (max-height: 800px)': {
+      marginTop: '1rem',
+    },
   },
   grid: {
     height: '100%',
