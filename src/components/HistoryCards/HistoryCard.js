@@ -71,13 +71,16 @@ const HistoryCard = (props) => {
     equationResultTypographyClass = classes.typography;
   }
 
+  const handleClick = (event) => {
+    if (event.detail === 0) {
+      return;
+    }
+    dispatch('RECALL_ENTRY', props.id);
+  };
+
   return (
     <li className={classes.li}>
-      <Card
-        className={classes.card}
-        onClick={() => dispatch('RECALL_ENTRY', props.id)}
-        raised
-      >
+      <Card className={classes.card} onClick={handleClick} raised>
         <CardActionArea>
           <CardContent className={classes.cardContent}>
             <Typography variant="h6" className={equationTypographyClass}>
