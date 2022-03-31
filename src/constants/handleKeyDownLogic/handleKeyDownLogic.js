@@ -13,7 +13,6 @@ export const handleKeyDown = (dispatch, event) => {
   }
 
   if (event.key === 'Enter') {
-    // console.log('ENTER');
     dispatch('EQUALS');
   }
 
