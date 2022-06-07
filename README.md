@@ -1,8 +1,8 @@
 # Calculator 2.0
 
-## An updated and refined version of my previous calculator project.
+### An updated and refined version of my previous calculator project.
 
-### Try out the [live app here](https://calc-app-2.herokuapp.com/)
+#### Try out the [live app here](https://calc-app-2.herokuapp.com/)
 
 ---
 
@@ -734,6 +734,4 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Project Complete!
 
-<<<<<<< HEAD
-
-# [Back To The Top](#calculator-20)
+[Back To The Top](#calculator-20)
